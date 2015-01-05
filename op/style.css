@@ -1,0 +1,804 @@
+<Variable name="bgcolor" description="Page Background Color" type="color" default="#FFDB66" value="#FFDB66">
+   <Variable name="textocolor" description="Text Color"
+             type="color" default="#000000" value="#000000">
+   <Variable name="enlacecolor" description="Link Color"
+             type="color" default="#336699" value="#336699">
+   <Variable name="colortituloentrada" description="Post Title Color"
+             type="color" default="#336699" value="#336699">
+   <Variable name="colormenu" description="Menu Color"
+             type="color" default="#FFFFFF" value="#FFFFFF">
+    <Variable name="colortituloslateral" description="Sidebar Title Color"
+             type="color" default="#FFFFFF" value="#FFFFFF">
+   <Variable name="colortextolateral" description="Sidebar Text Color"
+             type="color" default="#1B6AA5" value="#1B6AA5">
+#outer-wrapper {
+        width:970px;
+        background:#fff;
+        margin: 5px auto 0px auto;
+        padding: 0 0 1px 0;
+}
+
+#wrap2 {
+	margin: 0 auto 0px auto;
+	width: 966px;
+	text-align: left;
+}
+
+#navbar-iframe {
+   height:0px;
+   visibility:hidden;
+   display:none
+}
+
+/*-- (Generales) --*/
+
+body, h1, h2, h3, h4, h5, h6, p, form {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	font-family: Verdana,Arial, Helvetica, Georgia, Sans-serif;
+	font-size: 12px;
+	vertical-align: top;
+	background: $bgcolor;
+        color:$textocolor;
+}
+
+h1 {
+	font-family: Verdana, Sans-serif;
+	font-size: 30px;
+	padding: 0 0 10px 0;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: $enlacecolor;
+}
+
+a:hover {
+        color: #CC0000; 
+	text-decoration: none;
+}
+
+a img {
+border:0;
+}
+
+p {
+	padding: 10px 0 0 0;
+}
+
+blockquote {
+        margin:5px 10px;
+        padding:4px 7px 10px 7px;
+        font-size:10px;
+        color:#336699;  
+        border:1px dashed #40a9c9;
+        background: #FFFFFF url() no-repeat 10px 4px;        
+}
+
+blockquote blockquote {
+        margin:5px 10px;
+        padding:4px 7px 10px 7px;
+        font-size:10px;
+        background:#bac9cc; 
+        color:#336699;  
+        border:1px dashed #40a9c9;
+        background: #d8eaee url(http://bp0.blogger.com/_Zuzii37VUO4/R2iVTSjZEdI/AAAAAAAACeo/0reNSdqOfpU/s1600/quote.gif) no-repeat 10px 4px;      
+}
+
+#main-wrapper {overflow:hidden;} 
+
+.clear {clear:both;}  
+  
+#blog-pager-newer-link {float: left;} 
+
+#blog-pager-older-link {float: right;} 
+
+#blog-pager {text-align: center; }
+
+/*-- (Cabecera) --*/
+
+#header-wrapper {
+	float: left;
+	width: 958px;
+        height: 89px;
+        background: #0099cb; 
+        margin:1px auto;
+        padding: 2px 0 2px 8px;
+        text-decoration:none;
+        background:url(http://bp0.blogger.com/_47YXV2kCw1M/SF6bx_JdYBI/AAAAAAAAAMI/2ab2FoZjeh0/s1600/themexred.png) repeat-x;
+}
+
+#header {
+        float:left;
+        width:335px;height:85px;
+        margin-bottom:10px; padding:0;
+        background-image:url(http://bp3.blogger.com/_47YXV2kCw1M/SF6bIDV7OaI/AAAAAAAAALw/kXVjX5uFnOk/s1600/final_logo_red.png);
+}
+
+#header h1, #header p { display:none; visibility:hidden; height:0; }
+
+#header_r {
+        float:left;height:51px;width:410px;
+        margin:0; padding:35px 0 0 0;
+        background-image:url(http://bp0.blogger.com/_47YXV2kCw1M/SF6bGbKbUpI/AAAAAAAAALo/dLDUwQrN6kY/s1600/adsholderred.png);
+}
+
+#header_r_ads {
+        margin:0; 
+float:center;
+padding:0 0 5px 20px;
+        width:190px;
+        height:2px;          
+}
+
+
+/*-- (Menú) --*/
+
+#nav {
+        clear:both;
+        margin:1px auto 1px auto;
+        width: 966px;
+        height:31px;
+        background: url(http://img514.imageshack.us/img514/9677/966nby31vj8.png) repeat-x;
+        overflow:hidden; 
+}
+
+#nav_l {
+        float:left;
+        width:966px;  
+        margin:0px; padding:0px; 
+        overflow:hidden;
+        height:31px; 
+}
+
+.menu {
+        float:left;
+        margin:5px 1px;
+        padding:3px;
+        width:966px;
+}
+	
+.menu li {
+	display: inline;
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+
+.menu ul, .menu ol {
+        display: inline;
+	list-style: none;
+	margin:0;
+	padding:0 10px 0 0;
+}
+		
+.menu a, .menu a:visited {
+	color: $colormenu;
+	font-weight: bold;
+	margin:0;
+	padding: 3px 10px 3px 10px;
+	text-decoration: none;
+}
+		
+.menu a:hover {
+	background: #E8110F;
+	text-decoration: none;
+        border:1px solid #fff;
+}
+
+/*-- (Contenedor) --*/
+
+#content-wrapper {
+
+}
+
+/*-- (Principal) --*/
+
+#main-wrapper {
+	float: left;
+	width: 550px;
+        padding: 6px 10px 10px 10px;
+        text-align:justify;
+        background: #fff;
+        margin:0 auto 1px auto;
+}
+
+#main-wrapper a {
+}
+
+#main-wrapper a:hover {
+        color: #CC0000; 
+}
+
+h2.date-header {
+  margin:0 28px 0 12px;
+font-size: 10px;
+  line-height:1em;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#1B6AA5;
+  }
+
+.post {
+        padding: 0px 6px 10px 6px;
+}
+
+.post-title {
+        font-size: 12px;
+        color:$colortituloentrada;
+        margin:0 0px;
+background: #F2F2F2;
+  padding: 7px;
+  border:1px dotted #CCCCCC;
+}
+
+.post h2 {
+	font-family: Verdana, Georgia, Sans-serif;
+	font-size: 12px;
+        margin:0 0px;
+        text-align:left;
+        text-transform:none; 
+}
+
+.post-body {
+	font-family: Verdana, Arial, Georgia, Sans-serif;
+	font-size: 11px;
+	line-height: 1.3em;
+	margin: 2px 0 5px 0;
+}
+
+.post_header {
+        margin:0; padding:0;
+        height:33px;
+        background:#fff;
+}
+
+.post_headerr {
+        margin:0; padding:0;
+}
+
+.details {
+        margin:0; padding:4px 5px;
+}
+
+.post-labels {
+        background:url(http://bp2.blogger.com/_Zuzii37VUO4/R2iVSyjZEZI/AAAAAAAACeI/UgTKEfkUALU/s1600/folder.gif) no-repeat;
+        margin:0; padding:1px 0 0 20px;
+}
+
+.details .post-comment-link {
+        background:url(http://bp3.blogger.com/_Zuzii37VUO4/R2iVTCjZEbI/AAAAAAAACeY/2XevMzxCuWM/s1600/list_comments.gif) no-repeat;
+        margin:0; padding:0 0 0 20px;
+}
+
+
+.post-footer {
+	margin: 10px 0 0 0;
+        padding:1px 6px 1px 6px;
+        background: #fff;
+}
+
+.post-crap {
+        font-size: 12px;
+        color:$colortituloentrada;
+        margin:0 0px;
+background: #F2F2F2;
+  padding: 7px;
+  border:1px dotted #CCCCCC;
+}
+
+#blog-pager {
+	padding: 10px 0 0 0;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 18px;
+}
+
+.blog-pager-older-link {
+        margin:0;padding:0;
+}
+
+.blog-pager-newer-link {
+        margin:0;padding:0;
+}
+
+/*-- (Lateral) --*/
+
+#sidebar-wrapper {
+        border-right: 1px solid #CCCCCC;
+	float: left;
+	width: 198px;
+	margin: 1px 0 0 2px;
+        background:#fff;
+}
+
+#sidebar-wrapper ul{
+	list-style: none;
+	margin:0; padding:0;
+}
+
+#sidebar-wrapper li{
+	padding: 0;
+	line-height: 24px;
+}
+
+#sidebar-wrapper h2 {
+	font-family: Georgia, Sans-serif;
+	font-size: 14px;
+}
+
+#sidebar_top {
+text-align:right
+        margin:6px 0 0 0;padding:8px;
+
+#sidebar-wrapper2 {
+        border-left: 1px solid #CCCCCC;
+	float: right;
+	width: 198px;
+	margin: 1px 0 0 2px;
+        background:#fff;
+}
+
+#sidebar-wrapper2 ul{
+	list-style: none;
+	margin:0; padding:0;
+}
+
+#sidebar-wrapper2 li{
+text-align:left;
+	padding: 0;
+	line-height: 24px;
+}
+
+#sidebar-wrapper2 h2 {
+	font-family: Georgia, Sans-serif;
+	font-size: 14px;
+text-align:left;
+}
+        background:url(http://bp1.blogger.com/_47YXV2kCw1M/SF6bx2BCVzI/AAAAAAAAAMA/BgZiSarPRRc/s1600/sidebar_top.jpg) repeat-x;
+        width: 198px;
+        line-height:12px;
+        text-align:justify;
+        border:1px solid #91d3e9;
+        font-size:10px;
+        font-family:verdana;
+}
+
+#sidebar_top h4 {
+        color:#0e5268;
+text-align:right
+        margin-bottom:3px;
+        font-size:14px;
+}
+
+.widget-content {
+}
+
+.sidebar .widget {
+	padding: 10px 0;
+}
+
+#sidebar1 {
+        margin:0;padding: 0 1px 0 0;
+        float:left;
+        width:184px;
+}
+
+#sidebar1 ul{
+	list-style: none;
+}
+
+#sidebar1 ul li {
+	padding: 0 0 0 20px;
+	line-height: 18px;
+	font-family: Verdana, Georgia, Sans-serif;
+    background:url(http://bp2.blogger.com/_Zuzii37VUO4/R2iVHyjZEVI/AAAAAAAACdo/84fBq9ZlKOE/s1600/arrow_blue.jpg) no-repeat 0px 0px; 
+}
+
+#sidebar1 .widget {
+	padding: 0 0 2px 0;
+	font-family: Verdana, Georgia, Sans-serif;
+	font-size: 11px;
+    color:#7a888c;
+	margin:0;
+}
+
+#sidebar1 .widget a:link, #sidebar1 ,widget a:visited {
+        color:$colortextolateral;
+	padding: 0 2px 4px 2px;
+}
+
+#sidebar1 h2{
+	font-family: Verdana,Arial, Georgia, Sans-serif;
+	font-size: 11px;
+    background:url(http://bp3.blogger.com/_47YXV2kCw1M/SF6bC1GcmlI/AAAAAAAAALY/JUhdUV3UeHA/s1600/187by30.png) no-repeat top left;
+    margin:0; padding:7px 0 0 8px;
+    height:30px;width:182px;
+    color:$colortituloslateral;
+    text-transform:none;
+}
+
+#sidebar2 {
+border-left: 1px solid #CCCCCC;
+        margin:0;padding: 0 1px 0 0;
+        float:left;
+        width:181px;
+}
+
+#sidebar2 ul{
+	list-style: none;
+}
+
+#sidebar2 .widget {
+	padding: 0 0 4px 2px;
+	font-family: Verdana, Georgia, Sans-serif;
+	font-size: 11px;
+    color:#7a888c;
+	margin:0;
+}
+
+#sidebar2 .widget a:link, #sidebar2 .widget a:visited {
+        color:$colortextolateral;
+}
+
+#sidebar2 h2{
+	font-family: Verdana, Arial, Georgia, Sans-serif;
+	font-size: 11px;
+    background:url(http://bp3.blogger.com/_47YXV2kCw1M/SF6bC1GcmlI/AAAAAAAAALY/JUhdUV3UeHA/s1600/187by30.png) no-repeat top left;
+    margin:0; padding:7px 0 0 8px;
+    height:30px;width:182px;
+    color:$colortituloslateral;
+    text-transform:none;
+}
+#sidebar2 ul li{
+	padding: 0 0 0 22px;
+	line-height: 18px;
+	font-family: Verdana, Georgia, Sans-serif;
+    background:url(http://bp2.blogger.com/_Zuzii37VUO4/R2iVHyjZEVI/AAAAAAAACdo/84fBq9ZlKOE/s1600/arrow_blue.jpg) no-repeat 2px 0px; 
+}
+
+/*-- (Pie de página) --*/
+
+#footer-wrapper {
+	clear: both;
+	width: 966px;
+        background:url(http://bp2.blogger.com/_47YXV2kCw1M/SF6bIJU2tAI/AAAAAAAAAL4/tUs9myMh_Ns/s1600/footer2.jpg) repeat-x;
+        padding:10px 0;
+        margin:0;
+}
+
+#footer-wrapper .links {
+	line-height: 13px;
+        text-align:center;
+        font-weight:700;
+        color:#fff;
+        padding: 2px 0;
+        font-size: 10px;
+        font-family:Verdana;
+}
+
+#footer-wrapper a {
+        color:#FFFFFF;
+}
+
+#footer-wrapper a:hover {
+        color:#FFCC00;
+}
+
+/*-- (Comentarios) --*/
+
+#comments h4 {
+text-align:justify;
+font-size:14px;
+font-weight:bold;
+}
+
+#comments-block {
+        margin:0 0 1px;
+        padding:0;
+       font-size:11px;
+}
+
+.comment-author {
+border-top:1px dashed #31afda;
+border-left:1px dashed #31afda;
+border-right:1px dashed #31afda;
+padding:6px 15px 0px 15px;
+margin-left:0px;
+  font-weight:bold;
+display:block;
+margin-top:10px;
+}
+
+.comment-body {
+border-left:1px dashed #31afda;
+border-right:1px dashed #31afda;
+padding:5px 15px 5px 15px;
+margin-left:0px;
+display:block;
+}
+
+#comments-block .comment-footer {
+border-left:1px dashed #31afda;
+border-right:1px dashed #31afda;
+border-bottom:1px dashed #31afda;
+margin-bottom:15px;
+margin-left:0px;
+padding:0px 15px 12px 15px;
+display:block;
+}
+
+.lolgreen {
+font-size: 11px;
+width:180px;
+color:#009933;
+background-color:#fff;
+margin:5px;
+padding:0px;
+border:1px solid #fff;
+}
+
+.loltitlegreen
+{
+color:#FFFFFF;
+background-color:#009933;
+font-weight:bold;
+font-size:12px;
+margin:0;padding:0 0 0 4px;
+font-family:Arial,Helvetica,sans-serif;
+letter-spacing:1px;
+line-height:2em;
+border-bottom-width:1px;
+border-bottom-style:solid;
+border-bottom-color:#009933;
+}
+
+.lolblue {
+font-size: 11px;
+width:180px;
+color:#009933;
+background-color:#fff;
+margin:5px;
+padding:0px;
+border:1px solid #fff;
+}
+
+.loltitleblue
+{
+color:#FFFFFF;
+background-color:#1B6AA5;
+font-weight:bold;
+font-size:12px;
+margin:0;padding:0 0 0 4px;
+font-family:Arial,Helvetica,sans-serif;
+letter-spacing:1px;
+line-height:2em;
+border-bottom-width:1px;
+border-bottom-style:solid;
+border-bottom-color:#1B6AA5
+}
+
+.lolclassic {
+font-size: 11px;
+width:180px;
+color:#000;
+background-color:#fff;
+margin:5px;
+padding:0px;
+border:1px solid #CCCCCC;
+}
+
+.loltitleclassic
+{
+color:#000000;
+background-color:#F2F2F2;
+font-weight:bold;
+font-size:12px;
+margin:0;padding:0 0 0 4px;
+font-family:Arial,Helvetica,sans-serif;
+letter-spacing:1px;
+line-height:2em;
+border-bottom-width:1px;
+border-bottom-style:solid;
+border-bottom-color:#CCCCCC;
+}
+
+.loltext
+font-size: 11px;
+color:#000;
+padding: 7px 4px 5px 8px;
+line-height: 1.4em;
+}
+
+.lolnew {
+font-size: 11px;
+width:180px;
+color:#000;
+background-color:#fff;
+margin:5px;
+padding:0px;
+border:1px solid #FFB3B3;
+}
+
+.loltitlenew
+{
+color:#FFFFFF;
+background-color:#F2F2F2;
+font-weight:bold;
+font-size:12px;
+margin:0;padding:0 0 0 4px;
+font-family:Arial,Helvetica,sans-serif;
+letter-spacing:1px;
+line-height:2em;
+border-bottom-width:1px;
+border-bottom-style:solid;
+border-bottom-color:#FFB3B3;
+}
+
+.lolnew1 {
+font-size: 11px;
+width:180px;
+color:#CCCCCC;
+background-color:#fff;
+margin:5px;
+padding:0px;
+border:1px solid #CCCCCC;
+}
+
+.loltitlenew1
+{
+color:#000000;
+background-color:#D8F3C9;
+font-weight:bold;
+font-size:12px;
+margin:0;padding:0 0 0 4px;
+font-family:Arial,Helvetica,sans-serif;
+letter-spacing:1px;
+line-height:2em;
+border-bottom-width:1px;
+border-bottom-style:solid;
+border-bottom-color:#CCCCCC;
+}
+
+.lolnew2 {
+font-size: 11px;
+width:180px;
+color:#000;
+background-color:#fff;
+margin:5px;
+padding:0px;
+border:1px solid #CCCCCC;
+}
+
+.loltitlenew2
+{
+color:#FFFFFF;
+background-color:#D7E2E9;
+font-weight:bold;
+font-size:12px;
+margin:0;padding:0 0 0 4px;
+font-family:Arial,Helvetica,sans-serif;
+letter-spacing:1px;
+line-height:2em;
+border-bottom-width:1px;
+border-bottom-style:solid;
+border-bottom-color:#CCCCCC;
+}
+
+.lolnew3 {
+font-size: 11px;
+width:180px;
+color:#000;
+background-color:#fff;
+margin:5px;
+padding:0px;
+border:1px solid #fff;
+}
+
+.loltitlenew3
+{
+color:#FFFFFF;
+background-color:#F4A817;
+font-weight:bold;
+font-size:12px;
+margin:0;padding:0 0 0 4px;
+font-family:Arial,Helvetica,sans-serif;
+letter-spacing:1px;
+line-height:2em;
+border-bottom-width:1px;
+border-bottom-style:solid;
+border-bottom-color:#F4A817;
+}
+
+.lolnew4 {
+font-size: 11px;
+width:180px;
+color:#000;
+background-color:#fff;
+margin:5px;
+padding:0px;
+border:1px solid #fff;
+}
+
+.loltitlenew4
+{
+color:#FFFFFF;
+background-color:#CC3333;
+font-weight:bold;
+font-size:12px;
+margin:0;padding:0 0 0 4px;
+font-family:Arial,Helvetica,sans-serif;
+letter-spacing:1px;
+line-height:2em;
+border-bottom-width:1px;
+border-bottom-style:solid;
+border-bottom-color:#CC3333;
+}
+
+.lolnew5 {
+font-size: 11px;
+width:180px;
+color:#000;
+background-color:#fff;
+margin:5px;
+padding:0px;
+border:1px solid #fff;
+}
+
+.loltitlenew5
+{
+color:#FFFFFF;
+background-color:#FF9900;
+font-weight:bold;
+font-size:12px;
+margin:0;padding:0 0 0 4px;
+font-family:Arial,Helvetica,sans-serif;
+letter-spacing:1px;
+line-height:2em;
+border-bottom-width:1px;
+border-bottom-style:solid;
+border-bottom-color:#FF9900;
+}
+
+.showpageArea a {
+text-decoration:underline;
+}
+.showpageNum a {
+text-decoration:none;
+border: 1px solid #ccc;
+margin:0 3px;
+padding:3px;
+}
+.showpageNum a:hover {
+border: 1px solid #ccc;
+background-color:#ccc;
+}
+.showpagePoint {
+color:#333;
+text-decoration:none;
+border: 1px solid #ccc;
+background: #ccc;
+margin:0 3px;
+padding:3px;
+}
+.showpageOf {
+text-decoration:none;
+padding:3px;
+margin: 0 3px 0 0;
+}
+.showpage a {
+text-decoration:none;
+border: 1px solid #ccc;
+padding:3px;
+}
+.showpage a:hover {
+text-decoration:none;
+}
+.showpageNum a:link,.showpage a:link {
+text-decoration:none;
+color:#333;
+}

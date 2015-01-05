@@ -1,0 +1,201 @@
+<div style="background-color:#fff; font-family:'Trebuchet MS'; color:navy; border:2px groove navy; width:500; padding:5px; font-size:16px;">
+
+</div>
+
+
+<div style="background-color:#333; border:5px solid #000; padding:15px;">
+<div style="background-color:#000; border:1px solid gold; padding:25px; font-family:'Trebuchet MS'; color:gold; font-size:16px; text-align:center;">
+
+</div></div>
+
+<div style="background-color:#FFEAF1; font-size:18px; letter-spacing:1px; color:#CC3366; padding:25px; border:5px groove maroon; text-align:center;"><hr color="#CC3366" /><br/><font face="Trebuchet MS">
+
+</font><br/><hr color="#CC3366" /></div>
+
+
+<div style="background-color:#2278A4; color:#D6F1FF; border-top:15px solid navy; border-bottom:15px solid navy; border-right:1px solid navy; border-left:1px solid navy; text-align:center; padding:40px; font-size:20px;"><font face="Trebuchet MS">
+
+</font></div>
+-------------------------------------
+
+<div style="background-color:#efefef; color:#FFCC66; border-right:2px solid #FFCC66; border-left:2px solid #FFCC66; border-bottom:15px solid #FFCC66; padding-top:35px; padding-right:5px; padding:left:5px; padding-bottom:2px; font-size:18px; text-align:center;"><font face="Trebuchet MS">
+
+</font></div>
+----------------------------------------------
+
+<div style="background-color:#eee; padding:50px;">
+<div style="background-color:#fff; border:2px solid maroon; padding:40px 5px 5px 40px; font-size:24px; color:maroon; text-align:right;"><font face="Pristina,Monotype Corsiva,Comic Sans MS">
+
+</font></div></div>
+
+-------------------------------------------------------
+<div style="background-color:#ddf; padding:25px;">
+<div style="background-color:#eef; border-right:15px solid navy; border-bottom:1px solid navy; padding:40px 5px 5px 40px; font-size:18px; color:navy; text-align:right;"><font face="Trebuchet MS">
+</font></div></div>
+----------------------------------------
+<div style="background-color:#fff; border:7px dashed #999; color:#999; font-size:18px; padding:5px;"><font face="Verdana">
+
+</font></div>
+------------------------------------------------------------------------
+
+<div style="background-color:#000; border-bottom:20px solid darkred; padding:40px 5px 5px 10px; color:red;font-size:20px;"><font face="Vivaldi,Pristina,Monotype Corsiva,Trebuchet MS,Arial">
+
+</font></div>
+
+-----------------------------------------------
+<div style="background-color:#fff; border-top:25px solid orange; border-bottom:25px solid green;  padding:10px 20px 10px 20px; color:navy; text-align:center; font-size:20px; width:500;">
+
+</div>
+
+
+<table style="background-color:#efefef;" cellspacing="-1px"><tr><td width="55" height="55" style="background-color:#476FB6; border:2px solid navy"></td><td width="500" style="background-color:#C1D7FF; border-top:2px solid navy;"></td></tr><tr><td height="500" style="background-color:#C1D7FF; border-left:2px solid navy;"></td><td valign="top" width="500" height="500" style="padding:25px; color:#476FB6; font-size:20px;">
+
+</td></tr></table>
+
+----------------------------------------------------------
+<table width="600"><td style="background-color:#fff; border-left:15px solid #eee; font-size:16px; padding:15px; color:#555" valign="top" align="left">
+
+<img  src="https://img1.orkut.com/img/doodle/orkut_logo.gif" align="right" ></td></table>
+
+----------------------------------------------------------------------------------------------------
+<table border="0" width="100%"><td style="background-color:#fff; border:7px solid #FFE18D; font-size:18px; padding:15px 5px 5px 15px; color: #ECB416;">
+
+<img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/smile.png" align="right"></td></table>
+
+-------------------------------------------------------------------------------
+<table border="0"><td style="background-color:#FCFDFF; border:3px solid #496D1F; " width="100%"><p style="padding:15px 15px 5px 200px; color:#827C8C; font-size:16px;">
+
+</p><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/greeny.png"></td></table>
+
+--------------------------------------------------------------------------
+<table border="0"><td style="background-color:#fff; border:3px solid #444;" width="100%"><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/music.jpg" align="left"><p style="clear:left; padding:15px; color:#888; font-size:16px;">
+
+</p></td></table>
+
+--------------------------------------------------------------
+<table border="0"><td style="background-color:#D3E0F0; border:3px solid #739FC9;" width="100%"><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/chill.png" align="left"><p style="clear:left; padding:15px; color:#5080AD; font-size:16px;">
+
+</p></td></table>
+-------------------------------
+
+<table height="375" style="background-color:#fff; border:5px solid #CCE57F;" cellspacing="-1px"><td valign="top" width="100%" style="padding:15px; color:#BFBF91; font-size:14px;">
+
+</td><td width="100%" height="375"><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/flower.png" ></td></table>
+
+---------------------------------------
+<table width="100%" style="border:2px solid #D32F19; background-color:#fff"><td style="padding:15px; color:#A51B14; font-size:15px;">
+
+<img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/gift.png" align="right"></td></table>
+
+-------------------------------------
+<table width="100%" style="border:2px solid #0C499C; background-color:#fff" cellspacing="-1px"><td><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/gradient_top.png" width="100%"><p style="padding:15px; color:#2793ED; font-size:15px;">
+
+</p></td></table>
+
+--------------------------------
+<table width="100%" style="border:2px solid #D32F19; background-color:#eee"><td style="padding:15px; color:#A51B14; font-size:15px;">
+
+<img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/heart.png" align="right"></td></table>
+
+---------------------------------------------
+<table border="0"><td style="background-color:#FCFDFF; border:3px solid #E965A2; " width="100%"><p style="padding:15px; color:#EE7DAB; font-size:16px;">
+
+</p><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/heart2.png" width="100%"></td></table>
+
+-------------------------------------------------------------------
+<table border="0"><td style="background-color:#000; border:9px solid #999; " width="100%"><p style="padding:10px; color:#ddd; font-size:18px;"><font face="Trebuchet MS">
+
+</font></p><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/linkin.png" width="100%"></td></table>
+
+--------------------------------------
+<table border="0" width="100%"><td style="background-color:#fff; border:7px solid #eee; font-size:18px; padding:15px 5px 5px 15px; color: #555;">
+
+<img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/lp.png" align="right"></td></table>
+
+--------------------------------------------------------------------------------------
+<table style="border:1px solid #000; background-color:#fff;" ><td width="90%" height="100%"><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/hands.png" width="90%"></td><td valign="top" width="90%" style="padding:25px 5px 5px 1px; font-size:18px; color:#333;"><font face="Verdana">
+
+</font></td></table>
+
+------------------------------------------------------------------------
+<table style="background-color:#fff; border:5px solid #FFE2FA;" width="100%" cellspacing="-1px"><td><p style="font-size:16px; text-align:center; color:#B81E9D; padding:15px 5px 1px 5px;">
+
+</p><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/butterfly.png" width="100%"></td></table>
+
+--------------------------
+<table border="0" width="100%"><td style="background-color:#fff; border:7px solid #eee; font-size:18px; padding:15px 5px 5px 15px; color: #555;">
+
+<img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/bulb.png" align="right"></td></table>
+
+----------------------------------------
+<table border="0" width="100%"><td style="background-color:#fff; border:7px solid #eee;"><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/pencil.png" align="right"><p align="left" style="font-size:18px; padding:15px; color: #555;">
+
+</p></td></table>
+
+----------------------------------------------
+<table border="0" width="100%"><td style="background-color:#fff; border:7px solid #533734; font-size:18px; padding:15px 5px 5px 15px; color: #aaa;">
+
+<img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/book.png" align="right"></td></table>
+
+-------------------------------------------------------------------------------------------------------
+<table width="100%" style="border:2px solid #FF9F01;background-color:#2A1B16;" cellspacing="-1px"><td ><p style="color:#FF9F01; font-size:16px; padding:15px;">
+
+</p><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/sunset.png" ></td></table>
+
+---------------------------------------------------------------
+<table width="100%" style="border:2px solid #C5CEAE;background-color:#5073C0;" cellspacing="-1px"><td ><p style="color:#C2C7AD; font-size:16px; padding:15px;">
+
+</p><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/beach.png"></td></table>
+
+-----------------------------------------------------------------
+<table border="0" width="100%"><td style="background-color:#fff; border:7px solid #9999CC; font-size:18px; padding:15px 5px 5px 15px; color: #9999CC;">
+
+<img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/balloons.png" align="right"></td></table>
+
+-------------------------------------------------------------
+<table border="0" width="100%"><td style="background-color:#000; border:3px solid #eee;"><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/flare.jpg" align="left"><p align="right" style="font-size:18px; padding:14px; color: #fff;">
+
+</p></td></table>
+
+-------------------------------
+<table border="0" width="100%"><td style="background-color:#000; border:3px solid red;"><p  style="font-size:14px; padding:14px; color:pink;">
+
+</p><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/rose.jpg" align="right"></td></table>
+
+--------------------------------------
+<table border="0" width="100%"><td style="background-color:#fff; border:5px solid gold;"><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/berternie.gif" align="left"><p align="right" style="font-size:18px; padding:15px; color: brown;">
+
+</p></td></table>
+
+------------------------------------
+<table border="0" width="100%"><td style="background-color:#fff; border:5px groove red;"><p align="left" style="font-size:16px; padding:15px; color:red;">
+
+</p><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/elmo.jpg" align="right"></td></table>
+
+-------------------------------
+
+
+<table border="0" width="100%"><td style="background-color:#fff; border:5px groove red;"><p align="left" style="font-size:14px; padding:15px; color:maroon;"><font face="Trebuchet MS">
+
+</font></p><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/lancer.jpg" align="right"></td></table>
+
+
+----------------------------------------
+<table border="0"><td style="background-color:#E2E3D1; border:3px dashed #739FC9;" width="100%"><br/><center><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/beach1.jpg" align="center" style="border:2px outset teal;" width="100%"><p style="clear:left; padding:15px; color:#5080AD; font-size:16px;">
+
+</p></td></table>
+
+------------------
+<table border="0"><td style="background-color:#000; border:3px outset #739FC9;" width="100%"><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/color.jpg" align="center" width="100%"><p style="clear:left; padding:15px; color:#61B1E2; font-size:14px;">
+
+</p></td></table>
+
+--------------------------------
+<table border="0" width="100%"><td style="background-color:#fff; border:5px groove black;"><p align="left" style="font-size:14px; padding:15px; color:#777;"><font face="Trebuchet MS">
+
+</font></p><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/gtr.jpg" align="right"></td></table>
+
+
+<table border="0" width="100%"><td style="background-color:#000; border:5px groove purple;"><p align="left" style="font-size:14px; padding:15px; color:#f0f;"><font face="Trebuchet MS">
+
+</font></p><img src="http://www.orkutplus.net/toolkit/generators/imgs/scrap/shut.jpg" align="right"></td></table>

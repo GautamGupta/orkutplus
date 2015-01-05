@@ -1,0 +1,630 @@
+/*
+See style.css and
+style-ie.css for
+additional info.
+*/
+
+body {
+    margin: 0;
+   padding: 0;
+	font-family: Verdana, Geneva, Arial, Sans-Serif;
+	font-size: 62.5%; /* Resets 1em to 10px , but there's font-size's all over the place compensating for it.*/
+	color: #333333;
+	background-color: #990000;
+ text-decoration:none;
+	}
+
+a:link {
+  color: #3B59A0;
+  text-decoration:none;
+  }
+a:visited {
+  color: #3B59A0;
+ text-decoration:none;
+  }
+a:hover {
+  color: #CC0000;
+  }
+a img {
+  border-width:0;
+  }
+
+.alignleft {
+	float: left;
+	}
+
+.alignright {
+	float: right;
+	}
+
+.center {
+	text-align: center;
+	}
+
+.pagetitle {
+	margin-top: 0px;
+	font-size: 1.6em;
+	font-weight: normal;
+	text-align: center;
+ text-decoration:none;
+	}
+
+/**************
+ *** ROUNDED CORNER - CENTER COL***
+ **************/
+.rbroundbox { background: url(images/nt.gif) repeat; }
+.rbtop div { background: url(images/tl.gif) no-repeat top left; }
+.rbtop { background: url(images/tr.gif) no-repeat top right; }
+.rbbot div { background: url(images/bl.gif) no-repeat bottom left; }
+.rbbot { background: url(images/br.gif) no-repeat bottom right; }
+
+/* height and width stuff, width not really necessary. */
+.rbtop div, .rbtop, .rbbot div, .rbbot {
+width: 100%;
+height: 7px;
+font-size: 1px;
+}
+.rbcontent { margin: 0 7px; }
+.rbroundbox { 
+width: 754px;
+float:none;
+margin: 1em auto;
+}
+
+/**************
+ *** Header ***
+ **************/
+
+#header {
+	position: relative;
+	height: 110px;
+	margin: 0 auto 0 auto;
+	padding: 5px 0 5px 0; /* Is this necessary? */
+	}
+	
+#blogtitle {
+/*
+position: absolute;
+top:10px;
+
+*/	
+}
+
+#blogtitle img{
+	float: left;
+}
+
+#blogtitle h1 {
+	font-size: 1.8em;
+	font-weight: normal;
+	color: #b4c6d4;
+	letter-spacing: 1px;
+	}	
+
+#banner {
+		width: 300px;
+        float:right;
+        margin: 5px 0;
+        padding: 10px 0;
+}
+
+
+#navbar {
+		clear: both;
+		float: left;
+		width: 100%;
+		height: 31px;
+		overflow: hidden;
+		}
+
+#navbar {
+		clear: both;
+		float: left;
+		width: 100%;
+		height: 31px;
+		overflow: hidden;
+		}
+
+ul.menu {
+background:black url(images/blockdefaultda4.gif) repeat-x scroll center center;
+float:left;	
+margin: 0;
+padding: 0;
+list-style-type: none;
+font: bold 11px Verdana;
+border: 1px solid #625e00;
+width:1004px;
+position:absolute;
+top:70px;
+	}
+
+ul.menu li {
+		display:inline;
+ text-decoration:none;
+		}
+
+ul.menu li a {
+		float: left;
+color: white;
+padding: 9px 11px;
+text-decoration: none;
+border-right: 1px solid white;
+		}
+
+ul.menu li a:link,
+ text-decoration:none;
+ul.menu li a:visited {
+		color: white;
+ text-decoration:none;
+		}
+	
+ul.menu li a:hover,
+ul.menu li a:active {
+background:black url(images/blockactivenr6.gif) repeat-x scroll center center;
+}
+
+/******************************
+ *** Columns and Containers ***
+ ******************************/
+
+.fixcontain1{
+    	position: absolute;
+	left: 0px;
+	width: 225px;
+	background: #fff;
+	text-decoration:none;
+}
+
+.fixcontain2{
+width: 754px;
+float:none;
+margin-left:21em;
+}
+
+#page_container {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	font-size: 1.2em;
+ text-decoration:none;
+	}
+
+#postcol {
+	background: #fff;
+text-decoration:none;
+	}
+	
+.postbox {
+	margin: 15px 0px 15px 0px;
+	padding: 0px;
+	background: white;
+text-decoration:none;
+	}
+.post_title { background: #fff; }
+.postbox .content {
+	margin: 0px 15px 0px 15px;
+	padding: 0px;
+text-decoration:none;
+	}
+
+.navigation { margin: 15px 0px 15px 0px; }
+
+/************
+ *** Post ***
+ ************/
+
+h2.title {
+	margin: 0px;
+	padding: 15px 15px 5px 15px;
+	letter-spacing: none;
+	font-weight: bold;
+	line-height: 1em;
+	font-size: 1.6em;
+text-decoration: none;
+	}
+
+h2.title a {
+	color: #324B86;
+	text-decoration: none;
+font-size: 70%;
+
+	}
+
+h2.title a:hover {  }
+
+small.title {
+	margin: -10px 0px 0px 0px;
+	padding: 0px 15px 0px 15px;
+          text-decoration:none;
+	font-size: 0.9em;
+
+	color: #777777;
+	}
+
+.postmetadata {
+	text-align: center;
+	padding: 0px 0px 15px 0px;
+	margin: 0px;
+	color: #777777;
+text-decoration:none;
+	}
+
+blockquote {
+	color: #777;
+	display: block;
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	background: url(images/quote.gif) no-repeat left top;
+	}
+
+cite {
+	margin: 5px 0 0;
+	display: block;
+ text-decoration:none;
+	}
+
+strike {
+	color: #777;
+ text-decoration:none;
+	}
+
+code {
+	font: 1.1em 'Courier New', Georgia, Fixed, Sans-Serif;
+ text-decoration:none;
+	}
+
+.postbox .content img {
+	padding: 0;
+	max-width: 100%;
+text-decoration:none;
+	}
+
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+	}
+
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.content{
+	padding: 15px 15px 0 15px;
+font-family: Verdana, Arial, Georgia, Sans-serif;
+	font-size: 11px;
+text-decoration:none;
+	line-height: 2.0em;
+}
+
+.content h2 {
+	font-size: 1.4em;
+	font-weight: normal;
+text-decoration:none;
+	letter-spacing: 1px;
+	margin-top: 1.25em;
+	}
+
+.content h3 {
+	font-size: 1.25em;
+	font-weight: normal;
+text-decoration:none;
+	letter-spacing: 1px;
+	}
+
+.content h4 {
+	font-size: 1em;
+text-decoration:none;
+	}
+
+.content p {
+	margin-top: 1em;
+	margin-bottom: 1em;
+text-decoration:none;
+	}
+
+/****************
+ *** Comments ***
+ ****************/
+
+.commenthead 
+{
+font-weight: bold;
+margin:0 0px;
+background: #F2F2F2;
+  padding: 7px;
+  border:1px dotted #CCCCCC;
+}
+
+#comments{
+	font-size:  1.1em;
+	text-align: left;
+	padding: 15px;
+text-decoration: none;
+	}
+
+.respond {
+font-size: 1.0em;
+	margin-top: 50px;
+	margin-bottom: 0px;
+	font-weight: bold;
+text-decoration: none;
+	}
+
+.comment_1, .comment_2,.comment_author {
+	margin: 15px;
+	background: white;
+text-decoration:none;
+	}
+
+.comment_1 .content, .comment_2 .content {  text-decoration:none; padding: 15px; }
+.comment_author .content {  text-decoration:none; padding: 15px; }
+
+.respond {
+	font-size: 1.5em;
+	margin-top: 50px;
+	margin-bottom: 0px;
+	padding: 0px 15px;
+ text-decoration:none;
+	}
+
+#commentform {
+	margin: 15px auto 15px auto;
+	padding: 0px 15px;
+ text-decoration:none;
+	}
+
+#commentform .textform {
+	border-style: solid;
+	border-color: #999999;
+	border-width: 1px;
+ text-decoration:none;
+	}
+
+#commentform textarea {
+	width: 100%;
+	font-size: 1.5em;
+ text-decoration:none;
+	}
+
+#commentform #submit {
+	float: right;
+	}
+
+
+/****************
+ *** Sidebars ***
+ ****************/
+
+/**************
+ *** ROUNDED CORNER RIGHT SIDEBAR ***
+ **************/
+.right-rbroundbox { background: url(images/nt.gif) repeat; }
+.right-rbtop div { background: url(images/tl.gif) no-repeat top left; }
+.right-rbtop { background: url(images/tr.gif) no-repeat top right; }
+.right-rbbot div { background: url(images/bl.gif) no-repeat bottom left; }
+.right-rbbot { background: url(images/br.gif) no-repeat bottom right; }
+
+/* height and width stuff, width not really necessary. */
+.right-rbtop div, .right-rbtop, .right-rbbot div, .right-rbbot {
+width: 100%;
+height: 7px;
+font-size: 1px;
+ text-decoration:none;
+}
+.right-rbcontent { 
+font-size: 11px;
+margin: 0 7px; 
+padding: 10px;
+ text-decoration:none;
+}
+
+
+.right-rbroundbox { 
+/*
+width: 50%; 
+margin: 1em auto; 
+
+*/}	
+
+
+#rightbar {
+	position: absolute;
+	right: 0px;
+	width: 225px;
+	background: #fff;
+text-decoration:none;
+/* 	padding: 10px; */
+	}
+
+#rightbar ul, #leftbar ul {
+	margin: 0px;
+	padding: 0px;
+ text-decoration:none;
+	}
+
+#rightbar ul li, #leftbar ul li {
+	list-style-type: none;
+	list-style-image: none;
+	margin-bottom: 15px;
+ text-decoration:none;
+	}
+
+li.sidebar-spacer {
+ text-decoration:none;
+	}
+
+#rightbar ul li h2, #leftbar ul li h2 { /* Sidebar Headings */
+	margin: 5px 0px 0px 0px;
+	font-size: 1.25em;
+text-decoration:none;
+	font-weight: normal;
+	color: #333333;
+	letter-spacing: 1px;
+	}
+
+#rightbar ul li ul, #leftbar ul li ul {
+	margin-top: 5px;
+	margin-left: 15px;
+ text-decoration:none;
+	}
+
+#rightbar ul li ul li, #leftbar ul li ul li {
+	margin-top: 3px;
+	margin-bottom: 0px;
+ text-decoration:none;
+	}
+
+
+/*********************
+ *** Archives Page ***
+ *********************/
+
+.postspermonth, .category-archives, .page-archives {
+/* Currently all the archives are styled the same */
+	margin: 5px 0 10px 0;
+text-decoration:none;
+	list-style: none;
+	padding-left: 25px;
+}
+
+.page_item { 
+text-decoration:none;
+list-style: none; }
+
+.postspermonth .comment-count {
+	color: #999999;
+	}
+
+
+/******************
+ *** Links Page ***
+ ******************/
+
+ul.links {
+	margin: 5px 0 10px 0;
+	list-style: none;
+	padding-left: 0px;
+text-decoration:none;
+	}
+
+ul.links li {
+	list-style: none;
+	padding-bottom: 2px;
+text-decoration:none;
+	}
+
+
+/**************
+ *** lol ***
+ **************/
+
+.lolclassic {
+font-size: 11px;
+width:180px;
+color:#000;
+background-color:#fff;
+margin:5px;
+padding:0px;
+border:1px solid #CCCCCC;
+}
+
+.loltitleclassic
+{
+color:#000000;
+background-color:#F2F2F2;
+font-weight:bold;
+font-size:12px;
+margin:0;padding:0 0 0 4px;
+font-family:Arial,Helvetica,sans-serif;
+letter-spacing:1px;
+line-height:2em;
+border-bottom-width:1px;
+border-bottom-style:solid;
+border-bottom-color:#CCCCCC;
+}
+
+/**************
+ *** Footer ***
+ **************/
+
+/**************
+ *** ROUNDED CORNER FOOTER ***
+ **************/
+.foot-rbroundbox { background: url(images/nt.gif) repeat; }
+.foot-rbtop div { background: url(images/tl.gif) no-repeat top left; }
+.foot-rbtop { background: url(images/tr.gif) no-repeat top right; }
+.foot-rbbot div { background: url(images/bl.gif) no-repeat bottom left; }
+.foot-rbbot { background: url(images/br.gif) no-repeat bottom right; }
+
+/* height and width stuff, width not really necessary. */
+.foot-rbtop div, .foot-rbtop, .foot-rbbot div, .foot-rbbot {
+width: 100%;
+height: 7px;
+font-size: 1px;
+}
+
+.foot-rbcontent { 
+margin: 0 7px; 
+padding: 10px;
+ text-decoration:none;
+}
+
+.foot-rbroundbox { 
+width: 754px; 
+margin: 1em auto; 
+background: #fff;
+text-decoration:none;
+position:relative;
+left:127px;
+}	
+
+#footer {
+clear: both;
+text-align: center;
+ text-decoration:none;
+}
+
+#worldmap {
+	position:absolute;
+	width:85px;
+	height:25px;
+	z-index:1;
+	left: 375px;
+	top: 54px;
+}
+
+.lolfullbox {
+font-size: 11px;
+width:auto;
+color:#000;
+background-color:#fff;
+border:1px solid #CCCCCC;
+line-height:1.2em;
+height:99%;
+}
+
+.titleclassic
+{
+color:#000000;
+background-color:#F2F2F2;
+font-weight:bold;
+font-size:12px;
+margin:0;padding:0 0 0 4px;
+font-family:Arial,Helvetica,sans-serif;
+letter-spacing:1px;
+line-height:1.2em;
+border-bottom-width:1px;
+border-bottom-style:solid;
+border-bottom-color:#CCCCCC;
+}

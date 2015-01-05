@@ -1,0 +1,364 @@
+*
+{
+   margin: 0;
+   padding: 0;
+}
+body{
+	font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif; 
+	font-size:12px;
+}
+.spacer{clear:both; height:1px;}
+.myform{
+	margin:0 auto;
+	width:auto;
+	padding:14px;
+}
+	#stylized{
+		border:solid 2px #b7ddf2;
+		background:#ebf4fb;
+	}
+	#stylized h1 {
+		font-size:14px;
+		font-weight:bold;
+		margin-bottom:8px;
+	}
+	#stylized p{
+		font-size:11px;
+		color:#666666;
+		margin-bottom:20px;
+		border-bottom:solid 1px #b7ddf2;
+	}
+	#stylized ul,li{
+		font-size:11px;
+		color:#666666;
+		margin-bottom:5px;
+	}
+	#stylized label{
+		display:block;
+		font-weight:bold;
+		text-align:right;
+		width:200px;
+		float:left;
+		padding:6px 0 0 0;
+	}
+#stylized label2{
+		display:block;
+		font-weight:bold;
+		text-align:right;
+		float:left;
+		padding:6px 0 0 0;
+	}
+	#stylized .small{
+		color:#666666;
+		display:block;
+		font-size:11px;
+		font-weight:normal;
+		text-align:right;
+		width:140px;
+	}
+	#stylized input{
+		float:left;
+		font-size:12px;
+		padding:4px 2px;
+		border:solid 1px #aacfe4;
+		margin:2px 0 20px 10px;
+	}
+	#stylized button{ 
+		clear:both;
+		margin-left:150px;
+		width:150px;
+		height:31px;
+		background:#666666 url(img/button.png) no-repeat;
+		text-align:center;
+		line-height:31px;
+		color:#FFFFFF;
+		font-size:11px;
+		font-weight:bold;
+	}
+#boxBorder {
+    position: absolute;
+    background-image:url(../images/table.png);
+    width: 600px;
+    height: 272px;
+    top: 130px;
+    left: 50%;
+    margin-left: -300px;
+}
+
+#answer {
+    bottom: 20px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #53535C;
+}
+#questionBubble{
+	padding-bottom:5px;
+}
+.helpBox {
+	border: 1px solid #666;
+	width: 200px;
+	height: 50px;
+	position: absolute;
+	left: 50%;
+	top: 70%;
+	margin-top: -210px;
+	margin-left: 50px;
+	}
+#petitionText{
+	background-color:#000000;
+	color:#CCCCCC;
+}
+#questionText{
+	background-color:#000000;
+	color:#CCCCCC;
+}
+.helpBox div {
+	margin: 4px;
+	font-size: 22px;
+	color: #ccc;
+	text-align: center;
+	background: #666;
+	height: 42px;
+	}
+
+.helpBox div p {
+	padding-top: 7px;
+	cursor: pointer;
+	}
+	
+/* Begin Text Box Styles */
+
+#petition
+{
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    margin-left: -250px;
+    width: 508px;
+    font-size: 30px;
+    border: 1px solid #C4C4D9;
+}
+
+#petition label
+{
+    position: absolute;
+    top: -28px;
+    font-size: 30px;
+    color: black;
+}
+
+#petition input
+{
+    width: 500px;
+    font-size: 30px;
+    border: none;
+    margin: 4px;
+}
+
+#question
+{
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    margin-left: -250px;
+    width: 508px;
+    font-size: 30px;
+    border: 1px solid #C4C4D9;
+}
+
+#question label
+{
+    position: absolute;
+    top: -28px;
+    font-size: 30px;
+    color: black;
+}
+
+#question input
+{
+    width: 500px;
+    font-size: 30px;
+    border: none;
+    margin: 4px;
+}
+
+#terminalText
+{
+    font-size: 16px;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    width: 500px;
+    color: white;
+}
+
+#askQuestion
+{
+    width: 190px;
+    height: 40px;
+    bottom: 20px;
+    left: 20px;;
+    text-align: center;
+    position: absolute;
+    pointer: cursor;
+    color: white;
+    border-bottom: 3px solid #C4C4D9;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#judsReply
+{
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    width: 500px;
+    margin-left: -250px;
+    text-align: center;
+}
+
+#contentContainer
+{
+    width: 500px;
+    position: absolute;
+    top: 700px;
+    left: 50%;
+    margin-left: -250px;
+}
+
+.first
+{
+    margin-top: 0px;
+}
+
+.content 
+{
+    display: none;
+}
+
+.content h1
+{
+    margin-top: 60px;
+    font-size: 30px;
+    font-weight: normal;
+    color: #53535C;
+    border-bottom: 1px solid #53535C;
+}
+
+.content p
+{
+    padding: 5px;
+    font-size: 14px;
+    color: #999;
+}
+
+
+#extraSpace
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#footer .content 
+{
+    display: block;
+}
+
+/* Start psuedo terminal css */
+#overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 98;
+	width: 100%;
+	background-color: #000;
+}
+
+#theAnswer{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    margin-left: -200px;
+    width: 400px;
+    height: 100px;
+    font-size: 30px;
+    text-align: center;
+    padding: 0;
+}
+
+#newQuestion{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    text-decoration: underline;
+    text-align: left;
+    width: 207px;
+}
+
+#newQuestion p {
+    cursor: pointer;
+}
+
+#infoSlider {
+	position: absolute;
+	left: 50%;
+	top: 150px;
+	margin-left: -275px;
+	color: black;
+	background: white;
+	width: 550px;
+	font-size: 16px;
+	z-index: 80;
+}
+
+#slideWrapper {
+    margin: 30px;
+    text-align: left;
+}
+
+#slideWrapper ul {
+    margin: 10px;
+}
+
+#ads {
+    bottom: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -355px;
+    width: 720px;
+    text-align: center;
+}
+
+#logo {
+	position: absolute;
+	left: 50%;
+	top: 60%;
+	margin-top: -250px;
+	margin-left: -250px;
+	}
+
+img {
+ border: 0;
+ }
+
+#linkUnits {
+	top: 385px;
+	width: 600px; 
+	left: 50%; 
+	margin-left: -300px; 
+	position: absolute; 
+	z-index: 200; 
+	text-align: center;
+	}
+
+div#intro {
+	margin: 0 0 0 0;
+	padding: 5px 0 0 0;
+	background: #EBF4FB;
+	text-align: center;
+}

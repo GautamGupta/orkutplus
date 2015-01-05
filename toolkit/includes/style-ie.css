@@ -1,0 +1,30 @@
+/*
+This stylesheet contains the style information pertaining
+to IE6
+*/
+
+/* This hack is required for postboxes to display properly in IE6 */
+/* Escaped comment hides the following block from IE5-mac \*/
+* html .postbox .content { height: 1% }
+/* End hide from IE5-mac */
+/* The star selector above hides that line from IE7 */
+
+/* This hack is required for comment boxes to display properly in IE6 */
+/* Escaped comment hides the following block from IE5-mac \*/
+* html .comment_1 .content { height: 1% }
+/* End hide from IE5-mac */
+/* The star selector above hides that line from IE7 */
+
+/* This hack is required for comment boxes to display properly in IE6 */
+/* Escaped comment hides the following block from IE5-mac \*/
+* html .comment_2 .content { height: 1% }
+/* End hide from IE5-mac */
+/* The star selector above hides that line from IE7 */
+
+/* This hack is required for comment boxes to display properly in IE6 */
+/* Escaped comment hides the following block from IE5-mac \*/
+* html .comment_author .content { height: 1% }
+/* End hide from IE5-mac */
+/* The star selector above hides that line from IE7 */
+
+li.sidebar-spacer { width: 220px; }

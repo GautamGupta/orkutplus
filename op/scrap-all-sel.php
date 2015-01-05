@@ -1,0 +1,1 @@
+<?php header("Location: http://toolkit.orkutplus.net/scrapall/scrap-all.php"); ?>

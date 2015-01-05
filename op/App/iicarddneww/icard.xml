@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="Orkut i-Card Generator!">
+    <Require feature="opensocial-0.8"/>
+  </ModulePrefs>
+  <Content type="html" view="canvas">
+    <![CDATA[
+<html>
+<head>
+   <SCRIPT language=Javascript>
+   var read_val;
+      function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+
+         return true;
+      }
+      function showset()
+      {
+      	for (var i=0; i < document.ding.set.length; i++)
+		{
+			if (document.ding.set[i].checked)
+			{
+      			read_val = document.ding.set[i].value;
+			}
+		}
+		switch(read_val)
+		{
+		case "set1":
+			document.getElementById("1set").style.display="";
+			document.getElementById("default1").checked="true";
+			document.getElementById("2set").style.display="none";
+			document.getElementById("3set").style.display="none";
+			break;
+		case "set2":
+			document.getElementById("2set").style.display="";
+			document.getElementById("default2").checked="true";
+			document.getElementById("1set").style.display="none";
+			document.getElementById("3set").style.display="none";
+			break;
+		case "set3":
+			document.getElementById("3set").style.display="";
+			document.getElementById("default3").checked="true";
+			document.getElementById("2set").style.display="none";
+			document.getElementById("1set").style.display="none";
+			break;
+      }
+      switch(read_val)
+		{
+		case "set1":
+			icard = icard1;
+			icard = icard + "set1.gif?uid=" + owneruid;
+			break;
+		case "set2":
+			icard = icard1;
+			icard = icard + "set2.gif?uid=" + owneruid;
+			break;
+		case "set3":
+			icard = icard1;
+			icard = icard + "set3.gif?uid=" + owneruid;
+			break;
+      }
+     	for (var i=0; i < document.ding.cardtype.length; i++)
+		{
+			if (document.ding.cardtype[i].checked)
+			{
+      			color_val = document.ding.cardtype[i].value;
+			}
+		}
+		switch(color_val)
+		{
+		case "black":
+			icard = icard + "&color=black";
+			 
+			break;
+		case "blue":
+			icard = icard + "&color=blue";
+			 
+			break;
+		case "brown":
+			icard = icard + "&color=brown";
+			 
+			break;	
+		case "green":
+			icard = icard1;
+			icard = icard + "&color=green";
+			 
+			break;
+		case "lightgreen":
+			icard = icard + "&color=lightgreen";
+			 
+			break;
+		case "orange":
+			icard = icard + "&color=orange";
+			 
+			break;
+   		case "pink":
+			icard = icard + "&color=pink";
+			 
+			break;
+		case "red":
+			icard = icard + "&color=red";
+			 
+			break;
+		case "yellow":
+			icard = icard + "&color=yellow";
+			 
+			break;
+		case "white":
+			icard = icard + "&color=white";
+			 
+			break;
+		case "darkblue":
+			icard = icard + "&color=darkblue";
+			 
+			break;
+		case "skyblue":
+			icard = icard + "&color=skyblue";
+			 
+			break;
+		}
+	}	
+   </SCRIPT>
+    <script type="text/javascript" src="http://apps.orkutplus.net/icard/js/prototype.js"></script>
+	<script type="text/javascript" src="http://apps.orkutplus.net/icard/js/scriptaculous.js?load=effects"></script>
+	<script type="text/javascript" src="http://apps.orkutplus.net/icard/js/lightbox.js"></script>
+	<link rel="stylesheet" href="http://apps.orkutplus.net/icard/css/lightbox.css" type="text/css" media="screen" />
+	<style>
+	a {
+		color:#FFF;
+	}
+</script>
+</head>
+<body style="background:url('http://static.ak.fbcdn.net/images/welcome/radial_behind_content.jpg');background-color:#bbc6da;">
+<div align="center">
+<h2 id="mheader"><font color="#00CC00">Orkut <font color="#0099FF">ID Card</font> Generator </h2>
+</div>
+<div align="center" id="card" style="display:none;">
+</div>
+<div align="center" style="display:none;" id="codes">
+Code: <textarea id="htmlcode"></textarea>
+</div>
+<div id="dl" style="display:none;">
+<p style="float:left;"><a href="javascript:void(0)" onclick="bstep2();"><font color="#0066FF"><< Back</font></a></p><p style="float:right;"><a href="javascript:void(0):" onclick="startdl();"><font color="#F00000">Download Card</font></a></p>
+<iframe frameborder="0" height="0px" width="0px" src="" id="ddl" style="display:none;"></iframe>
+</div>
+<div id="info">
+Welcome to <b>Orkut i-Card Generator!</b> Please have a look at the text below. :-)<br>
+To generate your own card fill out the form below, if you enter them the card will have the entered values or you can simply leave it blank to get the real values! <br>
+</div>
+<p align="center" id="bla"><a href="javascript:void(0);" onclick="custom();"><font color="#0099FF"><u>Click Here!</u></font></a> to start generating!</p>
+<br><form name="ding">
+<div id="step2" style="display:none;" align="center">
+<h2><font color="#0066FF">Step 3 - Optional Details </font></h2>
+<b>
+<table border="0">
+<tr>
+<td><font color="#0099FF">Name</font></td><td>:</td><td><input type="textbox" id="namec" maxlength="50" value="" onBlur="preview();"></td>
+</tr>
+<tr>
+<td><font color="#00CC00">Short Desc</font></td><td>:</td><td><input type="textbox" id="desc" maxlength="100" value="" onBlur="preview();"></td><td>Or <input type="checkbox" name="v2" onclick="man();" onBlur="preview();" checked>Use my status instead!</td>
+</tr>
+<tr>
+<td><font color="#00CC00">Scraps</font></td><td>:</td><td><input type="textbox" id="scrapc" maxlength="8" onkeypress="return isNumberKey(event)" onBlur="preview();" value=""></td>
+</tr>
+<tr>
+<td><font color="#0099FF">Photos</font></td><td>:</td><td><input type="textbox" id="photoc" maxlength="5" onkeypress="return isNumberKey(event)"  onBlur="preview();"
+value=""></td>
+</tr>
+<tr>
+<td><font color="#F00000">Videos</font></td><td>:</td><td><input type="textbox" id="videoc" maxlength="5" onkeypress="return isNumberKey(event)"  onBlur="preview();"
+value=""></td>
+</tr>
+<tr>
+<td><font color="#F00000">Fans</font></td><td>:</td><td><input type="textbox" id="fanc" maxlength="5" onkeypress="return isNumberKey(event)"  onBlur="preview();"    value=""></td>
+</tr>
+</table>
+<p style="float:left;"><a href="javascript:void(0);" onclick="firststep();"><font color="#0066FF"><< Back </font></a></p><p style="float:right;"><a href="javascript:void(0);" onclick="generate();"><font color="#0066FF">Generate! >></font></a></p>
+</div>
+<div align="center" id="firststep" style="display:none;">
+<h2><font color="#0066FF">Step 1 - Choose a Format</font></h2>
+<table align="center">
+<tr>
+<td><font color="#0066FF">Color:</font></td><td>:</td><td><input type="radio" onclick="showset();" name="set" value="set1" checked>Set 1 <input type="radio" onclick="showset();" name="set" value="set2">Set 2 <input type="radio" onclick="showset();"  name="set" value="set3" >Set 3</td>
+</tr>
+</table>
+<p align="center"><img src="http://apps.orkutplus.net/icard/preview/set1/scene.gif"> <img src="http://apps.orkutplus.net/icard/preview/set2/scene.gif"> <img src="http://apps.orkutplus.net/icard/preview/set3/scene.gif"></p>
+<p><p style="float:left;"><font color="#707070"><< Back </font></p><p style="float:right;"><a href="javascript:void(0);" onclick="extrastep();"><font color="#0066FF">Next >></font></p>
+</div>
+<div align="center" id="extrastep" style="display:none;">
+<h2><font color="#0066FF">Step 2 - Choose Color</font></h2>
+<div id="1set">
+<a href="http://apps.orkutplus.net/icard/images/set1/card-1.gif" rel="lightbox"><img src="http://apps.orkutplus.net/icard/preview/set1/scene.gif"></a>
+&nbsp;&nbsp;
+<a href="http://apps.orkutplus.net/icard/images/set1/card-2.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set1/bluescene.gif"></a>
+&nbsp;&nbsp;
+<a href="http://apps.orkutplus.net/icard/images/set1/card-3.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set1/brownscene.gif"></a>
+<br>
+<input type="radio" name="cardtype" value="black"  checked="checked" id="default1">Black 
+<input type="radio" name="cardtype" value="blue">Blue 
+<input type="radio" name="cardtype" value="brown">Brown
+<br>
+<a href="http://apps.orkutplus.net/icard/images/set1/card-4.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set1/greenscene.gif"></a>
+&nbsp;&nbsp;
+<a href="http://apps.orkutplus.net/icard/images/set1/card-5.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set1/lightgreenscene.gif"></a>
+&nbsp;&nbsp;
+<a href="http://apps.orkutplus.net/icard/images/set1/card-6.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set1/orangescene.gif"></a>
+<br>
+<input type="radio" name="cardtype" value="green">Green 
+<input type="radio" name="cardtype" value="lightgreen">Lightgreen 
+<input type="radio" name="cardtype" value="orange">Orange 
+<br>
+<a href="http://apps.orkutplus.net/icard/images/set1/card-7.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set1/pinkscene.gif"></a>
+&nbsp;&nbsp;
+<a href="http://apps.orkutplus.net/icard/images/set1/card-8.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set1/redscene.gif"></a>
+&nbsp;&nbsp;
+<a href="http://apps.orkutplus.net/icard/images/set1/card-9.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set1/yellowscene.gif"></a>
+<br>
+<input type="radio" name="cardtype" value="pink">Pink 
+<input type="radio" name="cardtype" value="red">Red 
+<input type="radio" name="cardtype" value="yellow">Yellow
+</div>
+<div id="2set" style="display:none;">
+<a href="http://apps.orkutplus.net/icard/images/set2/card-1.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set2/scene.gif"></a>
+&nbsp;&nbsp;
+<a href="http://apps.orkutplus.net/icard/images/set2/card-2.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set2/greenscene.gif"></a>
+&nbsp;&nbsp;
+<a href="http://apps.orkutplus.net/icard/images/set2/card-3.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set2/brownscene.gif"></a>
+<br>
+<input type="radio" name="cardtype" value="black" id="default2">Black 
+<input type="radio" name="cardtype" value="green">Green 
+<input type="radio" name="cardtype" value="brown">Brown
+<br>
+<a href="http://apps.orkutplus.net/icard/images/set2/card-4.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set2/darkbluescene.gif"></a>
+&nbsp;&nbsp;
+<a href="http://apps.orkutplus.net/icard/images/set2/card-5.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set2/skybluescene.gif"></a>
+&nbsp;&nbsp;
+<a href="http://apps.orkutplus.net/icard/images/set2/card-6.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set2/orangescene.gif"></a>
+<br>
+<input type="radio" name="cardtype" value="darkblue">Dark Blue 
+<input type="radio" name="cardtype" value="skyblue">Sky Blue 
+<input type="radio" name="cardtype" value="orange">Orange 
+<br>
+<a href="http://apps.orkutplus.net/icard/images/set2/card-7.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set2/pinkscene.gif"></a>
+&nbsp;&nbsp;
+<a href="http://apps.orkutplus.net/icard/images/set2/card-8.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set2/redscene.gif"></a>
+&nbsp;&nbsp
+<a href="http://apps.orkutplus.net/icard/images/set2/card-9.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set2/yellowscene.gif"></a>
+<br><input type="radio" name="cardtype" value="pink">Pink 
+<input type="radio" name="cardtype" value="red">Red 
+<input type="radio" name="cardtype" value="yellow">Yellow
+</div>
+<div id="3set" style="display:none;">
+<a href="http://apps.orkutplus.net/icard/images/set3/card-1.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set3/scene.gif"></a>
+&nbsp;&nbsp;
+<a href="http://apps.orkutplus.net/icard/images/set3/card-2.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set3/greenscene.gif"></a>
+&nbsp;&nbsp;
+<br>
+<input type="radio" name="cardtype" value="black" id="default3">Black 
+<input type="radio" name="cardtype" value="green">Green 
+<br>
+<a href="http://apps.orkutplus.net/icard/images/set3/card-3.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set3/bluescene.gif"></a>
+&nbsp;&nbsp;
+<a href="http://apps.orkutplus.net/icard/images/set3/card-4.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set3/whitescene.gif"></a>
+&nbsp;&nbsp;
+<a href="http://apps.orkutplus.net/icard/images/set3/card-5.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set3/orangescene.gif"></a>
+<br>
+<input type="radio" name="cardtype" value="blue">Blue 
+<input type="radio" name="cardtype" value="white">White 
+<input type="radio" name="cardtype" value="orange">Orange 
+<br>
+<a href="http://apps.orkutplus.net/icard/images/set3/card-6.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set3/pinkscene.gif"></a>
+&nbsp;&nbsp;
+<a href="http://apps.orkutplus.net/icard/images/set3/card-7.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set3/redscene.gif"></a>
+&nbsp;&nbsp;
+<a href="http://apps.orkutplus.net/icard/images/set3/card-8.gif" rel="lightbox[roadtrip]"><img src="http://apps.orkutplus.net/icard/preview/set3/yellowscene.gif"></a>
+<br>
+<input type="radio" name="cardtype" value="pink">Pink 
+<input type="radio" name="cardtype" value="red">Red 
+<input type="radio" name="cardtype" value="yellow">Yellow
+</div>
+<p><p style="float:left;"><a href="javascript:void(0);" onclick="firststep();"><font color="#0066FF"><< Back </font></a></p><p style="float:right;"><a href="javascript:void(0);" onclick="step2();"><font color="#0066FF">Next >></font></p>
+</div>
+</form>
+</div>
+<p id="bla2" align="center" style="display:none;"> Need help? <a href="javascript:void(0);" onclick="infoshow();"><font color="#0099FF"><u>Click Here!</u></font></a> to get the info para again! </p>
+<script type="text/javascript">
+var owneruid;
+var ownername;
+var state;
+var status;
+var status2;
+var dob0;
+var dob1;
+var dob2;
+var color_val;
+var t1,t2,t3,t4,t5,t6;
+var icard = "http://apps.orkutplus.net/icard/";
+var icard1 = "http://apps.orkutplus.net/icard/";
+var icard2 = "http://apps.orkutplus.net/icard/";
+function loadUsers()
+{
+var req = opensocial.newDataRequest();
+var params = {};
+params[opensocial.DataRequest.PeopleRequestFields.PROFILE_DETAILS] = [
+opensocial.Person.Field.PROFILE_URL,
+opensocial.Person.Field.STATUS,
+opensocial.Person.Field.GENDER,
+opensocial.Person.Field.RELATIONSHIP_STATUS,
+opensocial.Person.Field.CURRENT_LOCATION,
+opensocial.Person.Field.THUMBNAIL_URL];
+req.add(req.newFetchPersonRequest("VIEWER", params), "owner_profile");
+req.send(onRun);
+man();
+};
+function onRun(data)
+{
+var owner = data.get("owner_profile").getData();
+var profile_url = owner.getField(opensocial.Person.Field.PROFILE_URL);
+status = owner.getField(opensocial.Person.Field.STATUS);
+status = escape(status);
+status = status.substr(0, 99);
+var gender = owner.getField(opensocial.Person.Field.GENDER);
+gender = gender.getDisplayValue();
+status2 = owner.getField(opensocial.Person.Field.RELATIONSHIP_STATUS);
+status2 = escape(status2);
+dob0 = gender + "," + status2;
+var location = owner.getField(opensocial.Person.Field.CURRENT_LOCATION);
+dob1 = location.getField(opensocial.Address.Field.LOCALITY) + "," + location.getField(opensocial.Address.Field.REGION);
+dob2 = location.getField(opensocial.Address.Field.COUNTRY); 
+var regex = /uid=([^&#]+)/;
+var result = profile_url.match(regex);
+owneruid = result[1];
+ownername = owner.getDisplayName();
+icard = icard + "set1.gif?uid=" + owneruid;
+}
+function custom()
+{
+document.getElementById("info").style.display="none";
+document.getElementById("bla").style.display="none";
+document.getElementById("card").style.display="none";
+document.getElementById("firststep").style.display="";
+document.getElementById("mheader").style.display="none";
+gadgets.window.adjustHeight();
+}
+function infoshow()
+{
+	document.getElementById("info").style.display="";
+	document.getElementById("bla2").style.display="none";
+}
+function firststep()
+{
+	document.getElementById("info").style.display="none";
+	document.getElementById("bla").style.display="none";
+	document.getElementById("bla2").style.display="none";
+	document.getElementById("step2").style.display="none";
+	document.getElementById("card").style.display="none";
+	document.getElementById("extrastep").style.display = "none";
+	document.getElementById("firststep").style.display="";
+}
+function extrastep()
+{
+	document.getElementById("extrastep").style.display = "";
+	document.getElementById("firststep").style.display="none";
+}	
+function step2()
+{
+	document.getElementById("bla2").style.display="";
+	document.getElementById("step2").style.display="";
+	document.getElementById("card").style.display="";	
+	document.getElementById("extrastep").style.display = "none";
+	document.getElementById("firststep").style.display="none";
+	preview();
+}
+function bstep2()
+{
+	document.getElementById("bla2").style.display="";
+	document.getElementById("step2").style.display="";
+	document.getElementById("card").style.display="";
+	document.getElementById("dl").style.display="none";
+	document.getElementById("codes").style.display="none";
+	document.getElementById("extrastep").style.display = "none";
+	document.getElementById("firststep").style.display="none";
+	
+}
+function fetchvals()
+{
+	t1 = document.getElementById("namec").value;
+	t2 = document.getElementById("desc").value;
+	t3 = document.getElementById("scrapc").value;
+	t4 = document.getElementById("photoc").value;
+	t5 = document.getElementById("videoc").value;
+	t6 = document.getElementById("fanc").value;
+		switch(read_val)
+		{
+		case "set1":
+			icard = icard1;
+			icard = icard + "set1.gif?uid=" + owneruid;
+			break;
+		case "set2":
+			icard = icard1;
+			icard = icard + "set2.gif?uid=" + owneruid;
+			break;
+		case "set3":
+			icard = icard1;
+			icard = icard + "set3.gif?uid=" + owneruid;
+			break;
+      }
+     	for (var i=0; i < document.ding.cardtype.length; i++)
+		{
+			if (document.ding.cardtype[i].checked)
+			{
+      			color_val = document.ding.cardtype[i].value;
+			}
+		}
+		switch(color_val)
+		{
+		case "black":
+			icard = icard + "&color=black";
+			 
+			break;
+		case "blue":
+			icard = icard + "&color=blue";
+			 
+			break;
+		case "brown":
+			icard = icard + "&color=brown";
+			 
+			break;	
+		case "green":
+			icard = icard1;
+			icard = icard + "&color=green";
+			 
+			break;
+		case "lightgreen":
+			icard = icard + "&color=lightgreen";
+			 
+			break;
+		case "orange":
+			icard = icard + "&color=orange";
+			 
+			break;
+   		case "pink":
+			icard = icard + "&color=pink";
+			 
+			break;
+		case "red":
+			icard = icard + "&color=red";
+			 
+			break;
+		case "yellow":
+			icard = icard + "&color=yellow";
+			 
+			break;
+		case "white":
+			icard = icard + "&color=white";
+			 
+			break;
+		case "darkblue":
+			icard = icard + "&color=darkblue";
+			 
+			break;
+		case "skyblue":
+			icard = icard + "&color=skyblue";
+			 
+			break;
+		}
+}
+function generate()
+{
+		fetchvals();
+		document.getElementById("info").style.display="none";
+		document.getElementById("bla").style.display="none";
+		document.getElementById("bla2").style.display="none";
+		document.getElementById("step2").style.display="none";
+		document.getElementById("card").style.display="";
+		document.getElementById("dl").style.display="";
+		document.getElementById("codes").style.display="";
+		if(document.ding.v2.checked==true){
+		document.getElementById("card").innerHTML = '<img src="' + icard + '&dob0=' + dob0 + '&dob1=' + dob1 + '&dob2=' + dob2 + '&desc=' + status + '&scrapc=' + t3 +  '&photoc=' + t4 + '&videoc=' + t5 + '&fanc=' + t6 + '&namec=' + t1 + '">';
+		}else{
+		document.getElementById("card").innerHTML = '<img src="' + icard + '&dob0=' + dob0 + '&dob1=' + dob1 + '&dob2=' + dob2 + '&desc=' + t2 + '&scrapc=' + t3 +      '&photoc=' + t4 + '&videoc=' + t5 + '&fanc=' + t6 + '&namec=' + t1 + '">';
+		}
+		document.getElementById("htmlcode").value = "";
+		document.getElementById("htmlcode").value = document.getElementById("card").innerHTML;
+		gadgets.window.adjustHeight();
+}
+function preview()
+{
+	fetchvals();
+	document.getElementById("card").style.display="";
+	document.getElementById("dl").style.display="none";
+	document.getElementById("codes").style.display="none";
+		if(document.ding.v2.checked==true){
+		document.getElementById("card").innerHTML = '<img src="' + icard + '&dob0=' + dob0 + '&dob1=' + dob1 + '&dob2=' + dob2 + '&desc=' + status + '&scrapc=' + t3 +  '&photoc=' + t4 + '&videoc=' + t5 + '&fanc=' + t6 + '&namec=' + t1 + '">';
+		}else{
+		document.getElementById("card").innerHTML = '<img src="' + icard + '&dob0=' + dob0 + '&dob1=' + dob1 + '&dob2=' + dob2 + '&desc=' + t2 + '&scrapc=' + t3 +      '&photoc=' + t4 + '&videoc=' + t5 + '&fanc=' + t6 + '&namec=' + t1 + '">';
+		}
+		document.getElementById("htmlcode").value = "";
+		document.getElementById("htmlcode").value = document.getElementById("card").innerHTML;
+		gadgets.window.adjustHeight();
+}
+function man()
+{
+if(document.ding.v2.checked==true){
+document.getElementById("desc").disabled=true;	
+}else{
+document.getElementById("desc").disabled=false;	
+}
+}
+function startdl()
+{
+		fetchvals();
+		document.getElementById("card").style.display="";
+		document.getElementById("dl").style.display="";
+		document.getElementById("codes").style.display="";
+		if(document.ding.v2.checked==true){
+		document.getElementById("ddl").src = icard + "&dob0=" + dob0 + "&dob1=" + dob1 + "&dob2=" + dob2 + "&desc=" + t2 + "&scrapc=" + t3 + "&photoc=" + t4 + "&videoc=" + t5 + "&fanc=" + t6 + "&namec=" + t1 + "&dl=yes";
+		}else{
+		document.getElementById("ddl").src = icard + "&dob0=" + dob0 + "&dob1=" + dob1 + "&dob2=" + dob2 + "&desc=" + status + "&scrapc=" + t3 + "&photoc=" + t4 + "&videoc=" + t5 + "&fanc=" + t6 + "&namec=" + t1 + "&dl=yes";
+		}
+		document.getElementById("ddl").style.display="";
+		gadgets.window.adjustHeight();
+}
+loadUsers();
+gadgets.window.adjustHeight();  
+</script>
+</body>
+</html>
+]]> 
+</Content>
+</Module>

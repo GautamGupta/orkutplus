@@ -1,0 +1,5 @@
+Options -Indexes
+RewriteEngine On
+RewriteRule ^(/)?$ /index.php
+RewriteRule ^includes(/)?$ /404.php
+ErrorDocument 404 /404.php

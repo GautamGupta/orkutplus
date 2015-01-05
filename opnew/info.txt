@@ -1,0 +1,9 @@
+# Contact info submission
+url: orkutplus.net
+site_owner: <REDACTED>
+city: Jammu
+state: Jammu &amp; Kashmir
+country: India
+display_email: admin@orkutplus.net
+site_name: Orkut Plus!
+site_description: Your daily guide to make the most out of orkut!

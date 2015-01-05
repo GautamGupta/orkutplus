@@ -1,0 +1,30 @@
+#header { width: 1004px; }
+#page_container { width: 1254px; }
+#postcol{
+	margin-left: auto;
+	margin-right: auto;
+	text-decoration:none;
+	}
+#leftbar{
+	position: absolute;
+	left: 0px;
+	width: 225px;
+	background: #fff;
+	text-decoration:none;
+	}
+.left-rbroundbox { background: url(http://www.orkutplus.net/blog/wp-content/themes/op/images/nt.gif) repeat; }
+.left-rbtop div { background: url(http://www.orkutplus.net/blog/wp-content/themes/op/images/tl.gif) no-repeat top left; }
+.left-rbtop { background: url(http://www.orkutplus.net/blog/wp-content/themes/op/images/tr.gif) no-repeat top right; }
+.left-rbbot div { background: url(http://www.orkutplus.net/blog/wp-content/themes/op/images/bl.gif) no-repeat bottom left; }
+.left-rbbot { background: url(http://www.orkutplus.net/blog/wp-content/themes/op/images/br.gif) no-repeat bottom right; }
+.left-rbtop div, .left-rbtop, .left-rbbot div, .left-rbbot {
+width: 100%;
+height: 7px;
+font-size: 1px;
+text-decoration:none;
+}
+.left-rbcontent { 
+margin: 0 7px; 
+padding: 10px;
+text-decoration:none;
+}

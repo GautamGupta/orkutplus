@@ -1,0 +1,24 @@
+?<?xml version="1.0" encoding="UTF-8"?>
+<messagebundle>
+<msg name="orkut_theme">Múltipla Orkut Tema Gerador</msg>
+<msg name="apps_description">Melhor Orkut Ferramenta para criar vários temas em um único clique. O Tema Preview antes de instalar. Dimensões da imagem e todos os formatos suportados.</msg>
+<msg name="updatetitle"> Criando Temas é Orkut! </msg>
+<msg name="updatemsgstart"> Convida:</msg>
+<msg name="updatemsgline1"> Para que você faça download de novos temas do Orkut</msg>
+<msg name="updatemsgline2"> Para Você Criar Temas  </msg>
+<msg name="updatemsgline3"> Para Você Criar Seu Próprio Tema De Foto </msg>
+<msg name="updatemsgline4"> Para você desenvolver Temas Orkut  </msg>
+<msg name="updatemsgline5"> Para Você Criar Theme From dele / dela Fotos </msg>
+<msg name="updatemsgline6">  está criando vários temas do Orkut! </msg>
+<msg name="updatemsgline7"> Para você fazer download Últimas Orkut Temas </msg>
+<msg name="updatemsgline8">  Para que você faça download de novos temas do Orkut   </msg>
+<msg name="updfriends">  Para que você faça download de novos temas do Orkut </msg>
+<msg name="logo_image">http://sandbox.orkutplus.net/apps/theme.jpg</msg>
+<msg name="updatemsg1">Convidar amigos </msg>
+<msg name="updatemsg2">Participe da Comunidade </msg>
+<msg name="updatemsg3">Mais Orkut Ferramentas </msg>
+<msg name="updatemsg4"> Precisa de Ajuda? </msg>
+<msg name="updatemsg5">Orkut Plus!</msg>
+<msg name="updatemsg6"> Recados Para orkut</msg>
+<msg name="updatemsg7">Orkut Geradores </msg>
+</messagebundle>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Module>
+<ModulePrefs title="Multiple Orkut Theme Generator" title_url="http://www.orkutplus.net/" author="<REDACTED>" author_email="<REDACTED>@gmail.com" author_location="http://www.orkutplus.net" description="Best Orkut Tool To Create Multiple Orkut Themes in a Single Click. Preview The Theme Before Installing. All Image Dimensions and Formats Supported. Works With - Firefox, Internet Explorer, Google Chrome and Opera" screenshot="http://sandbox.orkutplus.net/apps/mutipletheme.png" thumbnail="http://sandbox.orkutplus.net/apps/theme.jpg">
+<Locale messages="http://sandbox.orkutplus.net/apps/1en_US.xml"/>
+<Locale lang="en" messages="http://sandbox.orkutplus.net/apps/2en_US.xml"/>
+<Locale lang="en-US" messages="http://http://sandbox.orkutplus.net/apps/3en_US.xml"/>
+<Locale lang="pt" messages="http://http://sandbox.orkutplus.net/apps/4pt_BR.xml"/>
+<Locale lang="pt-br" messages="http://sandbox.orkutplus.net/apps/5pt_BR.xml"/>
+<Require feature="opensocial-0.7"/>
+<Require feature="views"/>
+<Require feature="opensocial-templates" />
+<Require feature="analytics"/>
+<Require feature="dynamic-height"/>
+</ModulePrefs>
+<Content type="html" view="canvas">
+<![CDATA[
+<!-- ALm6fM1BXUPSW_AKxQZugfRNyIYTfyEWIDXIUD5HzzWQ0LAvdTOccRcvQAcQ472NOvAJV5rE20nQvmN7G6IewBvGJCi3SGWEOj3K4XJPBf42I7ZCXCJ_1gT6lcvA18o2mXib14wu4PoB -->
+<script>
+
+
+var ar = new Array(8)
+ar[0] = "__MSG_updatemsgline1__"
+ar[1] = "__MSG_updatemsgline2__"
+ar[2] = "__MSG_updatemsgline3__"
+ar[3] = "__MSG_updatemsgline4__"
+ar[4] = "__MSG_updatemsgline5__"
+ar[5] = "__MSG_updatemsgline6__"
+ar[6] = "__MSG_updatemsgline7__"
+ar[7] = "__MSG_updatemsgline8__"
+
+var now = new Date()
+var sec = now.getSeconds()
+var globalline =ar[sec % 8];
+var globalView = "canvas";
+function requestProfile() {
+var params = {};
+params[opensocial.DataRequest.PeopleRequestFields.PROFILE_DETAILS] =
+[opensocial.Person.Field.PROFILE_URL,opensocial.Person.Field.THUMBNAIL_URL,opensocial.Person.Field.NAME,opensocial.Person.Field.CURRENT_LOCATION,opensocial.Person.Field.GENDER];
+params[opensocial.DataRequest.PeopleRequestFields.MAX] = 500;
+
+var req = opensocial.newDataRequest();
+
+
+req.add(req.newFetchPersonRequest(opensocial.DataRequest.PersonId.VIEWER,
+params), "req");
+req.add(req.newFetchPeopleRequest(opensocial.DataRequest.Group.VIEWER_FRIENDS,params), 'reqFriends');
+req.send(getUid);
+};
+var globalUid="";
+function getUid(data) {
+var viewer = data.get('req').getData();
+viewer123 = data.get('req').getData();
+if((viewer)&&(globalView == "canvas")){
+var profile_url = viewer.getField(opensocial.Person.Field.PROFILE_URL);
+}else {
+var params = {};
+params[opensocial.DataRequest.PeopleRequestFields.PROFILE_DETAILS] =
+[opensocial.Person.Field.PROFILE_URL,opensocial.Person.Field.THUMBNAIL_URL,opensocial.Person.Field.NAME,opensocial.Person.Field.CURRENT_LOCATION,opensocial.Person.Field.GENDER];
+
+var req = opensocial.newDataRequest();
+
+
+req.add(req.newFetchPersonRequest(opensocial.DataRequest.PersonId.OWNER,
+params), "req");
+req.send(getUidTemp);
+}
+var profile_url = viewer.getField(opensocial.Person.Field.PROFILE_URL);
+var regex = /uid=([^&#]+)/;
+var result = profile_url.match(regex);
+if (result.length == 2) {
+var uid = result[1];
+globalUid = uid;
+}
+
+setTimeout('createActivityChat()',1000);
+}
+function getUidTemp(data) {
+var viewer = data.get('req').getData();
+viewer123 = data.get('req').getData();
+}
+
+function postActivity(activity_title, activity_body)
+{
+var activity_params = {};
+activity_params[opensocial.Activity.Field.TITLE] = activity_title;
+activity_params[opensocial.Activity.Field.BODY] = activity_body;
+var activity = opensocial.newActivity(activity_params);
+opensocial.requestCreateActivity(activity, opensocial.CreateActivityPriority.HIGH, function(response){}) ;
+};
+
+function createActivityChat()
+{
+
+viewer_pic = viewer123.getField(opensocial.Person.Field.THUMBNAIL_URL) ;
+viewer_name = viewer123.getDisplayName();
+var banner_name = "__MSG_logo_image__";
+
+
+var activity_title = "<a href='/Application.aspx?appId=528226213025&uid="+globalUid+"'>__MSG_updatetitle__</a>";
+
+var activity_body = '<table cellspacing="1" cellpadding="1"><tbody><tr><td width="10" valign="middle"><a href="/Application.aspx?appId=528226213025"><img height="70" src="'+viewer_pic+'" style="margin: 0 20 0 20"/></a></td><td width="10" valign="middle"><a href="/Application.aspx?appId=528226213025"><img height="70" src="'+banner_name+'" style="margin: 0 20 0 0"/></a></td><td align="left" style="font-size: 11px;"> <a href="/Application.aspx?appId=528226213025"><b><i>'+viewer_name+'</i></b> __MSG_updatemsgstart__ <b><br/> '+ globalline +' </b><br/> __MSG_orkut_theme__<br/>(Click Here)</a></td></tr></tbody></table>';
+
+
+//var activity_body = '<table cellspacing="1" cellpadding="1"><tbody><tr><td width="10" valign="middle"><a href="/Application.aspx?appId=528226213025"><img height="70" src="'+viewer_pic+'" style="margin: 0 20 0 20"/></a></td><td width="10" valign="middle"><a href="/Application.aspx?appId=528226213025"><img height="70" src="'+banner_name+'" style="margin: 0 20 0 0"/></a></td><td align="left" style="font-size: 11px;"> <a href="/Application.aspx?appId=528226213025"><b><i>'+viewer_name+'</i></b> is Creating Orkut Themes! </a></td></tr></tbody></table>';
+
+postActivity(activity_title, activity_body);
+}
+var globalView = "canvas";
+requestProfile();
+
+</script>
+<script>
+function sendEmail() {
+var params = [];
+params[opensocial.Message.Field.TITLE]="Hellow!";
+var body="Create Stylish Themes?";
+var message = opensocial.newMessage(body, params);
+var recipient = opensocial.DataRequest.PersonId.OWNER;
+opensocial.requestSendMessage(recipient, message);
+};
+</script>
+]]>
+</Content>
+<Content type="html" view="profile">
+<![CDATA[
+
+<style>
+body {text-align:left; font-size:10px; color:#036; font-family:Verdana, Geneva, sans-serif;background-color: transparent}
+a {color:#333; text-decoration:none}
+a:hover {color:#EEE; text-decoration:none}
+img {border:none}
+.blockquote {background:#E3F9FD; padding:5px; border:#CAEDF9 1px solid;}
+</style>
+
+<script type="text/os-template">
+
+<br><br>
+<center>
+<a href="http://www.orkut.com/AppInfo.aspx?appId=528226213025" target="parent">
+<img src="http://sandbox.orkutplus.net/apps/mutiplethemepro.png"><br><br>
+<b><a href="http://www.orkut.com/AppInfo.aspx?appId=528226213025" target="parent">
+View App in Full Screen »</b></a>
+</a>
+<br><br>
+</div>
+
+<div class="blockquote">
+Create Multiple Orkut Themes in a Single Click. Preview Themes before Installing. Themes work with - Firefox, Internet Explorer, Opera and Google Chrome
+</div></script>
+]]>
+</Content>
+<Content type="html" view="canvas">
+<![CDATA[
+
+<iframe border="0" frameborder="0" framespacing="0" width="100%" height="760px" marginheight="0" marginwidth="0" noResize scrolling='auto' src="http://sandbox.orkutplus.net/apps/custom-orkut-toolbar-maker.php"></iframe>
+<script>gadgets.window.adjustHeight('760px');</script>
+]]>
+</Content>
+</Module>

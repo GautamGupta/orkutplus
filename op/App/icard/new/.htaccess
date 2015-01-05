@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteRule ^lightgreen\.gif$ lightgreen.php
+RewriteRule ^green\.gif$ green.php
+RewriteRule ^orange\.gif$ orange.php
+RewriteRule ^red\.gif$ red.php
+RewriteRule ^pink\.gif$ pink.php
+RewriteRule ^black\.gif$ black.php
+RewriteRule ^brown\.gif$ brown.php
+RewriteRule ^blue\.gif$ blue.php
+RewriteRule ^yellow\.gif$ yellow.php

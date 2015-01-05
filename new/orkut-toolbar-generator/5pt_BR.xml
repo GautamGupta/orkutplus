@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messagebundle>
+<msg name="orkut_theme">Custom Orkut Toolbar Generator</msg>
+<msg name="apps_description">	
+Esta aplicação permitirá que você crie a sua própria Barra de ferramentas personalizada do Orkut em um único clique. Você pode adicionar seus links favoritos no seu orkut linkbar e faça orkutting mais produtiva e agradável do que nunca.</msg>
+<msg name="updatetitle"> Sua Criação é personalizada Orkut Toolbar! </msg>
+<msg name="updatemsgstart"> Invites:</msg>
+<msg name="updatemsgline1"> Você tente Custom Orkut Toolbar Generator</msg>
+<msg name="updatemsgline2">  Você tente Custom Orkut Toolbar Generator</msg>
+<msg name="updatemsgline3">  Você tente Custom Orkut Toolbar Generator</msg>
+<msg name="updatemsgline4"> Você tente Custom Orkut Toolbar Generator</msg>
+<msg name="updatemsgline5">  Você tente Custom Orkut Toolbar Generator</msg>
+<msg name="updatemsgline6">  Você tente Custom Orkut Toolbar Generator</msg>
+<msg name="updatemsgline8"> Você tente Custom Orkut Toolbar Generator</msg>
+<msg name="updfriends"> Você tente Custom Orkut Toolbar Generator</msg>
+<msg name="logo_image">http://apps.orkutplus.net/orkut-toolbar-generator/orkut-toolbar-thumb.jpg</msg>
+<msg name="updatemsg1"> Invite Friends </msg>
+<msg name="updatemsg2"> Join Community </msg>
+<msg name="updatemsg3"> More Orkut Tools</msg>
+<msg name="updatemsg4"> Need Help?</msg>
+<msg name="updatemsg5"> Orkut Plus!</msg>
+<msg name="updatemsg6"> Scraps and Glitters </msg>
+<msg name="updatemsg7"> Orkut Generators </msg>
+</messagebundle>

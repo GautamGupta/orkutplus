@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messagebundle>
+<msg name="orkut_theme">New Orkut Invites</msg>
+<msg name="apps_description">Get your invite to experience the all new orkut.</msg>
+<msg name="updatetitle"> Just applied for an invite for new orkut. Need the Invite? Enroll now! </msg>
+<msg name="updatemsgstart"> Invites:</msg>
+<msg name="updatemsgline1"> You To Try the new Orkut</msg>
+<msg name="updatemsgline2">  You To Apply for New Orkut Invites</msg>
+<msg name="updatemsgline3">  You To Apply for New Orkut Invites</msg>
+<msg name="updatemsgline4"> You To Apply for Invites to view New Orkut Interface</msg>
+<msg name="updatemsgline5">  You To Apply for Invites to view New Orkut Interface</msg>
+<msg name="updatemsgline6">  You To Apply for Invites to view New Orkut Interface</msg>
+<msg name="updatemsgline8"> You To Apply for Invites to view New Orkut Interface </msg>
+<msg name="updfriends"> You To Apply for Invites to view New Orkut Interface</msg>
+<msg name="logo_image">http://sandbox.orkutplus.net/apps/invitethumb.jpg</msg>
+</messagebundle>

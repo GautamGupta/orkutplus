@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^scrapbook-autobot-embed\.jpg$ scrapbook-autobot-embed.php

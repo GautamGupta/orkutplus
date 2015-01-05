@@ -1,0 +1,633 @@
+/*
+ Stylesheet for OrkutPlus Scraps
+*/
+#header { width: 1004px; }
+
+#page_container { width: 1004px; }
+
+#postcol {
+/* 	width: 470px; */
+	margin-left: auto;
+	margin-right: auto;
+ text-decoration:none;
+	}
+
+#leftbar {
+	position: absolute;
+	left: 0px;
+	width: 225px;
+	background: #fff;
+ text-decoration:none;
+	}
+	
+/**************
+ *** ROUNDED CORNER LEFT SIDEBAR ***
+ **************/
+.left-rbroundbox { background: url(images/nt.gif) repeat; }
+.left-rbtop div { background: url(images/tl.gif) no-repeat top left; }
+.left-rbtop { background: url(images/tr.gif) no-repeat top right; }
+.left-rbbot div { background: url(images/bl.gif) no-repeat bottom left; }
+.left-rbbot { background: url(images/br.gif) no-repeat bottom right; }
+
+/* height and width stuff, width not really necessary. */
+.left-rbtop div, .left-rbtop, .left-rbbot div, .left-rbbot {
+width: 100%;
+height: 7px;
+font-size: 1px;
+ text-decoration:none;
+}
+.left-rbcontent { 
+margin: 0 7px; 
+padding: 10px;
+ text-decoration:none;
+}
+
+
+.left-rbroundbox { 
+/*
+width: 50%; 
+margin: 1em auto; 
+ text-decoration:none;
+*/}
+
+/*
+See style.css and
+style-ie.css for
+additional info.
+*/
+
+body {
+    margin: 0;
+   padding: 0;
+	font-family: Verdana, Geneva, Arial, Sans-Serif;
+	font-size: 62.5%; /* Resets 1em to 10px , but there's font-size's all over the place compensating for it.*/
+	color: #333333;
+	background-color: #990000;
+ text-decoration:none;
+	}
+
+a:link {
+  color: #3B59A0;
+  text-decoration:none;
+  }
+a:visited {
+  color: #3B59A0;
+ text-decoration:none;
+  }
+a:hover {
+  color: #CC0000;
+  }
+a img {
+  border-width:0;
+  }
+
+.alignleft {
+	float: left;
+	}
+
+.alignright {
+	float: right;
+	}
+
+.center {
+	text-align: center;
+	}
+
+.pagetitle {
+	margin-top: 0px;
+	font-size: 1.6em;
+	font-weight: normal;
+	text-align: center;
+ text-decoration:none;
+	}
+
+/**************
+ *** ROUNDED CORNER - CENTER COL***
+ **************/
+.rbroundbox { background: url(images/nt.gif) repeat; }
+.rbtop div { background: url(images/tl.gif) no-repeat top left; }
+.rbtop { background: url(images/tr.gif) no-repeat top right; }
+.rbbot div { background: url(images/bl.gif) no-repeat bottom left; }
+.rbbot { background: url(images/br.gif) no-repeat bottom right; }
+
+/* height and width stuff, width not really necessary. */
+.rbtop div, .rbtop, .rbbot div, .rbbot {
+width: 100%;
+height: 7px;
+font-size: 1px;
+}
+.rbcontent { margin: 0 7px; }
+.rbroundbox { 
+width: 754px;
+float:none;
+margin: 1em auto;
+}
+
+/**************
+ *** Header ***
+ **************/
+
+#header {
+	position: relative;
+	height: 110px;
+	margin: 0 auto 0 auto;
+	padding: 5px 0 5px 0; /* Is this necessary? */
+	}
+	
+#blogtitle {
+/*
+position: absolute;
+top:10px;
+
+*/	
+}
+
+#blogtitle img{
+	float: left;
+}
+
+#blogtitle h1 {
+	font-size: 1.8em;
+	font-weight: normal;
+	color: #b4c6d4;
+	letter-spacing: 1px;
+	}	
+
+#banner {
+		width: 300px;
+        float:right;
+        margin: 5px 0;
+        padding: 10px 0;
+}
+
+
+#navbar {
+		clear: both;
+		float: left;
+		width: 100%;
+		height: 31px;
+		overflow: hidden;
+		}
+
+#navbar {
+		clear: both;
+		float: left;
+		width: 100%;
+		height: 31px;
+		overflow: hidden;
+		}
+
+ul.menu {
+background:black url(images/blockdefaultda4.gif) repeat-x scroll center center;
+float:left;	
+margin: 0;
+padding: 0;
+list-style-type: none;
+font: bold 11px Verdana;
+border: 1px solid #625e00;
+width:1004px;
+position:absolute;
+top:70px;
+	}
+
+ul.menu li {
+		display:inline;
+ text-decoration:none;
+		}
+
+ul.menu li a {
+		float: left;
+color: white;
+padding: 9px 11px;
+text-decoration: none;
+border-right: 1px solid white;
+		}
+
+ul.menu li a:link,
+ text-decoration:none;
+ul.menu li a:visited {
+		color: white;
+ text-decoration:none;
+		}
+	
+ul.menu li a:hover,
+ul.menu li a:active {
+background:black url(images/blockactivenr6.gif) repeat-x scroll center center;
+}
+
+/******************************
+ *** Columns and Containers ***
+ ******************************/
+
+.fixcontain1{
+    	position: absolute;
+	left: 0px;
+	width: 225px;
+	background: #fff;
+	text-decoration:none;
+}
+
+.fixcontain2{
+width: 754px;
+float:none;
+margin-left:21em;
+}
+
+#page_container {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	font-size: 1.2em;
+ text-decoration:none;
+	}
+
+#postcol {
+	background: #fff;
+text-decoration:none;
+	}
+	
+.postbox {
+	margin: 15px 0px 15px 0px;
+	padding: 0px;
+	background: white;
+text-decoration:none;
+	}
+.post_title { background: #fff; }
+.postbox .content {
+	margin: 0px 15px 0px 15px;
+	padding: 0px;
+text-decoration:none;
+	}
+
+.navigation { margin: 15px 0px 15px 0px; }
+
+/************
+ *** Post ***
+ ************/
+
+h2.title {
+	margin: 0px;
+	padding: 15px 15px 5px 15px;
+	letter-spacing: none;
+	font-weight: bold;
+	line-height: 1em;
+	font-size: 1.6em;
+text-decoration: none;
+	}
+
+h2.title a {
+	color: #324B86;
+	text-decoration: none;
+font-size: 70%;
+
+	}
+
+h2.title a:hover {  }
+
+small.title {
+	margin: -10px 0px 0px 0px;
+	padding: 0px 15px 0px 15px;
+          text-decoration:none;
+	font-size: 0.9em;
+
+	color: #777777;
+	}
+
+.postmetadata {
+	text-align: center;
+	padding: 0px 0px 15px 0px;
+	margin: 0px;
+	color: #777777;
+text-decoration:none;
+	}
+
+blockquote {
+	color: #777;
+	display: block;
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	background: url(images/quote.gif) no-repeat left top;
+	}
+
+cite {
+	margin: 5px 0 0;
+	display: block;
+ text-decoration:none;
+	}
+
+strike {
+	color: #777;
+ text-decoration:none;
+	}
+
+code {
+	font: 1.1em 'Courier New', Georgia, Fixed, Sans-Serif;
+ text-decoration:none;
+	}
+
+.postbox .content img {
+	padding: 0;
+	max-width: 100%;
+text-decoration:none;
+	}
+
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+	}
+
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.content{
+	padding: 15px 15px 0 15px;
+font-family: Verdana, Arial, Georgia, Sans-serif;
+	font-size: 11px;
+text-decoration:none;
+	line-height: 2.0em;
+}
+
+.content h2 {
+	font-size: 1.4em;
+	font-weight: normal;
+text-decoration:none;
+	letter-spacing: 1px;
+	margin-top: 1.25em;
+	}
+
+.content h3 {
+	font-size: 1.25em;
+	font-weight: normal;
+text-decoration:none;
+	letter-spacing: 1px;
+	}
+
+.content h4 {
+	font-size: 1em;
+text-decoration:none;
+	}
+
+.content p {
+	margin-top: 1em;
+	margin-bottom: 1em;
+text-decoration:none;
+	}
+
+li.sidebar-spacer {
+ text-decoration:none;
+	}
+
+/******************
+ *** Links Page ***
+ ******************/
+
+ul.links {
+	margin: 5px 0 10px 0;
+	list-style: none;
+	padding-left: 0px;
+text-decoration:none;
+	}
+
+ul.links li {
+	list-style: none;
+	padding-bottom: 2px;
+text-decoration:none;
+	}
+
+
+/**************
+ *** lol ***
+ **************/
+
+.lolclassic {
+font-size: 11px;
+width:180px;
+color:#000;
+background-color:#fff;
+margin:5px;
+padding:0px;
+border:1px solid #CCCCCC;
+}
+
+.loltitleclassic
+{
+color:#000000;
+background-color:#F2F2F2;
+font-weight:bold;
+font-size:12px;
+margin:0;padding:0 0 0 4px;
+font-family:Arial,Helvetica,sans-serif;
+letter-spacing:1px;
+line-height:2em;
+border-bottom-width:1px;
+border-bottom-style:solid;
+border-bottom-color:#CCCCCC;
+}
+
+/**************
+ *** Footer ***
+ **************/
+
+/**************
+ *** ROUNDED CORNER FOOTER ***
+ **************/
+.foot-rbroundbox { background: url(images/nt.gif) repeat; }
+.foot-rbtop div { background: url(images/tl.gif) no-repeat top left; }
+.foot-rbtop { background: url(images/tr.gif) no-repeat top right; }
+.foot-rbbot div { background: url(images/bl.gif) no-repeat bottom left; }
+.foot-rbbot { background: url(images/br.gif) no-repeat bottom right; }
+
+/* height and width stuff, width not really necessary. */
+.foot-rbtop div, .foot-rbtop, .foot-rbbot div, .foot-rbbot {
+width: 100%;
+height: 7px;
+font-size: 1px;
+}
+
+.foot-rbcontent { 
+margin: 0 7px; 
+padding: 10px;
+ text-decoration:none;
+}
+
+.foot-rbroundbox { 
+width: 754px; 
+margin: 1em auto; 
+background: #fff;
+text-decoration:none;
+position:relative;
+left:127px;
+}	
+
+#footer {
+clear: both;
+text-align: center;
+ text-decoration:none;
+}
+
+#worldmap {
+	position:absolute;
+	width:85px;
+	height:25px;
+	z-index:1;
+	left: 375px;
+	top: 54px;
+}
+
+.titleclassic
+{
+color:#000000;
+background-color:#F2F2F2;
+font-weight:bold;
+font-size:12px;
+margin:0;padding:0 0 0 4px;
+font-family:Arial,Helvetica,sans-serif;
+letter-spacing:1px;
+line-height:1.2em;
+border-bottom-width:1px;
+border-bottom-style:solid;
+border-bottom-color:#CCCCCC;
+}
+
+/**************
+ *** Search ***
+ **************/
+
+#cse-search-results{
+width:740px;
+overflow:hidden;
+}
+
+#cse-search-results iframe{
+width:739px;
+}
+
+/**************
+ *** Navigation (WP Pagenavi) ***
+ **************/
+
+.wp-pagenavi a, .wp-pagenavi a:link {
+	padding: 2px 4px 2px 4px; 
+	margin: 2px;
+	text-decoration: none;
+	border: 1px solid #0066cc;
+	color: #0066cc;
+	background-color: #FFFFFF;	
+}
+.wp-pagenavi a:visited {
+	padding: 2px 4px 2px 4px; 
+	margin: 2px;
+	text-decoration: none;
+	border: 1px solid #0066cc;
+	color: #0066cc;
+	background-color: #FFFFFF;	
+}
+.wp-pagenavi a:hover {	
+	border: 1px solid #000000;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+.wp-pagenavi a:active {
+	padding: 2px 4px 2px 4px; 
+	margin: 2px;
+	text-decoration: none;
+	border: 1px solid #0066cc;
+	color: #0066cc;
+	background-color: #FFFFFF;	
+}
+.wp-pagenavi span.pages {
+	padding: 2px 4px 2px 4px; 
+	margin: 2px 2px 2px 2px;
+	color: #000000;
+	border: 1px solid #000000;
+	background-color: #FFFFFF;
+}
+.wp-pagenavi span.current {
+	padding: 2px 4px 2px 4px; 
+	margin: 2px;
+	font-weight: bold;
+	border: 1px solid #000000;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+.wp-pagenavi span.extend {
+	padding: 2px 4px 2px 4px; 
+	margin: 2px;	
+	border: 1px solid #000000;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+/**************
+ *** Content Slider ***
+ **************/
+
+.sliderwrapper{
+position: relative; /*leave as is*/
+overflow: hidden; /*leave as is*/
+border: 1px solid #e6e6e6;
+width: 709px; /*width of featured content slider*/
+height: 250px;
+}
+
+.sliderwrapper .contentdiv{
+visibility: hidden; /*leave as is*/
+position: absolute; /*leave as is*/
+left: 0;  /*leave as is*/
+top: 0;  /*leave as is*/
+padding: 5px;
+background: white;
+width: 699px; /*width of content DIVs within slider. Total width should equal slider's inner width (390+5+5=400) */
+height: 100%;
+filter:progid:DXImageTransform.Microsoft.alpha(opacity=100);
+-moz-opacity: 1;
+opacity: 1;
+}
+
+.pagination{
+width: 600px; /*Width of pagination DIV. Total width should equal slider's outer width (400+10+10=420)*/
+text-align: right;
+padding: 5px 10px;
+}
+
+.pagination a{
+padding: 0 5px;
+text-decoration: none; 
+color: #00007D;
+background: white;
+}
+
+.pagination a:hover, .pagination a.selected{
+color: #000;
+background-color: #E6E6E6;
+}
+
+/**************
+ *** Google 404 Tool ***
+ **************/
+
+#goog-wm h3.other-things {
+color:#000000;
+background-color:#F2F2F2;
+font-weight:bold;
+font-size:12px;
+margin:0;padding:0 0 0 4px;
+font-family:Arial,Helvetica,sans-serif;
+letter-spacing:1px;
+line-height:2em;
+border-bottom-width:1px;
+border-bottom-style:solid;
+border-bottom-color:#CCCCCC;
+}

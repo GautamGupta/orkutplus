@@ -1,0 +1,10 @@
+<settings>
+<baseURL>http://www.orkutplus.net/toolkit/generators/glitter/</baseURL>
+<clickURL>http://www.orkutplus.net</clickURL>
+<clickLABEL>orkutplus.net</clickLABEL>
+<top_panel_color>0x5cc165</top_panel_color>
+<middle_panel_color>0x6294C3</middle_panel_color>
+<tab_unactive_color>0x5cc165</tab_unactive_color>
+<tab_active_color>0x666699</tab_active_color>
+<back_color>0xffffff</back_color>
+</settings>

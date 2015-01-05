@@ -1,0 +1,7 @@
+Options -Indexes
+RewriteEngine On
+RewriteRule ^(/)?$ /index.php
+RewriteRule ^includes(/)?$ /404.php
+RewriteRule ^([0-9]+)?/?([A-Za-z_0-9-]+)?/([0-9]+)(/)?$ /imagescraps.php?catid=$1&cat=$2&page=$3
+RewriteRule ^([0-9]+)?/?([A-Za-z_0-9-]+)?(/)?$ /imagescraps.php?catid=$1&cat=$2&page=1
+ErrorDocument 404 /404.php

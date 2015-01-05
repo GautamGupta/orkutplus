@@ -1,0 +1,1009 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Orkut Plus! › Manage Plugins — WordPress</title>
+<script type="text/javascript">
+//<![CDATA[
+addLoadEvent = function(func) {if (typeof jQuery != "undefined") jQuery(document).ready(func); else if (typeof wpOnload!='function'){wpOnload=func;} else {var oldonload=wpOnload; wpOnload=function(){oldonload();func();}}};
+
+function convertEntities(o) {
+	var c = function(s) {
+		if (/&[^;]+;/.test(s)) {
+			var e = document.createElement("div");
+			e.innerHTML = s;
+			return !e.firstChild ? s : e.firstChild.nodeValue;
+		}
+		return s;
+	}
+
+	if ( typeof o === 'string' )
+		return c(o);
+	else if ( typeof o === 'object' )
+		for (var v in o) {
+			if ( typeof o[v] === 'string' )
+				o[v] = c(o[v]);
+		}
+	return o;
+};
+//]]>
+</script>
+<link rel="stylesheet" href="plugins.php_files/thickbox.css" type="text/css" media="all">
+<link rel="stylesheet" href="plugins.php_files/global.css" type="text/css" media="all">
+<link rel="stylesheet" href="plugins.php_files/wp-admin.css" type="text/css" media="all">
+<link rel="stylesheet" href="plugins.php_files/colors-classic.css" type="text/css" media="all">
+<!--[if gte IE 6]>
+<link rel='stylesheet' href='http://www.orkutplus.net/blog/wp-admin/css/ie.css?ver=20081210' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript">
+/* <![CDATA[ */
+function selectcb(thisobj,var1){
+	var o = document.forms[thisobj].elements;
+	if(o){
+		for (i=0; i<o.length; i++){
+			if (o[i].type == 'checkbox'){
+				o[i].checked = var1;
+			}
+		}
+	}
+}
+/* ]]> */
+</script>
+<script type="text/javascript" src="plugins.php_files/prototype.js"></script>
+<script type="text/javascript" src="plugins.php_files/jquery_002.js"></script>
+<script type="text/javascript" src="plugins.php_files/hoverIntent.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	userSettings = {
+		url: "/blog/",
+		uid: "3",
+		time: "1239110515"
+	}
+/* ]]> */
+</script>
+<script type="text/javascript" src="plugins.php_files/common.js"></script>
+<script type="text/javascript" src="plugins.php_files/jquery.js"></script>
+<script type="text/javascript" src="plugins.php_files/thickbox.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	plugininstallL10n = {
+		plugin_information: "Plugin Information:"
+	}
+	try{convertEntities(plugininstallL10n);}catch(e){};
+/* ]]> */
+</script>
+<script type="text/javascript" src="plugins.php_files/plugin-install.js"></script>
+<script type="text/javascript" src="plugins.php_files/editcomments.htm"></script>
+<script type="text/javascript" src="plugins.php_files/wp-scriptaculous.js"></script>
+<script type="text/javascript" src="plugins.php_files/effects.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	wpAjax = {
+		noPerm: "You do not have permission to do that.",
+		broken: "An unidentified error has occurred."
+	}
+	try{convertEntities(wpAjax);}catch(e){};
+/* ]]> */
+</script>
+<script type="text/javascript" src="plugins.php_files/wp-ajax-response.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	wpListL10n = {
+		url: "http://www.orkutplus.net/blog/wp-admin/admin-ajax.php"
+	}
+/* ]]> */
+</script>
+<script type="text/javascript" src="plugins.php_files/wp-lists.js"></script>
+<script type="text/javascript" src="plugins.php_files/ui.js"></script>
+<script type="text/javascript" src="plugins.php_files/ui_002.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	quicktagsL10n = {
+		quickLinks: "(Quick Links)",
+		wordLookup: "Enter a word to look up:",
+		dictionaryLookup: "Dictionary lookup",
+		lookup: "lookup",
+		closeAllOpenTags: "Close all open tags",
+		closeTags: "close tags",
+		enterURL: "Enter the URL",
+		enterImageURL: "Enter the URL of the image",
+		enterImageDescription: "Enter a description of the image"
+	}
+	try{convertEntities(quicktagsL10n);}catch(e){};
+/* ]]> */
+</script>
+<script type="text/javascript" src="plugins.php_files/quicktags.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+	adminCommentsL10n = {
+		hotkeys_highlight_first: "",
+		hotkeys_highlight_last: ""
+	}
+/* ]]> */
+</script>
+<script type="text/javascript" src="plugins.php_files/edit-comments.js"></script>
+
+<style type="text/css">
+fieldset.options {
+	border: 0;
+	padding: 10px;
+}
+fieldset.options p {
+	margin-bottom: 10px;
+}
+</style>
+				<style type="text/css" media="screen">
+		.updated-error {
+			background-color: #FF8080;
+			border: 1px solid #F00;
+		}
+		</style>
+		<script language="JavaScript" type="text/javascript" src="plugins.php_files/scripts_002.js"></script>
+<script language="JavaScript" type="text/javascript" src="plugins.php_files/scripts.js"></script>
+<script type="text/javascript">
+//window.onload=function(){enableTooltips()};
+</script>
+<!--<link rel="stylesheet" type="text/css" href="http://www.orkutplus.net/blog/wp-content/plugins/wp-security-scan/style.css" />-->
+<link rel="stylesheet" type="text/css" href="plugins.php_files/wptouch-admin.css"><script type="text/javascript" src="plugins.php_files/jquery_003.js"></script></head><body class="wp-admin">
+
+<div id="wpwrap">
+<div id="wpcontent">
+<div id="wphead">
+
+<img id="header-logo" src="plugins.php_files/blank.gif" alt="" width="32" height="32"> <h1><a href="http://www.orkutplus.net/" title="Visit site">Orkut Plus! <span>← Visit site</span></a></h1>
+
+<div id="wphead-info">
+<div id="user_info">
+<p>Howdy, <a href="http://www.orkutplus.net/blog/wp-admin/profile.php" title="Edit your profile">Gautam - OP Official Coder</a><span class="turbo-nag hidden"> | <a href="http://www.orkutplus.net/blog/wp-admin/tools.php">Turbo</a></span> |
+<a href="http://www.orkutplus.net/blog/wp-login.php?action=logout&amp;_wpnonce=13be6e33fc" title="Log Out">Log Out</a></p>
+</div>
+
+<div id="favorite-actions"><div id="favorite-first"><a href="http://www.orkutplus.net/blog/wp-admin/post-new.php">New Post</a></div><div id="favorite-toggle"><br></div><div style="width: 126px;" id="favorite-inside"><div class="favorite-action"><a href="http://www.orkutplus.net/blog/wp-admin/edit.php?post_status=draft">Drafts</a></div>
+<div class="favorite-action"><a href="http://www.orkutplus.net/blog/wp-admin/page-new.php">New Page</a></div>
+<div class="favorite-action"><a href="http://www.orkutplus.net/blog/wp-admin/media-new.php">Upload</a></div>
+<div class="favorite-action"><a href="http://www.orkutplus.net/blog/wp-admin/edit-comments.php">Comments</a></div>
+<div class="favorite-action"><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=wpsupercache&amp;wp_delete_cache=1&amp;_wpnonce=8bca7c3253">Delete Cache</a></div>
+</div></div>
+</div>
+</div>
+
+
+<div id="wpbody">
+
+<ul id="adminmenu">
+
+
+	<li class="wp-first-item wp-has-submenu menu-top menu-top-first menu-top-last wp-menu-open" id="menu-dashboard">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="http://www.orkutplus.net/blog/wp-admin/index.php" class="wp-first-item wp-has-submenu menu-top menu-top-first menu-top-last" tabindex="1">Dashboard</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Dashboard</div><ul><li class="wp-first-item"><a href="http://www.orkutplus.net/blog/wp-admin/index.php" class="wp-first-item" tabindex="1">Dashboard</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/index.php?page=akismet-stats-display" tabindex="1">Akismet Stats</a></li></ul></div></li>
+	<li class="wp-menu-separator"><br></li>
+	<li class="wp-has-submenu wp-menu-open menu-top menu-top-first" id="menu-posts">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="http://www.orkutplus.net/blog/wp-admin/edit.php" class="wp-has-submenu wp-menu-open menu-top menu-top-first" tabindex="1">Posts</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Posts</div><ul><li class="wp-first-item"><a href="http://www.orkutplus.net/blog/wp-admin/edit.php" class="wp-first-item" tabindex="1">Edit</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/post-new.php" tabindex="1">Add New</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/edit-tags.php" tabindex="1">Tags</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/categories.php" tabindex="1">Categories</a></li></ul></div></li>
+	<li class="wp-has-submenu menu-top" id="menu-media">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="http://www.orkutplus.net/blog/wp-admin/upload.php" class="wp-has-submenu menu-top" tabindex="1">Media</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Media</div><ul><li class="wp-first-item"><a href="http://www.orkutplus.net/blog/wp-admin/upload.php" class="wp-first-item" tabindex="1">Library</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/media-new.php" tabindex="1">Add New</a></li></ul></div></li>
+	<li class="wp-has-submenu menu-top" id="menu-links">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="http://www.orkutplus.net/blog/wp-admin/link-manager.php" class="wp-has-submenu menu-top" tabindex="1">Links</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Links</div><ul><li class="wp-first-item"><a href="http://www.orkutplus.net/blog/wp-admin/link-manager.php" class="wp-first-item" tabindex="1">Edit</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/link-add.php" tabindex="1">Add New</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/edit-link-categories.php" tabindex="1">Link Categories</a></li></ul></div></li>
+	<li class="wp-has-submenu menu-top" id="menu-pages">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="http://www.orkutplus.net/blog/wp-admin/edit-pages.php" class="wp-has-submenu menu-top" tabindex="1">Pages</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Pages</div><ul><li class="wp-first-item"><a href="http://www.orkutplus.net/blog/wp-admin/edit-pages.php" class="wp-first-item" tabindex="1">Edit</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/page-new.php" tabindex="1">Add New</a></li></ul></div></li>
+	<li class="menu-top menu-top-last" id="menu-comments">
+	<div class="wp-menu-image"><br></div><div style="display: none;" class="wp-menu-toggle"><br></div><a href="http://www.orkutplus.net/blog/wp-admin/edit-comments.php" class="menu-top menu-top-last" tabindex="1">Comments <span id="awaiting-mod" class="count-0"><span class="pending-count">0</span></span></a></li>
+	<li class="wp-menu-separator"><br></li>
+	<li class="wp-has-submenu menu-top menu-top-first" id="menu-appearance">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="http://www.orkutplus.net/blog/wp-admin/themes.php" class="wp-has-submenu menu-top menu-top-first" tabindex="1">Appearance</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Appearance</div><ul><li class="wp-first-item"><a href="http://www.orkutplus.net/blog/wp-admin/themes.php" class="wp-first-item" tabindex="1">Themes</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/widgets.php" tabindex="1">Widgets</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/theme-editor.php" tabindex="1">Editor</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/themes.php?page=theme-test-drive/themedrive.php" tabindex="1">Theme Test Drive</a></li></ul></div></li>
+	<li class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top" id="menu-plugins">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php" class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top" tabindex="1">Plugins <span class="update-plugins count-0"><span class="plugin-count">0</span></span></a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Plugins <span class="update-plugins count-0"><span class="plugin-count">0</span></span></div><ul><li class="wp-first-item current"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php" class="wp-first-item current" tabindex="1">Installed</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/plugin-install.php" tabindex="1">Add New</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php" tabindex="1">Editor</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?page=bannage.php" tabindex="1">Bannage Options</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?page=akismet-key-config" tabindex="1">Akismet Configuration</a></li></ul></div></li>
+	<li class="wp-has-submenu menu-top wp-menu-open" id="menu-users">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="http://www.orkutplus.net/blog/wp-admin/users.php" class="wp-has-submenu menu-top" tabindex="1">Users</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Users</div><ul><li class="wp-first-item"><a href="http://www.orkutplus.net/blog/wp-admin/users.php" class="wp-first-item" tabindex="1">Authors &amp; Users</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/user-new.php" tabindex="1">Add New</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/profile.php" tabindex="1">Your Profile</a></li></ul></div></li>
+	<li class="wp-has-submenu menu-top wp-menu-open" id="menu-tools">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="http://www.orkutplus.net/blog/wp-admin/tools.php" class="wp-has-submenu menu-top" tabindex="1">Tools</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Tools</div><ul><li class="wp-first-item"><a href="http://www.orkutplus.net/blog/wp-admin/tools.php" class="wp-first-item" tabindex="1">Tools</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/import.php" tabindex="1">Import</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/export.php" tabindex="1">Export</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/update-core.php" tabindex="1">Upgrade</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/tools.php?page=batch_categories" tabindex="1">Batch Categories</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/tools.php?page=broken-link-checker/broken-link-checker.php" tabindex="1">Broken Links</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/tools.php?page=contact-form-7/wp-contact-form-7.php" tabindex="1">Contact Form 7</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/tools.php?page=stc-management" tabindex="1">Subscriptions</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/tools.php?page=wp-db-backup" tabindex="1">Backup</a></li></ul></div></li>
+	<li class="wp-has-submenu menu-top menu-top-last" id="menu-settings">
+	<div class="wp-menu-image"><br></div><div class="wp-menu-toggle"><br></div><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php" class="wp-has-submenu menu-top menu-top-last" tabindex="1">Settings</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Settings</div><ul><li class="wp-first-item"><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php" class="wp-first-item" tabindex="1">General</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-writing.php" tabindex="1">Writing</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-reading.php" tabindex="1">Reading</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-discussion.php" tabindex="1">Discussion</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-media.php" tabindex="1">Media</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-privacy.php" tabindex="1">Privacy</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-permalink.php" tabindex="1">Permalinks</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-misc.php" tabindex="1">Miscellaneous</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=random-posts-plugin" tabindex="1">Random Posts</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=recent-comments-plugin" tabindex="1">Recent Comments</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=recent-posts-plugin" tabindex="1">Recent Posts</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=similar-posts" tabindex="1">Similar Posts</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=404-notifier.php" tabindex="1">404 Notifier</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=audio-player-options" tabindex="1">Audio Player</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=broken-link-checker/broken-link-checker.php" tabindex="1">Link Checker</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=FeedBurner_FeedSmith_Plugin.php" tabindex="1">FeedBurner</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=ajaxtranslation.php" tabindex="1">Google Translation</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=lightbox" tabindex="1">Lightbox</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=loginlockdown.php" tabindex="1">Login LockDown</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=more-link-modifier/more-link-options.php" tabindex="1">More Link</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=absolute-comments" tabindex="1">Absolute Comments</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=plugins/blogbling/wp-notable.php" tabindex="1">Notable</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=search-and-replace/search-and-replace.php" tabindex="1">Search &amp; Replace</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=sharethis.php" tabindex="1">ShareThis</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=stc-options" tabindex="1">Subscribe to Comments</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=wp-pagenavi/pagenavi-options.php" tabindex="1">PageNavi</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=wpsupercache" tabindex="1">WP Super Cache</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=wptouch/wptouch.php" tabindex="1">WPtouch</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=sitemap.php" tabindex="1">XML-Sitemap</a></li></ul></div></li>
+	<li class="wp-menu-separator-last"><br></li>
+	<li class="menu-top toplevel_page_better-comments-manager/bcm-edit-comments menu-top-first" id="toplevel_page_better-comments-manager-bcm-edit-comments">
+	<img class="wp-menu-image" src="plugins.php_files/generic.png" alt=""><div style="display: none;" class="wp-menu-toggle"><br></div><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=better-comments-manager/bcm-edit-comments.php" class="menu-top toplevel_page_better-comments-manager/bcm-edit-comments menu-top-first" tabindex="1">Better Comments Manager</a></li>
+	<li class="wp-has-submenu menu-top toplevel_page_statpress-reloaded/statpress wp-menu-open" id="toplevel_page_statpress-reloaded-statpress"><img class="wp-menu-image" src="plugins.php_files/generic.png" alt=""><div class="wp-menu-toggle"><br></div><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=statpress-reloaded/statpress.php" class="wp-has-submenu menu-top toplevel_page_statpress-reloaded/statpress" tabindex="1">StatPress</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">StatPress</div><ul><li class="wp-first-item"><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=statpress-reloaded/statpress.php" class="wp-first-item" tabindex="1">StatPress</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=statpress-reloaded/statpress.php&amp;statpress_action=details" tabindex="1">Details</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=statpress-reloaded/statpress.php&amp;statpress_action=spy" tabindex="1">Spy</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=statpress-reloaded/statpress.php&amp;statpress_action=search" tabindex="1">Search</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=statpress-reloaded/statpress.php&amp;statpress_action=export" tabindex="1">Export</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=statpress-reloaded/statpress.php&amp;statpress_action=options" tabindex="1">Options</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=statpress-reloaded/statpress.php&amp;statpress_action=agents" tabindex="1">User Agents</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=statpress-reloaded/statpress.php&amp;statpress_action=up" tabindex="1">StatPressUpdate</a></li></ul></div></li>
+	<li class="menu-top toplevel_page_gravatar" id="toplevel_page_gravatar">
+	<img class="wp-menu-image" src="plugins.php_files/generic.png" alt=""><div style="display: none;" class="wp-menu-toggle"><br></div><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=gravatar" class="menu-top toplevel_page_gravatar" tabindex="1">Gravatar</a></li>
+	<li class="wp-has-submenu menu-top toplevel_page_wp-security-scan/securityscan wp-menu-open" id="toplevel_page_wp-security-scan-securityscan"><img class="wp-menu-image" src="plugins.php_files/lock.png" alt=""><div class="wp-menu-toggle"><br></div><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=wp-security-scan/securityscan.php" class="wp-has-submenu menu-top toplevel_page_wp-security-scan/securityscan" tabindex="1">Security</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">Security</div><ul><li class="wp-first-item"><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=wp-security-scan/securityscan.php" class="wp-first-item" tabindex="1">Security</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=scanner" tabindex="1">Scanner</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=passwordtool" tabindex="1">Password Tool</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=database" tabindex="1">Database</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=support" tabindex="1">Support</a></li></ul></div></li>
+	<li class="wp-has-submenu menu-top toplevel_page_alinks/includes/Alinks/Menu menu-top-last wp-menu-open" id="toplevel_page_alinks-includes-Alinks-Menu"><img class="wp-menu-image" src="plugins.php_files/generic.png" alt=""><div class="wp-menu-toggle"><br></div><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=alinks/includes/Alinks/Menu.php" class="wp-has-submenu menu-top toplevel_page_alinks/includes/Alinks/Menu menu-top-last" tabindex="1">aLinks</a>
+	<div class="wp-submenu"><div class="wp-submenu-head">aLinks</div><ul><li class="wp-first-item"><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=alinks/includes/Alinks/Menu.php" class="wp-first-item" tabindex="1">Keyphrases</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=alinks_settings" tabindex="1">Settings</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=alinks_import_export" tabindex="1">Import/Export</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=alinks_factories" tabindex="1">Factories</a></li><li><a href="http://www.orkutplus.net/blog/wp-admin/admin.php?page=alinks_help" tabindex="1">Help</a></li></ul></div></li></ul>
+<div id="wpbody-content">
+<div id="screen-meta">
+	<div id="contextual-help-wrap" class="hidden">
+	<h5>Help</h5><div class="metabox-prefs"><a href="http://codex.wordpress.org/" target="_blank">Documentation</a><br><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></div>
+	</div>
+
+<div id="screen-meta-links">
+<div id="contextual-help-link-wrap" class="screen-meta-toggle">
+<a href="#contextual-help" id="contextual-help-link" class="show-settings">Help</a>
+</div>
+</div>
+</div>
+<div id="alinks_ajax_notices"></div>
+
+<div class="wrap">
+	<div id="icon-plugins" class="icon32"><br></div>
+	<h2>Manage Plugins</h2>
+
+<p>Plugins extend and expand the functionality of WordPress. Once a plugin is installed, you may activate it or deactivate it here.</p>
+
+
+<h3 id="currently-active">Currently Active Plugins</h3>
+<form method="post" action="http://www.orkutplus.net/blog/wp-admin/plugins.php">
+<input id="_wpnonce" name="_wpnonce" value="d8be06a4f3" type="hidden"><input name="_wp_http_referer" value="/blog/wp-admin/plugins.php" type="hidden">
+<div class="tablenav">
+	<div class="alignleft actions">
+		<select name="action">
+			<option value="" selected="selected">Bulk Actions</option>
+					<option value="deactivate-selected">Deactivate</option>
+				</select>
+		<input name="doaction_active" value="Apply" class="button-secondary action" type="submit">
+		</div>
+</div>
+<div class="clear"></div>
+<table class="widefat" id="active-plugins-table" cellspacing="0">
+	<thead>
+	<tr>
+		<th scope="col" class="check-column"><input type="checkbox"></th>
+		<th scope="col">Plugin</th>
+		<th scope="col" class="num">Version</th>
+		<th scope="col">Description</th>
+		<th scope="col" class="action-links">Action</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<th scope="col" class="check-column"><input type="checkbox"></th>
+		<th scope="col">Plugin</th>
+		<th scope="col" class="num">Version</th>
+		<th scope="col">Description</th>
+		<th scope="col" class="action-links">Action</th>
+	</tr>
+	</tfoot>
+
+	<tbody class="plugins">
+
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="404-notifier/404-notifier.php" type="checkbox"></th>
+		<td class="name"><a href="http://alexking.org/projects/wordpress" title="Visit plugin homepage">404 Notifier</a></td>
+		<td class="vers">1.2a</td>
+		<td class="desc"><p>This
+plugin will log 404 hits on your site and can notify you via e-mail or
+you can subscribe to the generated RSS feed of 404 events. Adjust your
+settings <a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=404-notifier.php">here</a>. By <a href="http://alexking.org/" title="Visit author homepage">Alex King</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=404-notifier%2F404-notifier.php&amp;_wpnonce=7c62b1d133" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=404-notifier/404-notifier.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="reply-to/at-reply.php" type="checkbox"></th>
+		<td class="name"><a href="http://wordpress.org/extend/plugins/reply-to/" title="Visit plugin homepage">@ Reply</a></td>
+		<td class="vers">1.0.1</td>
+		<td class="desc"><p>This plugin allows you to add Twitter-like @reply links to comments. By <a href="http://iyus.info/" title="Visit author homepage">Yus</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=reply-to%2Fat-reply.php&amp;_wpnonce=8b551f0255" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=reply-to/at-reply.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="akismet/akismet.php" type="checkbox"></th>
+		<td class="name"><a href="http://akismet.com/" title="Visit plugin homepage">Akismet</a></td>
+		<td class="vers">2.2.3</td>
+		<td class="desc"><p>Akismet checks your comments against the Akismet web service to see if they look like spam or not. You need a <a href="http://wordpress.com/api-keys/">WordPress.com API key</a> to use it. You can review the spam it catches under “Comments.” To show off your Akismet stats just put <code>&lt;?php akismet_counter(); ?&gt;</code> in your template. See also: <a href="http://wordpress.org/extend/plugins/stats/">WP Stats plugin</a>. By <a href="http://ma.tt/" title="Visit author homepage">Matt Mullenweg</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=akismet%2Fakismet.php&amp;_wpnonce=2fb91f8fcb" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=akismet/akismet.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="alinks/alinks.php" type="checkbox"></th>
+		<td class="name"><a href="http://alinks.headzoo.com/" title="Visit plugin homepage">aLinks</a></td>
+		<td class="vers">2.0.2</td>
+		<td class="desc"><p>A WordPress plugin that automatically links keywords in your blog post. By <a href="http://www.headzoo.com/" title="Visit author homepage">Sean Hickey</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=alinks%2Falinks.php&amp;_wpnonce=27008def6c" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=alinks/alinks.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="audio-player/audio-player.php" type="checkbox"></th>
+		<td class="name"><a href="http://wpaudioplayer.com/" title="Visit plugin homepage">Audio player</a></td>
+		<td class="vers">2.0b6</td>
+		<td class="desc"><p>Audio
+Player is a highly configurable but simple mp3 player for all your
+audio needs. You can customise the player’s colour scheme to match your
+blog theme, have it automatically show track information from the
+encoded ID3 tags and more. Go to your Settings page to start
+configuring it. By <a href="http://www.1pixelout.net/" title="Visit author homepage">Martin Laine</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=audio-player-options">Settings</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=audio-player%2Faudio-player.php&amp;_wpnonce=1acb449fe8" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=audio-player/audio-player.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="bannage.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.justinshattuck.com/bannage/" title="Visit plugin homepage">Bannage</a></td>
+		<td class="vers">0.2</td>
+		<td class="desc"><p>Bans commentors by IP, username, email, or URI By <a href="http://www.justinshattuck.com/" title="Visit author homepage">Shane Neuerburg, Justin Shattuck and Dave Jansen</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=bannage.php&amp;_wpnonce=82ffb17fa0" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=bannage.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="batch-categories/batch-categories.php" type="checkbox"></th>
+		<td class="name"><a href="http://robm.me.uk/projects/plugins/wordpress/batch-categories/" title="Visit plugin homepage">Batch Categories</a></td>
+		<td class="vers">1.4</td>
+		<td class="desc"><p>Easily manage the mass categorisation of posts that match various criteria. By <a href="http://robm.me.uk/" title="Visit author homepage">Rob Miller</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=batch-categories%2Fbatch-categories.php&amp;_wpnonce=88140f4f45" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=batch-categories/batch-categories.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="better-comments-manager/better-comments-manager.php" type="checkbox"></th>
+		<td class="name"><a href="http://techie-buzz.com/wordpress-plugins/better-comments-manager-wordpress-plugin-release.html" title="Visit plugin homepage">Better Comments Manager</a></td>
+		<td class="vers">1.5.1</td>
+		<td class="desc"><p>Better
+Comments manager allows you to view your comments post wise, it also
+allows you to reply to your comments from within admin panel without
+you having to visit the site to respond to comments By <a href="http://techie-buzz.com/" title="Visit author homepage">Keith Dsouza</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=better-comments-manager%2Fbetter-comments-manager.php&amp;_wpnonce=b1c2a24c19" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=better-comments-manager/better-comments-manager.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="broken-link-checker/broken-link-checker.php" type="checkbox"></th>
+		<td class="name"><a href="http://w-shadow.com/blog/2007/08/05/broken-link-checker-for-wordpress/" title="Visit plugin homepage">Broken Link Checker</a></td>
+		<td class="vers">0.4.14</td>
+		<td class="desc"><p>Checks your posts for broken links and missing images and notifies you on the dashboard if any are found. By <a href="http://w-shadow.com/blog/" title="Visit author homepage">Janis Elsts</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=broken-link-checker%2Fbroken-link-checker.php&amp;_wpnonce=1dda458a23" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=broken-link-checker/broken-link-checker.php" title="Open this file in the Plugin Editor" class="edit">Edit</a> | <a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=broken-link-checker/broken-link-checker.php">Settings</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="contact-form-7/wp-contact-form-7.php" type="checkbox"></th>
+		<td class="name"><a href="http://ideasilo.wordpress.com/2007/04/30/contact-form-7/" title="Visit plugin homepage">Contact Form 7</a></td>
+		<td class="vers">1.9.4</td>
+		<td class="desc"><p>Just another contact form plugin. Simple but flexible. By <a href="http://ideasilo.wordpress.com/" title="Visit author homepage">Takayuki Miyoshi</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=contact-form-7%2Fwp-contact-form-7.php&amp;_wpnonce=dea54a9709" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=contact-form-7/wp-contact-form-7.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="feedburner_feedsmith_plugin_2.3/FeedBurner_FeedSmith_Plugin.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.feedburner.com/fb/a/help/wordpress_quickstart" title="Visit plugin homepage">FeedBurner FeedSmith</a></td>
+		<td class="vers">2.3.1</td>
+		<td class="desc"><p>Originally authored by <a href="http://www.orderedlist.com/">Steve Smith</a>,
+this plugin detects all ways to access your original WordPress feeds
+and redirects them to your FeedBurner feed so you can track every
+possible subscriber. By <a href="http://www.feedburner.com/" title="Visit author homepage">FeedBurner</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=feedburner_feedsmith_plugin_2.3%2FFeedBurner_FeedSmith_Plugin.php&amp;_wpnonce=a3594c132c" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=feedburner_feedsmith_plugin_2.3/FeedBurner_FeedSmith_Plugin.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="google_ad_wrap.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.urbangiraffe.com/plugins/google_ad_wrap" title="Visit plugin homepage">Google Ad Wrap</a></td>
+		<td class="vers">1.0</td>
+		<td class="desc"><p>Simple plugin to wrap a google_ad_section tag around comments and content By <a href="http://www.urbangiraffe.com/" title="Visit author homepage">John Godley</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=google_ad_wrap.php&amp;_wpnonce=4f2578a614" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=google_ad_wrap.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="google-ajax-translation/ajaxtranslation.php" type="checkbox"></th>
+		<td class="name"><a href="http://blog.libinpan.com/2008/08/04/google-ajax-translation-wordpress-plugin/" title="Visit plugin homepage">Google AJAX Translation</a></td>
+		<td class="vers">0.3.1</td>
+		<td class="desc"><p>Add <a href="http://code.google.com/apis/ajaxlanguage/">Google AJAX Translation</a> onto your blog. This plugin enables your blog readers translate your blog posts or comments into other languages. By <a href="http://libinpan.com/" title="Visit author homepage">Libin Pan and Michael Klein</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=google-ajax-translation%2Fajaxtranslation.php&amp;_wpnonce=9012e9bc6c" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=google-ajax-translation/ajaxtranslation.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="google-sitemap-generator/sitemap.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.arnebrachhold.de/redir/sitemap-home/" title="Visit plugin homepage">Google XML Sitemaps</a></td>
+		<td class="vers">3.1.2</td>
+		<td class="desc"><p>This
+plugin will generate a sitemaps.org compatible sitemap of your
+WordPress blog which is supported by Ask.com, Google, MSN Search and
+YAHOO. <a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=sitemap.php">Configuration Page</a> By <a href="http://www.arnebrachhold.de/" title="Visit author homepage">Arne Brachhold</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=google-sitemap-generator%2Fsitemap.php&amp;_wpnonce=c616b75892" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=google-sitemap-generator/sitemap.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="lightbox-2-wordpress-plugin/lightbox.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.4mj.it/lightbox-js-v20-wordpress/" title="Visit plugin homepage">Lightbox 2</a></td>
+		<td class="vers">2.0.2</td>
+		<td class="desc"><p>Used to overlay images on the current page. Lightbox JS v2.04 by <a href="http://www.huddletogether.com/projects/lightbox2/" title="Lightbox JS v2.0 ">Lokesh Dhakar</a>. By <a href="http://www.4mj.it/" title="Visit author homepage">Giuseppe Argento</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=lightbox-2-wordpress-plugin%2Flightbox.php&amp;_wpnonce=1cdc167f89" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=lightbox-2-wordpress-plugin/lightbox.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="login-lockdown/loginlockdown.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.bad-neighborhood.com/" title="Visit plugin homepage">Login LockDown</a></td>
+		<td class="vers">v1.3</td>
+		<td class="desc"><p>Adds
+some extra security to WordPress by restricting the rate at which
+failed logins can be re-attempted from a given IP range. Distributed
+through <a href="http://www.bad-neighborhood.com/">Bad Neighborhood</a>. By Michael VanDeMar.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=login-lockdown%2Floginlockdown.php&amp;_wpnonce=3d3d925b32" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=login-lockdown/loginlockdown.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="more-link-modifier/more-link.php" type="checkbox"></th>
+		<td class="name"><a href="http://psychopyko.com/downloads/more-link-modifier/" title="Visit plugin homepage">More Link Modifier</a></td>
+		<td class="vers">1.0</td>
+		<td class="desc"><p>Allows you to easily modify the text for more link. Also lets you remove the default anchor link. By <a href="http://psychopyko.com/" title="Visit author homepage">Peggy Kuo</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=more-link-modifier%2Fmore-link.php&amp;_wpnonce=64a1026fc5" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=more-link-modifier/more-link.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="ozh-absolute-comments/wp_ozh_absolutecomments.php" type="checkbox"></th>
+		<td class="name"><a href="http://planetozh.com/blog/my-projects/absolute-comments-manager-instant-reply/" title="Visit plugin homepage">Ozh' Absolute Comments</a></td>
+		<td class="vers">2.2.2</td>
+		<td class="desc"><p>Reply instantly to comments, either from the email notification, or the usual <a href="http://www.orkutplus.net/blog/wp-admin/edit-comments.php">Comments</a> page, without loading the post first. <strong>For WordPress 2.5+</strong> By <a href="http://planetozh.com/" title="Visit author homepage">Ozh</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=ozh-absolute-comments%2Fwp_ozh_absolutecomments.php&amp;_wpnonce=26989d3ca6" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=ozh-absolute-comments/wp_ozh_absolutecomments.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="post-plugin-library/post-plugin-library.php" type="checkbox"></th>
+		<td class="name"><a href="http://rmarsh.com/plugins/post-plugin-library/" title="Visit plugin homepage">Post-Plugin Library</a></td>
+		<td class="vers">2.6.2.1</td>
+		<td class="desc"><p>Does nothing by itself but supplies common code for the <a href="http://rmarsh.com/plugins/similar-posts/">Similar Posts</a>, <a href="http://rmarsh.com/plugins/recent-posts/">Recent Posts</a>, <a href="http://rmarsh.com/plugins/random-posts/">Random Posts</a>, and <a href="http://rmarsh.com/plugins/recent-comments/">Recent Comments</a> plugins. Make sure you have the latest version of this plugin. By <a href="http://rmarsh.com/" title="Visit author homepage">Rob Marsh, SJ</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=post-plugin-library%2Fpost-plugin-library.php&amp;_wpnonce=6a5eae312c" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=post-plugin-library/post-plugin-library.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="random-posts-plugin/random-posts.php" type="checkbox"></th>
+		<td class="name"><a href="http://rmarsh.com/plugins/random-posts/" title="Visit plugin homepage">Random Posts</a></td>
+		<td class="vers">2.6.2.0</td>
+		<td class="desc"><p>Displays a <a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=random-posts.php">highly configurable</a> list of randomly selected posts. <a href="http://rmarsh.com/plugins/post-options/">Instructions and help online</a>. Requires the latest version of the <a href="http://wordpress.org/extend/plugins/post-plugin-library/">Post-Plugin Library</a> to be installed. By <a href="http://rmarsh.com/" title="Visit author homepage">Rob Marsh, SJ</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=random-posts-plugin%2Frandom-posts.php&amp;_wpnonce=55a33203ff" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=random-posts-plugin/random-posts.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="recent-comments-plugin/recent-comments.php" type="checkbox"></th>
+		<td class="name"><a href="http://rmarsh.com/plugins/recent-comments/" title="Visit plugin homepage">Recent Comments</a></td>
+		<td class="vers">2.6.2.1</td>
+		<td class="desc"><p>Displays a <a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=recent-comments.php">highly configurable</a> list of the most recent comments. <a href="http://rmarsh.com/plugins/post-options/">Instructions and help online</a>. Requires the latest version of the <a href="http://wordpress.org/extend/plugins/post-plugin-library/">Post-Plugin Library</a> to be installed. By <a href="http://rmarsh.com/" title="Visit author homepage">Rob Marsh, SJ</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=recent-comments-plugin%2Frecent-comments.php&amp;_wpnonce=97f601de89" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=recent-comments-plugin/recent-comments.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="recent-posts-plugin/recent-posts.php" type="checkbox"></th>
+		<td class="name"><a href="http://rmarsh.com/plugins/recent-posts/" title="Visit plugin homepage">Recent Posts</a></td>
+		<td class="vers">2.6.2.0</td>
+		<td class="desc"><p>Displays a <a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=recent-posts.php">highly configurable</a> list of the most recent posts. <a href="http://rmarsh.com/plugins/post-options/">Instructions and help online</a>. Requires the latest version of the <a href="http://wordpress.org/extend/plugins/post-plugin-library/">Post-Plugin Library</a> to be installed. By <a href="http://rmarsh.com/" title="Visit author homepage">Rob Marsh, SJ</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=recent-posts-plugin%2Frecent-posts.php&amp;_wpnonce=f169e736b5" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=recent-posts-plugin/recent-posts.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="search-and-replace/search-and-replace.php" type="checkbox"></th>
+		<td class="name"><a href="http://bueltge.de/wp-suchen-und-ersetzen-de-plugin/114/" title="Visit plugin homepage">Search &amp; Replace</a></td>
+		<td class="vers">2.5</td>
+		<td class="desc"><p>A simple search for find strings in your database and replace the string. By <a href="http://thedeadone.net/">Mark Cunningham</a> and <a href="http://bueltge.de/">Frank Bueltge</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=search-and-replace/search-and-replace.php">Settings</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=search-and-replace%2Fsearch-and-replace.php&amp;_wpnonce=07543367dc" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=search-and-replace/search-and-replace.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="share-this/sharethis.php" type="checkbox"></th>
+		<td class="name"><a href="http://sharethis.com/" title="Visit plugin homepage">ShareThis</a></td>
+		<td class="vers">2.3</td>
+		<td class="desc"><p>Let your visitors share a post/page with others. Supports e-mail and posting to social bookmarking sites. <a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=sharethis.php">Configuration options are here</a>. Questions on configuration, etc.? Make sure to read the README. By <a href="http://sharethis.com/" title="Visit author homepage">ShareThis and Crowd Favorite (crowdfavorite.com)</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=share-this%2Fsharethis.php&amp;_wpnonce=05c1ac0518" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=share-this/sharethis.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="similar-posts/similar-posts.php" type="checkbox"></th>
+		<td class="name"><a href="http://rmarsh.com/plugins/similar-posts/" title="Visit plugin homepage">Similar Posts</a></td>
+		<td class="vers">2.6.2.0</td>
+		<td class="desc"><p>Displays a <a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=similar-posts.php">highly configurable</a>
+list of related posts. Similarity can be based on any combination of
+word usage in the content, title, or tags. Don’t be disturbed if it
+takes a few moments to complete the installation — the plugin is
+indexing your posts. <a href="http://rmarsh.com/plugins/post-options/">Instructions and help online</a>. Requires the latest version of the <a href="http://wordpress.org/extend/plugins/post-plugin-library/">Post-Plugin Library</a> to be installed. By <a href="http://rmarsh.com/" title="Visit author homepage">Rob Marsh, SJ</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=similar-posts%2Fsimilar-posts.php&amp;_wpnonce=f165257541" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=similar-posts/similar-posts.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="statpress-reloaded/statpress.php" type="checkbox"></th>
+		<td class="name"><a href="http://blog.matrixagents.org/wp-plugins/" title="Visit plugin homepage">StatPress Reloaded</a></td>
+		<td class="vers">1.5.16</td>
+		<td class="desc"><p>Improved real time stats for your blog By <a href="http://blog.matrixagents.org/" title="Visit author homepage">Manuel Grabowski</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=statpress-reloaded%2Fstatpress.php&amp;_wpnonce=2d2cffdcfe" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=statpress-reloaded/statpress.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="subscribe-to-comments/subscribe-to-comments.php" type="checkbox"></th>
+		<td class="name"><a href="http://txfx.net/code/wordpress/subscribe-to-comments/" title="Visit plugin homepage">Subscribe To Comments</a></td>
+		<td class="vers">2.1.2</td>
+		<td class="desc"><p>Allows readers to receive notifications of new comments that are posted to an entry.  Based on version 1 from <a href="http://scriptygoddess.com/">Scriptygoddess</a> By <a href="http://txfx.net/" title="Visit author homepage">Mark Jaquith</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=subscribe-to-comments%2Fsubscribe-to-comments.php&amp;_wpnonce=e7f7785a94" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=subscribe-to-comments/subscribe-to-comments.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="theme-test-drive/themedrive.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.prelovac.com/vladimir/wordpress-plugins/theme-test-drive" title="Visit plugin homepage">Theme Test Drive</a></td>
+		<td class="vers">2.7.3</td>
+		<td class="desc"><p>Safely test drive any theme while visitors are using the default one. Includes instant theme preview via thumbnail. By <a href="http://www.prelovac.com/vladimir/" title="Visit author homepage">Vladimir Prelovac</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=theme-test-drive%2Fthemedrive.php&amp;_wpnonce=152a9cb164" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=theme-test-drive/themedrive.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-db-backup/wp-db-backup.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.ilfilosofo.com/blog/wp-db-backup" title="Visit plugin homepage">WordPress Database Backup</a></td>
+		<td class="vers">2.2.2</td>
+		<td class="desc"><p>On-demand backup of your WordPress database. Navigate to <a href="http://www.orkutplus.net/blog/wp-admin/edit.php?page=wp-db-backup">Tools → Backup</a> to get started. By <a href="http://www.ilfilosofo.com/" title="Visit author homepage">Austin Matzko</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=wp-db-backup%2Fwp-db-backup.php&amp;_wpnonce=c424417ce6" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-db-backup/wp-db-backup.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-gravatar/gravatars.php" type="checkbox"></th>
+		<td class="name"><a href="http://wordpress.org/extend/plugins/wp-gravatar/" title="Visit plugin homepage">Wordpress Gravatars</a></td>
+		<td class="vers">2.7.1</td>
+		<td class="desc"><p>Makes
+use of Gravatars and MyBlogLog Avatars, places Gravatars, OpenAvatar,
+Wavatar, Identicon, monsterID or MyBlogLog Avatars in the comments
+section. Uses the comment authors email to display their Gravatar. It
+also gives the user an Author Profile picture, based on his or hers <strong>Gravatar</strong>. Developer blog at <a href="http://shuttlex.blogdns.net/">this site</a>. By <a href="http://gravatar.bloggs.be/" title="Visit author homepage">Rune Gulbrandsøy</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=wp-gravatar%2Fgravatars.php&amp;_wpnonce=f8898b2da0" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-gravatar/gravatars.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-pagenavi/wp-pagenavi.php" type="checkbox"></th>
+		<td class="name"><a href="http://lesterchan.net/portfolio/programming/php/" title="Visit plugin homepage">WP-PageNavi</a></td>
+		<td class="vers">2.40</td>
+		<td class="desc"><p>Adds a more advanced paging navigation to your WordPress blog. By <a href="http://lesterchan.net/" title="Visit author homepage">Lester 'GaMerZ' Chan</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=wp-pagenavi%2Fwp-pagenavi.php&amp;_wpnonce=db22a10cea" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-pagenavi/wp-pagenavi.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-security-scan/securityscan.php" type="checkbox"></th>
+		<td class="name"><a href="http://semperfiwebdesign.com/plugins/wp-security-scan/" title="Visit plugin homepage">WP Security Scan</a></td>
+		<td class="vers">2.4</td>
+		<td class="desc"><p>Perform security scan of WordPress installation. By <a href="http://semperfiwebdesign.com/" title="Visit author homepage">Michael Torbert</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=wp-security-scan%2Fsecurityscan.php&amp;_wpnonce=a23dd0f2a1" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-security-scan/securityscan.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-super-cache/wp-cache.php" type="checkbox"></th>
+		<td class="name"><a href="http://ocaoimh.ie/wp-super-cache/" title="Visit plugin homepage">WP Super Cache</a></td>
+		<td class="vers">0.9.3.1</td>
+		<td class="desc"><p>Very fast caching plugin for WordPress. By <a href="http://ocaoimh.ie/" title="Visit author homepage">Donncha O Caoimh</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=wpsupercache">Settings</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=wp-super-cache%2Fwp-cache.php&amp;_wpnonce=97705af101" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-super-cache/wp-cache.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="active">
+		<th scope="row" class="check-column"><input name="checked[]" value="wptouch/wptouch.php" type="checkbox"></th>
+		<td class="name"><a href="http://bravenewcode.com/wptouch/" title="Visit plugin homepage">WPtouch iPhone Theme</a></td>
+		<td class="vers">1.8.6</td>
+		<td class="desc"><p>A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/"> Apple iPhone</a>, <a href="http://www.apple.com/ipodtouch/">Apple iPod touch</a>, <a href="http://www.android.com/">Google Android</a> or <a href="http://www.rim.com/storm/">Blackberry Storm</a> touch mobile device. Set options for the theme by visiting the <a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp; By <a href="http://www.bravenewcode.com/" title="Visit author homepage">Dale Mugford &amp; Duane Storey</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=deactivate&amp;plugin=wptouch%2Fwptouch.php&amp;_wpnonce=c069e3f87b" title="Deactivate this plugin">Deactivate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wptouch/wptouch.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>	</tbody>
+</table>
+</form>
+
+<p>If something goes wrong with a plugin and you can’t use WordPress, delete or rename that file in the <code>/home/<REDACTED>/orkutplus.net/blog/wp-content/plugins</code> directory and it will be automatically deactivated.</p>
+
+
+<h3 id="inactive-plugins">Inactive Plugins</h3>
+<form method="post" action="http://www.orkutplus.net/blog/wp-admin/plugins.php">
+<input id="_wpnonce" name="_wpnonce" value="d8be06a4f3" type="hidden"><input name="_wp_http_referer" value="/blog/wp-admin/plugins.php" type="hidden">
+<div class="tablenav">
+	<div class="alignleft actions">
+		<select name="action">
+			<option value="" selected="selected">Bulk Actions</option>
+				<option value="activate-selected">Activate</option>
+						<option value="delete-selected">Delete</option>
+			</select>
+		<input name="doaction_active" value="Apply" class="button-secondary action" type="submit">
+		</div>
+</div>
+<div class="clear"></div>
+<table class="widefat" id="inactive-plugins-table" cellspacing="0">
+	<thead>
+	<tr>
+		<th scope="col" class="check-column"><input type="checkbox"></th>
+		<th scope="col">Plugin</th>
+		<th scope="col" class="num">Version</th>
+		<th scope="col">Description</th>
+		<th scope="col" class="action-links">Action</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<th scope="col" class="check-column"><input type="checkbox"></th>
+		<th scope="col">Plugin</th>
+		<th scope="col" class="num">Version</th>
+		<th scope="col">Description</th>
+		<th scope="col" class="action-links">Action</th>
+	</tr>
+	</tfoot>
+
+	<tbody class="plugins">
+
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="admin-management-xtended/admin-management-xtended.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.schloebe.de/wordpress/admin-management-xtended-plugin/" title="Visit plugin homepage">Admin Management Xtended</a></td>
+		<td class="vers">2.0.2</td>
+		<td class="desc"><p><strong>WordPress 2.7+ only.</strong>
+Extends admin functionalities by introducing: toggling post/page
+visibility inline, changing page order with drag’n'drop, inline
+category management, inline tag management, changing publication date
+inline, changing post slug inline, toggling comment status open/closed,
+hide draft posts, change media order, change media description inline,
+toggling link visibility, changing link categories By <a href="http://www.schloebe.de/" title="Visit author homepage">Oliver Schlöbe</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=admin-management-xtended%2Fadmin-management-xtended.php&amp;_wpnonce=bb80527b37" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=admin-management-xtended/admin-management-xtended.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="adsense-manager/adsense-manager.php" type="checkbox"></th>
+		<td class="name"><a href="http://wordpress.org/extend/plugins/adsense-manager/" title="Visit plugin homepage">AdSense Manager</a></td>
+		<td class="vers">3.2.13</td>
+		<td class="desc"><p>Control
+and arrange your AdSense &amp; Referral blocks on your Wordpress blog.
+With Widget and inline post support, configurable colours. By <a href="http://www.mutube.com/" title="Visit author homepage">Martin Fitzpatrick</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=adsense-manager%2Fadsense-manager.php&amp;_wpnonce=98e254c3fe" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=adsense-manager/adsense-manager.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="all-in-one-seo-pack/all_in_one_seo_pack.php" type="checkbox"></th>
+		<td class="name"><a href="http://semperfiwebdesign.com/" title="Visit plugin homepage">All in One SEO Pack</a></td>
+		<td class="vers">1.4.9</td>
+		<td class="desc"><p>Out-of-the-box SEO for your Wordpress blog. <a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=all-in-one-seo-pack/all_in_one_seo_pack.php">Options configuration panel</a> | <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=mrtorbert%40gmail%2ecom&amp;item_name=All%20In%20One%20SEO%20Pack&amp;item_number=Support%20Open%20Source&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=USD&amp;lc=US&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8">Donate</a> | <a href="http://semperfiwebdesign.com/documentation/all-in-one-seo-pack/all-in-one-seo-faq/">Support</a> By <a href="http://semperfiwebdesign.com/" title="Visit author homepage">Michael Torbert</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=all-in-one-seo-pack%2Fall_in_one_seo_pack.php&amp;_wpnonce=0dfde57bf4" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=all-in-one-seo-pack/all_in_one_seo_pack.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="bookmark-me/plugin.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.satollo.com/english/wordpress/bookmark-me" title="Visit plugin homepage">Bookmark Me</a></td>
+		<td class="vers">1.3.2</td>
+		<td class="desc"><p>Bookmark Me is a plugin to add bookmark buttons (even non english bookmark sites) to your post or page. By <a href="http://www.satollo.com/" title="Visit author homepage">Satollo</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=bookmark-me%2Fplugin.php&amp;_wpnonce=ae638700ed" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=bookmark-me/plugin.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="commentluv/commentluv.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.commentluv.com/download/ajax-commentluv-installation/" title="Visit plugin homepage">commentluv</a></td>
+		<td class="vers">2.6.5</td>
+		<td class="desc"><p>Plugin
+to show a link to the last post from the commenters blog in their
+comment. Just activate and it’s ready. Will parse a feed from most
+sites that have a feed location specified in its head html. See the <a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=commentluv">Settings Page</a> for styling and text output options. By <a href="http://www.fiddyp.co.uk/" title="Visit author homepage">Andy Bailey</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=commentluv%2Fcommentluv.php&amp;_wpnonce=d4ab176791" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=commentluv/commentluv.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="faq-tastic/faq-tastic.php" type="checkbox"></th>
+		<td class="name"><a href="http://knowledgeconstructs.com/wordpress-plugins/faq-tastic/" title="Visit plugin homepage">FAQ-Tastic</a></td>
+		<td class="vers">1.0.7</td>
+		<td class="desc"><p><a href="http://www.orkutplus.net/blog/wp-admin/edit.php?page=faq-tastic.php&amp;sub=questions">Create and manage FAQs</a>.  A short overview is given on the <a href="http://www.orkutplus.net/blog/wp-admin/edit.php?page=faq-tastic.php&amp;sub=help">help</a> page. By <a href="http://knowledgeconstructs.com/wordpress-plugins/faq-tastic/" title="Visit author homepage">John Godley</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=faq-tastic%2Ffaq-tastic.php&amp;_wpnonce=74c80d79cc" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=faq-tastic/faq-tastic.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="feed-footer/feed-footer.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.blogclout.com/blog/goodies/feed-footer-plugin/" title="Visit plugin homepage">Feed Footer</a></td>
+		<td class="vers">1.1</td>
+		<td class="desc"><p>Add custom footers (copyright, notices, advertisements) to the bottom of your posts in your RSS feed. A special <a href="http://www.blogblout.com/blog">BlogClout</a> plugin By <a href="http://www.blogclout.com/blog/about-sherief-mursyidi/" title="Visit author homepage">Sherief Mursyidi</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=feed-footer%2Ffeed-footer.php&amp;_wpnonce=57b2ba88f0" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=feed-footer/feed-footer.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="flexible-upload/flexible-upload.php" type="checkbox"></th>
+		<td class="name"><a href="http://blog.japonophile.com/flexible-upload/" title="Visit plugin homepage">Flexible upload</a></td>
+		<td class="vers">1.13</td>
+		<td class="desc"><p>Resize
+picture at upload and make thumbnail creation configurable, optionally
+include a watermark to your uploaded images. Support Lightbox-like
+plugins. By <a href="http://blog.japonophile.com/" title="Visit author homepage">Antoine Choppin</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=flexible-upload%2Fflexible-upload.php&amp;_wpnonce=314caa6496" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=flexible-upload/flexible-upload.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="hello.php" type="checkbox"></th>
+		<td class="name"><a href="http://wordpress.org/#" title="Visit plugin homepage">Hello Dolly</a></td>
+		<td class="vers">1.5</td>
+		<td class="desc"><p>This
+is not just a plugin, it symbolizes the hope and enthusiasm of an
+entire generation summed up in two words sung most famously by Louis
+Armstrong: Hello, Dolly. When activated you will randomly see a lyric
+from Hello, Dolly in the upper right of your admin screen on every
+page. By <a href="http://ma.tt/" title="Visit author homepage">Matt Mullenweg</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=hello.php&amp;_wpnonce=6af20a7722" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=hello.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="ie-warning/iewarning.php" type="checkbox"></th>
+		<td class="name"><a href="http://bobrik.name/code/wordpress/ie-warning/" title="Visit plugin homepage">IE warning</a></td>
+		<td class="vers">0.20</td>
+		<td class="desc"><p>Shows nice and simple warning to your visitors with Internet Explorer, supports customization and settings By <a href="http://bobrik.name/" title="Visit author homepage">Ivan Babrou </a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=ie-warning%2Fiewarning.php&amp;_wpnonce=24a1a73d4e" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=ie-warning/iewarning.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="image-scaler/imagescaler.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.paulbutler.org/" title="Visit plugin homepage">Image Scaler</a></td>
+		<td class="vers">1.1</td>
+		<td class="desc"><p>Properly resamples images resized in the post editor By <a href="http://www.paulbutler.org/" title="Visit author homepage">Paul Butler</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=image-scaler%2Fimagescaler.php&amp;_wpnonce=08489905d2" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=image-scaler/imagescaler.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="indoeuropean-translator-widget/indoeuropean-translator-widget.php" type="checkbox"></th>
+		<td class="name"><a href="http://indo-european.info/" title="Visit plugin homepage">Indoeuropean Translator Widget</a></td>
+		<td class="vers">1.2.1</td>
+		<td class="desc"><p>Provides links to different automatic translations from the sidebar. By <a href="http://dnghu.org/" title="Visit author homepage">Carlos Quiles</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=indoeuropean-translator-widget%2Findoeuropean-translator-widget.php&amp;_wpnonce=1fc0a87a91" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=indoeuropean-translator-widget/indoeuropean-translator-widget.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="mailpress/MailPress.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.mailpress.org/" title="Visit plugin homepage">MailPress</a></td>
+		<td class="vers">2.0.1</td>
+		<td class="desc"><p>The WordPress mailing platform. By <a href="http://www.mailpress.org/" title="Visit author homepage">Andre Renaut</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=mailpress%2FMailPress.php&amp;_wpnonce=69c84e251a" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=mailpress/MailPress.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="one-click-plugin-updater/oneclick-plugin-updater.php" type="checkbox"></th>
+		<td class="name"><a href="http://w-shadow.com/blog/2007/10/19/one-click-plugin-updater/" title="Visit plugin homepage">One Click Plugin Updater</a></td>
+		<td class="vers">2.4.5</td>
+		<td class="desc"><p>Upgrade
+plugins with a single click, install new plugins or themes from an URL
+or by uploading a file, see which plugins have update notifications
+enabled, control how often WordPress checks for updates, and more. By <a href="http://w-shadow.com/blog/" title="Visit author homepage">Janis Elsts</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=one-click-plugin-updater%2Foneclick-plugin-updater.php&amp;_wpnonce=9b64cae97a" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=one-click-plugin-updater/oneclick-plugin-updater.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="ozh-admin-drop-down-menu/wp_ozh_adminmenu.php" type="checkbox"></th>
+		<td class="name"><a href="http://planetozh.com/blog/my-projects/wordpress-admin-menu-drop-down-css/" title="Visit plugin homepage">Ozh' Admin Drop Down Menu</a></td>
+		<td class="vers">3.1.3.3.7</td>
+		<td class="desc"><p>Replaces admin menus with a CSS dropdown menu bar. Saves lots of clicks and page loads! <strong>For WordPress 2.7+</strong> By <a href="http://planetozh.com/" title="Visit author homepage">Ozh</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=ozh-admin-drop-down-menu%2Fwp_ozh_adminmenu.php&amp;_wpnonce=bb3d794005" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=ozh-admin-drop-down-menu/wp_ozh_adminmenu.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="perfads/perfads.php" type="checkbox"></th>
+		<td class="name">Performancing Ads</td>
+		<td class="vers">1.2</td>
+		<td class="desc"><p>Performancing Ads publisher software By <a href="http://performancingads.com/" title="Visit author homepage">The Performancing Ads Team</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=perfads%2Fperfads.php&amp;_wpnonce=084a9672a5" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=perfads/perfads.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="photoq-photoblog-plugin/whoismanu-photoq.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.whoismanu.com/blog/" title="Visit plugin homepage">PhotoQ</a></td>
+		<td class="vers">1.6.4</td>
+		<td class="desc"><p>Adds queue based photo management and upload capability to WordPress. By <a href="http://www.whoismanu.com/" title="Visit author homepage">M. Flury</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=photoq-photoblog-plugin%2Fwhoismanu-photoq.php&amp;_wpnonce=38b098f44f" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=photoq-photoblog-plugin/whoismanu-photoq.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="popularity-contest/popularity-contest.php" type="checkbox"></th>
+		<td class="name"><a href="http://alexking.org/projects/wordpress" title="Visit plugin homepage">Popularity Contest</a></td>
+		<td class="vers">1.3b3</td>
+		<td class="desc"><p>This
+will enable ranking of your posts by popularity; using the behavior of
+your visitors to determine each post’s popularity. You set a value (or
+use the default value) for every post view, comment, etc. and the
+popularity of your posts is calculated based on those values. Once you
+have activated the plugin, you can configure the <a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=popularity-contest.php">Popularity Values</a> and <a href="http://www.orkutplus.net/blog/wp-admin/index.php?page=popularity-contest.php">View Reports</a>. You can also use the included <a href="http://www.orkutplus.net/blog/wp-admin/options-general.php?page=popularity-contest.php#akpc_template_tags">Template Tags</a> to display post popularity and lists of popular posts on your blog. By <a href="http://alexking.org/" title="Visit author homepage">Alex King</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=popularity-contest%2Fpopularity-contest.php&amp;_wpnonce=3c62184991" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=popularity-contest/popularity-contest.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="redirection/redirection.php" type="checkbox"></th>
+		<td class="name"><a href="http://urbangiraffe.com/plugins/redirection/" title="Visit plugin homepage">Redirection</a></td>
+		<td class="vers">2.1.13</td>
+		<td class="desc"><p>A redirection manager By <a href="http://urbangiraffe.com/" title="Visit author homepage">John Godley</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=redirection%2Fredirection.php&amp;_wpnonce=51a80dc08f" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=redirection/redirection.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="scissors/scissors.php" type="checkbox"></th>
+		<td class="name"><a href="http://stephanreiter.info/2008/10/wordpress-plugin-scissors/" title="Visit plugin homepage">Scissors</a></td>
+		<td class="vers">0.99</td>
+		<td class="desc"><p>Scissors
+enhances WordPress’ handling of images by introducing cropping,
+resizing, and watermarking functionality. It does so blending in nicely
+with the existing image upload and management dialogs. By <a href="http://stephanreiter.info/" title="Visit author homepage">Stephan Reiter</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=scissors%2Fscissors.php&amp;_wpnonce=9be1d32eba" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=scissors/scissors.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="seo-title-tag/seo-title-tag.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.netconcepts.com/seo-title-tag-plugin/" title="Visit plugin homepage">SEO Title Tag</a></td>
+		<td class="vers">2.3.3</td>
+		<td class="desc"><p>Search
+engine optimize your blog’s title tags. Create a customized title tag
+for any post, static page, category page, UltimateTagWarrior tag page -
+indeed, any URL! And will auto-insert the tag name into the title on
+tag pages generated by UltimateTagWarrior plugin. Admin allows for mass
+editing of title tags. By <a href="http://www.netconcepts.com/" title="Visit author homepage">Stephan Spencer, Netconcepts</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=seo-title-tag%2Fseo-title-tag.php&amp;_wpnonce=56cb353caa" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=seo-title-tag/seo-title-tag.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="tinymce-advanced/tinymce-advanced.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.laptoptips.ca/projects/tinymce-advanced/" title="Visit plugin homepage">TinyMCE Advanced</a></td>
+		<td class="vers">3.2</td>
+		<td class="desc"><p>Enables advanced features and plugins in TinyMCE. By <a href="http://www.laptoptips.ca/" title="Visit author homepage">Andrew Ozz</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=tinymce-advanced%2Ftinymce-advanced.php&amp;_wpnonce=d6826dda5e" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=tinymce-advanced/tinymce-advanced.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="what-would-seth-godin-do/what_would_seth_godin_do.php" type="checkbox"></th>
+		<td class="name"><a href="http://richardkmiller.com/wordpress-plugin-what-would-seth-godin-do" title="Visit plugin homepage">What Would Seth Godin Do</a></td>
+		<td class="vers">1.7</td>
+		<td class="desc"><p>Displays a custom welcome message to new visitors and another to return visitors. By <a href="http://richardkmiller.com/" title="Visit author homepage">Richard K Miller</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=what-would-seth-godin-do%2Fwhat_would_seth_godin_do.php&amp;_wpnonce=56a61b03e3" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=what-would-seth-godin-do/what_would_seth_godin_do.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="wordpress-automatic-upgrade/wordpress-automatic-upgrade.php" type="checkbox"></th>
+		<td class="name"><a href="http://techie-buzz.com/wordpress-plugins/wordpress-automatic-upgrade-12-release.html" title="Visit plugin homepage">Wordpress Automatic Upgrade</a></td>
+		<td class="vers">1.2.5</td>
+		<td class="desc"><p>Wordpress
+Automatic Upgrade allows a user to automatically upgrade the wordpress
+installation to the latest one provided by wordpress.org using the 5
+steps provided in the wordpress upgrade instructions. Go to <a href="http://www.orkutplus.net/blog/wp-admin/edit.php?page=wordpress-automatic-upgrade/wordpress-automatic-upgrade.php">Wordpress Automatic Upgrade</a> to upgrade your installation Thanks to <a href="http://www.ronalfy.com/">Ronald Huereca</a>  for making the plugin run in automatic mode. By <a href="http://techie-buzz.com/" title="Visit author homepage">Keith Dsouza</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=wordpress-automatic-upgrade%2Fwordpress-automatic-upgrade.php&amp;_wpnonce=a2e9c53096" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wordpress-automatic-upgrade/wordpress-automatic-upgrade.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="wordpress-mobile-edition/wp-mobile.php" type="checkbox"></th>
+		<td class="name"><a href="http://crowdfavorite.com/wordpress/" title="Visit plugin homepage">WordPress Mobile Edition</a></td>
+		<td class="vers">3.0.4</td>
+		<td class="desc"><p>Show
+your mobile visitors a site presentation designed just for them. Rich
+experience for iPhone, Android, etc. and clean simple formatting for
+less capable mobile browsers. Cache-friendly with a Carrington-based
+theme, and progressive enhancement for advanced mobile browsers. By <a href="http://crowdfavorite.com/" title="Visit author homepage">Crowd Favorite</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=wordpress-mobile-edition%2Fwp-mobile.php&amp;_wpnonce=36fee1c8a1" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wordpress-mobile-edition/wp-mobile.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="wordpress-navigation-list-plugin-navt/navt.php" type="checkbox"></th>
+		<td class="name"><a href="http://atalayastudio.com/" title="Visit plugin homepage">Wordpress Navigation List Plugin NAVT</a></td>
+		<td class="vers">1.0.31</td>
+		<td class="desc"><p>Create,
+organize and manage your web site navigation by logically grouping your
+pages, categories and user’s via a drag’n drop interface. Manage your
+navigation lists from the NAVT Lists menu tab in the Manage menu. By <a href="http://gbellucci.us/" title="Visit author homepage">Greg Bellucci</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=wordpress-navigation-list-plugin-navt%2Fnavt.php&amp;_wpnonce=41591ab300" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wordpress-navigation-list-plugin-navt/navt.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-pda/pda.php" type="checkbox"></th>
+		<td class="name"><a href="http://imthi.com/wp-pda/" title="Visit plugin homepage">Wordpress PDA &amp; iPhone</a></td>
+		<td class="vers">1.2.8</td>
+		<td class="desc"><p>This plugin helps the users to view your blog in a pda and iPhone browser. By <a href="http://imthi.com/" title="Visit author homepage">Imthiaz Rafiq</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=wp-pda%2Fpda.php&amp;_wpnonce=ad42b57b49" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-pda/pda.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="dnghu_en_h.php" type="checkbox"></th>
+		<td class="name"><a href="http://www.carlosquiles.com/indo-european-language-blog/wordpress-translation-plugin/" title="Visit plugin homepage">Wordpress Translation Plugin (en-h)</a></td>
+		<td class="vers">1.3</td>
+		<td class="desc"><p>Provides links to different automatic translations By <a href="http://dnghu.org/" title="Visit author homepage">Carlos Quiles</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=dnghu_en_h.php&amp;_wpnonce=d4b44f31bc" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=dnghu_en_h.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-polls/wp-polls.php" type="checkbox"></th>
+		<td class="name"><a href="http://lesterchan.net/portfolio/programming/php/" title="Visit plugin homepage">WP-Polls</a></td>
+		<td class="vers">2.40</td>
+		<td class="desc"><p>Adds
+an AJAX poll system to your WordPress blog. You can easily include a
+poll into your WordPress’s blog post/page. WP-Polls is extremely
+customizable via templates and css styles and there are tons of options
+for you to choose to ensure that WP-Polls runs the way you wanted. It
+now supports multiple selection of answers. By <a href="http://lesterchan.net/" title="Visit author homepage">Lester 'GaMerZ' Chan</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=wp-polls%2Fwp-polls.php&amp;_wpnonce=484659623d" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-polls/wp-polls.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-polls/wp-polls-widget.php" type="checkbox"></th>
+		<td class="name"><a href="http://lesterchan.net/portfolio/programming/php/" title="Visit plugin homepage">WP-Polls Widget</a></td>
+		<td class="vers">2.40</td>
+		<td class="desc"><p>Adds a Poll Widget to display single or multiple polls from WP-Polls Plugin. You will need to activate WP-Polls first. By <a href="http://lesterchan.net/" title="Visit author homepage">Lester 'GaMerZ' Chan</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=wp-polls%2Fwp-polls-widget.php&amp;_wpnonce=e39970c012" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-polls/wp-polls-widget.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-postratings/wp-postratings.php" type="checkbox"></th>
+		<td class="name"><a href="http://lesterchan.net/portfolio/programming/php/" title="Visit plugin homepage">WP-PostRatings</a></td>
+		<td class="vers">1.40</td>
+		<td class="desc"><p>Adds an AJAX rating system for your WordPress blog’s post/page. By <a href="http://lesterchan.net/" title="Visit author homepage">Lester 'GaMerZ' Chan</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=wp-postratings%2Fwp-postratings.php&amp;_wpnonce=d58dd0c450" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-postratings/wp-postratings.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-postratings/wp-postratings-widget.php" type="checkbox"></th>
+		<td class="name"><a href="http://lesterchan.net/portfolio/programming/php/" title="Visit plugin homepage">WP-PostRatings Widget</a></td>
+		<td class="vers">1.40</td>
+		<td class="desc"><p>Adds
+a PostRatings Widget to display most rated and/or highest rated posts
+and/or pages on your sidebar. You will need to activate WP-PostRatings
+first. By <a href="http://lesterchan.net/" title="Visit author homepage">Lester 'GaMerZ' Chan</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=wp-postratings%2Fwp-postratings-widget.php&amp;_wpnonce=c3a87fa0c0" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-postratings/wp-postratings-widget.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-postviews/wp-postviews.php" type="checkbox"></th>
+		<td class="name"><a href="http://lesterchan.net/portfolio/programming/php/" title="Visit plugin homepage">WP-PostViews</a></td>
+		<td class="vers">1.40</td>
+		<td class="desc"><p>Enables you to display how many times a post/page had been viewed. Modified by <a href="http://dpotter.net/Technical/" title="David's Technical Musings">David Potter</a> to include options for when and where to display view counts. By <a href="http://lesterchan.net/" title="Visit author homepage">Lester 'GaMerZ' Chan</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=wp-postviews%2Fwp-postviews.php&amp;_wpnonce=f8c2f047c2" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-postviews/wp-postviews.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-postviews/wp-postviews-widget.php" type="checkbox"></th>
+		<td class="name"><a href="http://lesterchan.net/portfolio/programming/php/" title="Visit plugin homepage">WP-PostViews Widget</a></td>
+		<td class="vers">1.40</td>
+		<td class="desc"><p>Adds
+a PostViews Widget to display most viewed posts and/or pages on your
+sidebar. You will need to activate WP-PostViews first. By <a href="http://lesterchan.net/" title="Visit author homepage">Lester 'GaMerZ' Chan</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=wp-postviews%2Fwp-postviews-widget.php&amp;_wpnonce=43dbc4bcd7" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-postviews/wp-postviews-widget.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-print/wp-print.php" type="checkbox"></th>
+		<td class="name"><a href="http://lesterchan.net/portfolio/programming/php/" title="Visit plugin homepage">WP-Print</a></td>
+		<td class="vers">2.40</td>
+		<td class="desc"><p>Displays a printable version of your WordPress blog’s post/page. By <a href="http://lesterchan.net/" title="Visit author homepage">Lester 'GaMerZ' Chan</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=wp-print%2Fwp-print.php&amp;_wpnonce=b5daf4bbab" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-print/wp-print.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-sticky/wp-sticky.php" type="checkbox"></th>
+		<td class="name"><a href="http://lesterchan.net/portfolio/programming/php/" title="Visit plugin homepage">WP-Sticky</a></td>
+		<td class="vers">1.40</td>
+		<td class="desc"><p>Adds a sticky post feature to your WordPress’s blog. Modified from Adhesive by Owen Winkler. By <a href="http://lesterchan.net/" title="Visit author homepage">Lester 'GaMerZ' Chan</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=wp-sticky%2Fwp-sticky.php&amp;_wpnonce=1b288cb705" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-sticky/wp-sticky.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-useronline/wp-useronline.php" type="checkbox"></th>
+		<td class="name"><a href="http://lesterchan.net/portfolio/programming/php/" title="Visit plugin homepage">WP-UserOnline</a></td>
+		<td class="vers">2.40</td>
+		<td class="desc"><p>Enable
+you to display how many users are online on your Wordpress blog with
+detailed statistics of where they are and who there
+are(Members/Guests/Search Bots). By <a href="http://lesterchan.net/" title="Visit author homepage">Lester 'GaMerZ' Chan</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=wp-useronline%2Fwp-useronline.php&amp;_wpnonce=2667d7a4b6" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-useronline/wp-useronline.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-useronline/wp-useronline-widget.php" type="checkbox"></th>
+		<td class="name"><a href="http://lesterchan.net/portfolio/programming/php/" title="Visit plugin homepage">WP-UserOnline Widget</a></td>
+		<td class="vers">2.40</td>
+		<td class="desc"><p>Adds a UserOnline Widget to display users online from WP-UserOnline Plugin. You need to activate WP-UserOnline first. By <a href="http://lesterchan.net/" title="Visit author homepage">Lester 'GaMerZ' Chan</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=wp-useronline%2Fwp-useronline-widget.php&amp;_wpnonce=98d5ed3437" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-useronline/wp-useronline-widget.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-ajax-edit-comments/wp-ajax-edit-comments.php" type="checkbox"></th>
+		<td class="name"><a href="http://ajaydsouza.com/wordpress/plugins/wp-ajax-edit-comments/" title="Visit plugin homepage">WP Ajax Edit Comments</a></td>
+		<td class="vers">2.3.2.1</td>
+		<td class="desc"><p>Allows users and admin to edit their comments inline.  Admin and editors can edit all comments. By <a href="http://ajaydsouza.com/" title="Visit author homepage">Ajay D'Souza</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=wp-ajax-edit-comments%2Fwp-ajax-edit-comments.php&amp;_wpnonce=e9307b950e" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-ajax-edit-comments/wp-ajax-edit-comments.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-decoratr/decoratr.php" type="checkbox"></th>
+		<td class="name"><a href="http://wordpresssupplies.com/wordpress-plugins/wp-decoratr/" title="Visit plugin homepage">WP Decoratr</a></td>
+		<td class="vers">1.2.1</td>
+		<td class="desc"><p>Automatically finds images from Flickr related to your post content (Requires Wordpress 2.5). By <a href="http://wordpresssupplies.com/" title="Visit author homepage">iDope</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=wp-decoratr%2Fdecoratr.php&amp;_wpnonce=6a7e1a272a" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-decoratr/decoratr.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>
+	<tr class="inactive">
+		<th scope="row" class="check-column"><input name="checked[]" value="wp-grins/wp-grins.php" type="checkbox"></th>
+		<td class="name"><a href="http://alexking.org/projects/wordpress" title="Visit plugin homepage">WP Grins</a></td>
+		<td class="vers">1.5</td>
+		<td class="desc"><p>A Clickable Smilies hack for WordPress. By <a href="http://alexking.org/" title="Visit author homepage">Alex King</a>.</p></td>
+		<td class="togl action-links"><a href="http://www.orkutplus.net/blog/wp-admin/plugins.php?action=activate&amp;plugin=wp-grins%2Fwp-grins.php&amp;_wpnonce=9df0d25e5e" title="Activate this plugin" class="edit">Activate</a> | <a href="http://www.orkutplus.net/blog/wp-admin/plugin-editor.php?file=wp-grins/wp-grins.php" title="Open this file in the Plugin Editor" class="edit">Edit</a></td>
+	</tr>	</tbody>
+</table>
+</form>
+
+
+<h2>Get More Plugins</h2>
+<p>You can find additional plugins for your site by using the new <a href="http://www.orkutplus.net/blog/wp-admin/plugin-install.php">Plugin Browser/Installer</a> functionality, Or by browsing the <a href="http://wordpress.org/extend/plugins/">WordPress Plugin Directory</a> directly and installing manually.</p>
+<p>To <em>manually</em> install a plugin you generally just need to upload the plugin file into your <code>/home/<REDACTED>/orkutplus.net/blog/wp-content/plugins</code> directory.</p>
+<p>Once a plugin has been installed, you may activate it here.</p>
+
+</div>
+
+
+<div class="clear"></div></div><!-- wpbody-content -->
+<div class="clear"></div></div><!-- wpbody -->
+<div class="clear"></div></div><!-- wpcontent -->
+</div><!-- wpwrap -->
+
+<div id="footer">
+<p id="footer-left" class="alignleft"><span id="footer-thankyou">Thank you for creating with <a href="http://wordpress.org/">WordPress</a>.</span> | <a href="http://codex.wordpress.org/">Documentation</a> | <a href="http://wordpress.org/support/forum/4">Feedback</a></p>
+<p id="footer-upgrade" class="alignright">Version 2.7.1</p>
+<div class="clear"></div>
+</div>
+        <!-- wsblc admin footer -->
+        <div id="wsblc_updater_div"><!-- run_check  --><!-- checking 2 links (rand : 673) --><!-- /run_check --></div>
+        <script type="text/javascript">
+            new Ajax.PeriodicalUpdater('wsblc_updater_div', 'http://www.orkutplus.net/blog/wp-content/plugins/broken-link-checker/wsblc_ajax.php?action=run_check',
+            {
+                method: 'get',
+                frequency: 26,
+                decay: 1.3
+            });
+        </script>
+        <!-- /wsblc admin footer -->
+        <script type="text/javascript" src="plugins.php_files/jsapi"></script>
+<script type="text/javascript">
+    google.load('language', '1');
+    var original_posts = new Array();
+    var original_comments = new Array();
+    function google_translate(lang, type, id){
+      text_node = document.getElementById('translate_'+type+'_'+id);
+      original_text = get_original_text(type, id, text_node);
+      to_translate_text = original_text.replace(/<\/?[^>]*>/g, '');
+      to_append_text = '';
+      if (to_translate_text.length > 500)
+        to_append_text = to_translate_text.substr(500);
+      to_translate_text = to_translate_text.substr(0, 500);
+      google.language.detect(to_translate_text, function(result) {
+        if (!result.error && result.language) {
+          google.language.translate(to_translate_text, result.language, lang, function(result) {
+            if (!result.error)
+              text_node.innerHTML = result.translation + to_append_text;
+            else
+              text_node.innerHTML = original_text;
+          });
+        }
+      });
+    }
+
+    function get_original_text(type, id, text_node) {
+      switch(type) {
+        case 'post':
+          original_text = original_posts[id];
+          if (original_text == null)
+            original_text = original_posts[id] = text_node.innerHTML;
+          break;
+        case 'comment':
+          original_text = original_comments[id];
+          if (original_text == null)
+            original_text = original_comments[id] = text_node.innerHTML;
+          break;
+      }
+      return original_text;
+    }
+    function google_translate_callback() {}
+    google.setOnLoadCallback(google_translate_callback);
+</script><script src="plugins.php_files/defaulten_GB.js" type="text/javascript"></script><script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+</body></html>

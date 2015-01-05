@@ -1,0 +1,93 @@
+body {
+margin-left: 2px !important;
+}
+
+#pages {
+margin-top: 10px;
+}
+
+#categories {
+width: 948px;
+height: 45px;
+background-image: url(images/categories-bg.gif);
+margin: auto;
+border-left: 1px solid #F91111;
+border-right: 1px solid #F91111;
+
+}
+
+#categories ul {
+list-style-type: none;
+list-style-image: none;
+float: left;
+padding: 0px 0px 0px 0px;
+margin-top: 0em
+
+}
+
+#categories ul li {
+float: left;
+display: block;
+height: 45px;
+padding: 0px;
+}
+
+#categories ul li a:link,#categories ul li a:visited, #categories ul li a:active {
+float: left;
+color: #FFF;
+display: block;
+height: 35px;
+font-size: 11px;
+padding: 10px 20px 0px 20px;
+margin: 0px;
+}
+
+
+#categories ul li a:hover {
+background-position: top;
+margin: 0px;
+background-image: url(images/categories-hover.gif);
+padding: 3px 0 0 0;
+}
+
+.post-info {
+color: #666;
+text-decoration:none;
+font-size:11px;
+display:block;
+margin:0 0px 0 0;
+padding:0 0 0 0;
+float: left;
+font-family:tahoma, arial;
+}
+
+a.print {
+padding:0 0 0 18px;
+background:url("http://<REDACTED>.com/files/print.gif") top left no-repeat
+}
+
+a.brazil {
+padding:0 0 0 18px;
+background:url("http://<REDACTED>.com/files/brazil-flag.gif") top left no-repeat
+}
+
+a.comment {
+padding:0 0 0 18px;
+background:url("http://<REDACTED>.com/files/comment.gif") top left no-repeat
+}
+
+div.post-info a.pdf {
+padding:0 0 0 18px;
+background:url("http://<REDACTED>.com/files/pdf.gif") top left no-repeat
+}
+
+a.pdf {
+padding:0 0 0 18px;
+background:url("http://<REDACTED>.com/files/pdf.gif") top left no-repeat;
+}
+
+div.post-info a.email {
+padding:0 0 0 18px;
+background:url("http://<REDACTED>.com/files/email.gif") top left no-repeat
+}
+

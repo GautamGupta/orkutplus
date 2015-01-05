@@ -1,0 +1,103 @@
+<?php bb_get_header(); ?>
+
+<h3 class="bbcrumb"><a href="<?php bb_option('uri'); ?>"><?php bb_option('name'); ?></a> &raquo; <?php _e('Log in'); ?></h3>
+<p><center><script type="text/javascript"><!--
+google_ad_client = "pub-1123855832779971";
+/* orkutplus/forum - front page - 468x60 */
+google_ad_slot = "9669682987";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></center></p>
+<h2 id="userlogin"><?php isset($_POST['user_login']) ? _e('Log in Failed') : _e('Log in') ; ?></h2>
+<p><script type="text/javascript"><!--
+google_ad_client = "pub-1123855832779971";
+/* op/forum menu link ads - 468x15 */
+google_ad_slot = "9740372737";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p>
+<form method="post" action="<?php bb_option('uri'); ?>bb-login.php">
+<fieldset>
+<table>
+<?php if ( $user_exists ) : ?>
+	<tr valign="top">
+		<th scope="row"><?php _e('Username:'); ?></th>
+		<td><input name="user_login" type="text" value="<?php echo $user_login; ?>" /></td>
+	</tr>
+	<tr valign="top" class="error">
+		<th scope="row"><?php _e('Password:'); ?></th>
+		<td><input name="password" type="password" /><br />
+		<?php _e('Incorrect password'); ?></td>
+	</tr>
+<?php elseif ( isset($_POST['user_login']) ) : ?>
+	<tr valign="top" class="error">
+		<th scope="row"><?php _e('Username:'); ?></th>
+		<td><input name="user_login" type="text" value="<?php echo $user_login; ?>" /><br />
+		<?php _e('This username does not exist.'); ?> <a href="<?php bb_option('uri'); ?>register.php?user=<?php echo $user_login; ?>"><?php _e('Register it?'); ?></a></td>
+	</tr>
+	<tr valign="top">
+		<th scope="row"><?php _e('Password:'); ?></th>
+		<td><input name="password" type="password" /></td>
+	</tr>
+<?php else : ?>
+	<tr valign="top" class="error">
+		<th scope="row"><?php _e('Username:'); ?></th>
+		<td><input name="user_login" type="text" /><br />
+	</tr>
+	<tr valign="top">
+		<th scope="row"><?php _e('Password:'); ?></th>
+		<td><input name="password" type="password" /></td>
+	</tr>
+<?php endif; ?>
+	<tr valign="top">
+		<th scope="row"><?php _e('Remember me:'); ?></th>
+		<td><input name="remember" type="checkbox" id="remember" value="1"<?php echo $remember_checked; ?> /></td>
+	</tr>
+	<tr>
+		<th scope="row">&nbsp;</th>
+		<td>
+			<input name="re" type="hidden" value="<?php echo $redirect_to; ?>" />
+			<input type="submit" value="<?php echo attribute_escape( isset($_POST['user_login']) ? __('Try Again &raquo;'): __('Log in &raquo;') ); ?>" />
+			<?php wp_referer_field(); ?>
+		</td>
+	</tr>
+</table>
+</fieldset>
+</form>
+<p><script type="text/javascript"><!--
+google_ad_client = "pub-1123855832779971";
+/* op/forum menu link ads - 468x15 */
+google_ad_slot = "9740372737";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p>
+<?php if ( $user_exists ) : ?>
+<form method="post" action="<?php bb_option('uri'); ?>bb-reset-password.php">
+<fieldset>
+	<p><?php _e('If you would like to recover the password for this account, you may use the following button to start the recovery process:'); ?></p>
+	<table>
+		<tr>
+			<th></th>
+			<td>
+				<input name="user_login" type="hidden" value="<?php echo $user_login; ?>" />
+				<input type="submit" value="<?php echo attribute_escape( __('Recover Password &raquo;') ); ?>" />
+			</td>
+		</tr>
+	</table>
+</fieldset>
+</form>
+<?php endif; ?>
+
+<?php bb_get_footer(); ?>

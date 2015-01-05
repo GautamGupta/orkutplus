@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="Owkward Talkz">
+    <Require feature="opensocial-0.7"/>
+  </ModulePrefs>
+  <Content type="html">
+    <![CDATA[
+      <script src="http://www.orkutplus.net/App/owkward_talkz_js.js"></script>
+      <script>
+        gadgets.util.registerOnLoadHandler(init);
+      </script>
+      <div id='main'>
+        <div id='give'>
+          <form id='gift_form'>
+            Give <span id='gifts'></span> to <span id='friends'></span>. <a href="javascript:void(0);" onclick='giveGift();'>Give!</a>
+          </form>
+        </div>
+        <div id='given'></div>
+        <div id='received'</div>
+      </div>
+    ]]>
+  </Content>
+</Module>

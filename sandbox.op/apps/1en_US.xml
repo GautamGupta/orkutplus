@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messagebundle>
+<msg name="orkut_theme">Multiple Orkut Theme Generator</msg>
+<msg name="apps_description">Best Orkut Tool To Create Multiple Orkut Themes in a Single Click. Preview The Theme Before Installing. All Image Dimensions and Formats Supported. Works With - Firefox, Internet Explorer, Google Chrome and Opera</msg>
+<msg name="updatetitle"> is Creating Multiple Orkut Themes! </msg>
+<msg name="updatemsgstart"> Invites:</msg>
+<msg name="updatemsgline1"> You To Try Multiple Orkut Theme Generator</msg>
+<msg name="updatemsgline2">  You To Create Your Own Orkut Theme</msg>
+<msg name="updatemsgline3">  You To Try Orkut Theme Generator</msg>
+<msg name="updatemsgline4"> You To Create Orkut Themes From Your Own Photos</msg>
+<msg name="updatemsgline5">  You To Try The Best Orkut Tool - Multiple Theme Generator</msg>
+<msg name="updatemsgline6">  You To Create Your Own Orkut Themes</msg>
+<msg name="updatemsgline8"> You To Download New Orkut Themes </msg>
+<msg name="updfriends"> You To Create Orkut Themes of Your Favorite Celebrity</msg>
+<msg name="logo_image">http://sandbox.orkutplus.net/apps/theme.jpg</msg>
+<msg name="updatemsg1"> Invite Friends </msg>
+<msg name="updatemsg2"> Join Community </msg>
+<msg name="updatemsg3"> More Orkut Tools</msg>
+<msg name="updatemsg4"> Need Help?</msg>
+<msg name="updatemsg5"> Orkut Plus!</msg>
+<msg name="updatemsg6"> Scraps and Glitters </msg>
+<msg name="updatemsg7"> Orkut Generators </msg>
+</messagebundle>

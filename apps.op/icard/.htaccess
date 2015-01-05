@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteRule ^set3\.gif$ set3.php
+RewriteRule ^set2\.gif$ set2.php
+RewriteRule ^set1\.gif$ set1.php
+RewriteRule ^download\.gif$ download.php

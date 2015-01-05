@@ -1,0 +1,53 @@
+/*
+	See style-core.css for additional styles.
+	See style-ie.css for ie-specific fixes.
+*/
+
+#header { width: 1004px; }
+
+#page_container { width: 1004px; }
+
+#postcol {
+/* 	width: 470px; */
+	margin-left: auto;
+	margin-right: auto;
+ text-decoration:none;
+	}
+
+#leftbar {
+	position: absolute;
+	left: 0px;
+	width: 225px;
+	background: #fff;
+ text-decoration:none;
+	}
+	
+/**************
+ *** ROUNDED CORNER LEFT SIDEBAR ***
+ **************/
+.left-rbroundbox { background: url(images/nt.gif) repeat; }
+.left-rbtop div { background: url(images/tl.gif) no-repeat top left; }
+.left-rbtop { background: url(images/tr.gif) no-repeat top right; }
+.left-rbbot div { background: url(images/bl.gif) no-repeat bottom left; }
+.left-rbbot { background: url(images/br.gif) no-repeat bottom right; }
+
+/* height and width stuff, width not really necessary. */
+.left-rbtop div, .left-rbtop, .left-rbbot div, .left-rbbot {
+width: 100%;
+height: 7px;
+font-size: 1px;
+ text-decoration:none;
+}
+.left-rbcontent { 
+margin: 0 7px; 
+padding: 10px;
+ text-decoration:none;
+}
+
+
+.left-rbroundbox { 
+/*
+width: 50%; 
+margin: 1em auto; 
+ text-decoration:none;
+*/}	

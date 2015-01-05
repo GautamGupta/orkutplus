@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="Orkut ID Generator!">
+    <Require feature="opensocial-0.8"/>
+  </ModulePrefs>
+  <Content type="html" view="canvas">
+    <![CDATA[
+<html>
+<head>
+   <SCRIPT language=Javascript>
+      function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+
+         return true;
+      }
+   </SCRIPT>
+</head>
+<body>
+<div align="center">
+<h1><font color="#00CC00">Orkut <font color="#0099FF">ID Card</font> Generator </h1>
+</div>
+<div align="center" id="card">
+</div>
+<div align="center" style="display:none;" id="codes">
+Code: <textarea id="htmlcode"></textarea>
+</div>
+<div id="dl" style="display:none;float:right;" align="right">
+<a href="startdl();"><font color="#F00000">Download Card</font></a>
+<iframe frameborder="0" height="0px" width="0px" src="" id="ddl"></iframe>
+</div>
+<div id="info">
+Welcome to <b>Orkut ID Card Generator!</b> Please have a look at the text below. :-)<br>
+To generate your own card fill out the form below, if you enter them the card will have the entered values or you can simply leave it blank to get the real values! <br>
+</div>
+<p align="center" id="bla"><a href="javascript:void(0);" onclick="custom();"><font color="#0099FF"><u>Click Here!</u></font></a> to start generating!</p>
+<br><form name="ding">
+<div id="custom" style="display:none;" align="center">
+<b>
+<table border="0">
+<tr>
+<td><font color="#0099FF">Name</font></td><td>:</td><td><input type="textbox" id="namec" maxlength="50" value="" onBlur="preview();"></td>
+</tr>
+<tr>
+<td><font color="#00CC00">Short Desc</font></td><td>:</td><td><input type="textbox" id="desc" maxlength="100" value="" onBlur="preview();"></td><td>Or <input type="checkbox" name="v2" onclick="man();" onBlur="preview();" checked>Use my status instead!</td>
+</tr>
+<tr>
+<td><font color="#00CC00">Scraps</font></td><td>:</td><td><input type="textbox" id="scrapc" maxlength="6" onkeypress="return isNumberKey(event)" onBlur="preview();" value=""></td>
+</tr>
+<tr>
+<td><font color="#0099FF">Photos</font></td><td>:</td><td><input type="textbox" id="photoc" maxlength="5" onkeypress="return isNumberKey(event)"  onBlur="preview();"
+value=""></td>
+</tr>
+<tr>
+<td><font color="#F00000">Videos</font></td><td>:</td><td><input type="textbox" id="videoc" maxlength="5" onkeypress="return isNumberKey(event)"  onBlur="preview();"
+value=""></td>
+</tr>
+<tr>
+<td><font color="#F00000">Fans</font></td><td>:</td><td><input type="textbox" id="fanc" maxlength="5" onkeypress="return isNumberKey(event)"  onBlur="preview();"    value=""></td>
+</tr>
+</table>
+<p align="center"><input type="button" value="Generate!!" onclick="generate();"></p>
+</b></form>
+<br>
+</div>
+<p id="bla2" align="center" style="display:none;"> Need help? <a href="javascript:void(0);" onclick="infoshow();"><font color="#0099FF"><u>Click Here!</u></font></a> to get the info para again! </p>
+<script type="text/javascript">
+var owneruid;
+var ownername;
+var state;
+var status;
+var status2;
+var dob0;
+var dob1;
+var dob2;
+var t1,t2,t3,t4,t5,t6;
+var icard = "http://apps.orkutplus.net/icard/orkutpic.php?uid=";
+var icard2 = "http://apps.orkutplus.net/icard/download.php?uid=";
+function loadUsers()
+{
+var req = opensocial.newDataRequest();
+var params = {};
+params[opensocial.DataRequest.PeopleRequestFields.PROFILE_DETAILS] = [
+opensocial.Person.Field.PROFILE_URL,
+opensocial.Person.Field.STATUS,
+opensocial.Person.Field.GENDER,
+opensocial.Person.Field.RELATIONSHIP_STATUS,
+opensocial.Person.Field.CURRENT_LOCATION,
+opensocial.Person.Field.THUMBNAIL_URL];
+req.add(req.newFetchPersonRequest("VIEWER", params), "owner_profile");
+req.send(onRun);
+man();
+};
+function onRun(data)
+{
+var owner = data.get("owner_profile").getData();
+var profile_url = owner.getField(opensocial.Person.Field.PROFILE_URL);
+status = owner.getField(opensocial.Person.Field.STATUS);
+var gender = owner.getField(opensocial.Person.Field.GENDER);
+gender = gender.getDisplayValue();
+status2 = owner.getField(opensocial.Person.Field.RELATIONSHIP_STATUS);
+dob0 = gender + "," + status2;
+var location = owner.getField(opensocial.Person.Field.CURRENT_LOCATION);
+dob1 = location.getField(opensocial.Address.Field.LOCALITY) + "," + location.getField(opensocial.Address.Field.REGION);
+dob2 = location.getField(opensocial.Address.Field.COUNTRY); 
+var regex = /uid=([^&#]+)/;
+var result = profile_url.match(regex);
+owneruid = result[1];
+ownername = owner.getDisplayName();
+icard = icard + owneruid;
+icard2 = icard2 + owneruid;
+}
+function custom()
+{
+document.getElementById("info").style.display="none";
+document.getElementById("bla").style.display="none";
+document.getElementById("bla2").style.display="";
+document.getElementById("custom").style.display="";
+gadgets.window.adjustHeight();
+}
+function infoshow()
+{
+	document.getElementById("info").style.display="";
+	document.getElementById("bla2").style.display="none";
+}
+function fetchvals()
+{
+	t1 = document.getElementById("namec").value;
+	t2 = document.getElementById("desc").value;
+	t3 = document.getElementById("scrapc").value;
+	t4 = document.getElementById("photoc").value;
+	t5 = document.getElementById("videoc").value;
+	t6 = document.getElementById("fanc").value;
+}
+function generate()
+{
+		fetchvals();
+		document.getElementById("card").style.display="";
+		document.getElementById("dl").style.display="";
+		document.getElementById("codes").style.display="";
+		if(document.ding.v2.checked==true){
+		document.getElementById("card").innerHTML = '<img src="' + icard + '&dob0=' + dob0 + '&dob1=' + dob1 + '&dob2=' + dob2 + '&desc=' + status + '&scrapc=' + t3 +  '&photoc=' + t4 + '&videoc=' + t5 + '&fanc=' + t6 + '&namec=' + t1 + '">';
+		}else{
+		document.getElementById("card").innerHTML = '<img src="' + icard + '&dob0=' + dob0 + '&dob1=' + dob1 + '&dob2=' + dob2 + '&desc=' + t2 + '&scrapc=' + t3 +      '&photoc=' + t4 + '&videoc=' + t5 + '&fanc=' + t6 + '&namec=' + t1 + '">';
+		}
+		document.getElementById("htmlcode").value = document.getElementById("card").innerHTML;
+		gadgets.window.adjustHeight();
+}
+function preview()
+{
+	fetchvals();
+	document.getElementById("card").style.display="";
+	document.getElementById("dl").style.display="none";
+	document.getElementById("codes").style.display="none";
+	if(document.ding.v2.checked==true){
+		document.getElementById("card").innerHTML = '<img src="' + icard + '&dob0=' + dob0 + '&dob1=' + dob1 + '&dob2=' + dob2 + '&desc=' + status + '&scrapc=' + t3 +  '&photoc=' + t4 + '&videoc=' + t5 + '&fanc=' + t6 + '&namec=' + t1 + '">';
+	}else{
+		document.getElementById("card").innerHTML = '<img src="' + icard + '&dob0=' + dob0 + '&dob1=' + dob1 + '&dob2=' + dob2 + '&desc=' + t2 + '&scrapc=' + t3 +      '&photoc=' + t4 + '&videoc=' + t5 + '&fanc=' + t6 + '&namec=' + t1 + '">';
+	}
+	gadgets.window.adjustHeight();
+}
+function man()
+{
+if(document.ding.v2.checked==true){
+document.getElementById("desc").disabled=true;	
+}else{
+document.getElementById("desc").disabled=false;	
+}
+}
+function startdl()
+{
+		fetchvals();
+		document.getElementById("card").style.display="";
+		document.getElementById("dl").style.display="";
+		document.getElementById("codes").style.display="";
+		if(document.ding.v2.checked==true){
+		document.getElementById("ddl").src = '<img src="' + icard2 + '&dob0=' + dob0 + '&dob1=' + dob1 + '&dob2=' + dob2 + '&desc=' + status + '&scrapc=' + t3 +  '&photoc=' + t4 + '&videoc=' + t5 + '&fanc=' + t6 + '&namec=' + t1 + '">';
+		}else{
+		document.getElementById("ddl").src = '<img src="' + icard2 + '&dob0=' + dob0 + '&dob1=' + dob1 + '&dob2=' + dob2 + '&desc=' + t2 + '&scrapc=' + t3 +      '&photoc=' + t4 + '&videoc=' + t5 + '&fanc=' + t6 + '&namec=' + t1 + '">';
+		}
+		document.getElementById("htmlcode").value = document.getElementById("card").innerHTML;
+		gadgets.window.adjustHeight();
+}
+loadUsers();
+gadgets.window.adjustHeight();  
+</script>
+</body>
+</html>
+]]> 
+</Content>
+<Content type="html" view="profile">
+    <![CDATA[
+    <html>
+    <body>
+<div align="center" id="card">
+</div>
+<div align="center" style="display:none;" id="codes">
+Code: <textarea id="htmlcode"></textarea>
+</div>
+<div id="dl" style="display:none;float:right;" align="right">
+<a href="startdl();"><font color="#F00000">Download Card</font></a>
+<iframe frameborder="0" height="0px" width="0px" src="" id="ddl"></iframe>
+</div>
+<script type="text/javascript">
+var owneruid;
+var ownername;
+var state;
+var status;
+var status2;
+var dob0;
+var dob1;
+var dob2;
+var t1,t2,t3,t4,t5,t6;
+var icard = "http://apps.orkutplus.net/icard/orkutpic.php?uid=";
+var icard2 = "http://apps.orkutplus.net/icard/download.php?uid=";
+function loadUsers()
+{
+var req = opensocial.newDataRequest();
+var params = {};
+params[opensocial.DataRequest.PeopleRequestFields.PROFILE_DETAILS] = [
+opensocial.Person.Field.PROFILE_URL,
+opensocial.Person.Field.STATUS,
+opensocial.Person.Field.GENDER,
+opensocial.Person.Field.RELATIONSHIP_STATUS,
+opensocial.Person.Field.CURRENT_LOCATION,
+opensocial.Person.Field.THUMBNAIL_URL];
+req.add(req.newFetchPersonRequest("VIEWER", params), "owner_profile");
+req.send(onRun);
+};
+function onRun(data)
+{
+var owner = data.get("owner_profile").getData();
+var profile_url = owner.getField(opensocial.Person.Field.PROFILE_URL);
+status = owner.getField(opensocial.Person.Field.STATUS);
+var gender = owner.getField(opensocial.Person.Field.GENDER);
+gender = gender.getDisplayValue();
+status2 = owner.getField(opensocial.Person.Field.RELATIONSHIP_STATUS);
+dob0 = gender + "," + status2;
+var location = owner.getField(opensocial.Person.Field.CURRENT_LOCATION);
+dob1 = location.getField(opensocial.Address.Field.LOCALITY) + "," + location.getField(opensocial.Address.Field.REGION);
+dob2 = location.getField(opensocial.Address.Field.COUNTRY); 
+var regex = /uid=([^&#]+)/;
+var result = profile_url.match(regex);
+owneruid = result[1];
+ownername = owner.getDisplayName();
+icard = icard + owneruid;
+icard2 = icard2 + owneruid;
+}
+function generate()
+{
+		document.getElementById("card").innerHTML = '<img src="' + icard + '&dob0=' + dob0 + '&dob1=' + dob1 + '&dob2=' + dob2 + '&desc=' + status + '&scrapc=' + t3 +  '&photoc=' + t4 + '&videoc=' + t5 + '&fanc=' + t6 + '&namec=' + t1 + '">';
+		document.getElementById("htmlcode").value = document.getElementById("card").innerHTML;
+		gadgets.window.adjustHeight();
+}
+</script>
+]]> 
+</Content>
+</Module>

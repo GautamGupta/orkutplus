@@ -1,0 +1,5 @@
+Options -Indexes
+RewriteEngine On
+RewriteRule ^(/)?$ http://www.orkutplus.net/
+ErrorDocument 404 http://www.orkutplus.net/
+ErrorDocument 403 http://www.orkutplus.net/
